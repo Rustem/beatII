@@ -1,9 +1,7 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: easychair.aux
 The style file: plain.bst
 Database file #1: easychair.bib
-Warning--entry type for "btp_spec" isn't style-file defined
---line 11618 of file easychair.bib
-I was expecting a `,' or a `}'---line 11649 of file easychair.bib
+I was expecting a `,' or a `}'---line 11433 of file easychair.bib
  :  
  :  title   = {Web Services Choreography Description Language Version 1.0}
 (Error may have been on previous line)

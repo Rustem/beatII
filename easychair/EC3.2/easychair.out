@@ -1,33 +1,8 @@
 \BOOKMARK [1][-]{section.1}{Introduction}{}% 1
-\BOOKMARK [1][-]{section.2}{Implementation of Choreography}{}% 2
-\BOOKMARK [1][-]{section.3}{Implementation of Cloud Scenarios}{}% 3
-\BOOKMARK [2][-]{subsection.3.1}{Scenario 1: SaaS integration}{section.3}% 4
-\BOOKMARK [2][-]{subsection.3.2}{Scenario 2: Payment and Wallet Recharging}{section.3}% 5
-\BOOKMARK [1][-]{section.4}{Future Work}{}% 6
-\BOOKMARK [2][-]{subsection.4.1}{Main Criterias for Faultless Web-services}{section.4}% 7
-\BOOKMARK [2][-]{subsection.4.2}{Choreography Implementation and Conformance}{section.4}% 8
-\BOOKMARK [1][-]{section.5}{Typesetting}{}% 9
-\BOOKMARK [2][-]{subsection.5.1}{Generalities}{section.5}% 10
-\BOOKMARK [2][-]{subsection.5.2}{Front Matter}{section.5}% 11
-\BOOKMARK [2][-]{subsection.5.3}{Page Numbering}{section.5}% 12
-\BOOKMARK [2][-]{subsection.5.4}{Section Headings and Capitalization}{section.5}% 13
-\BOOKMARK [2][-]{subsection.5.5}{Mathematics}{section.5}% 14
-\BOOKMARK [2][-]{subsection.5.6}{Tables}{section.5}% 15
-\BOOKMARK [2][-]{subsection.5.7}{References}{section.5}% 16
-\BOOKMARK [1][-]{section.6}{Installation and Usage Instructions}{}% 17
-\BOOKMARK [2][-]{subsection.6.1}{Installation}{section.6}% 18
-\BOOKMARK [2][-]{subsection.6.2}{Required Packages}{section.6}% 19
-\BOOKMARK [2][-]{subsection.6.3}{Recommended Packages}{section.6}% 20
-\BOOKMARK [2][-]{subsection.6.4}{Compiling}{section.6}% 21
-\BOOKMARK [2][-]{subsection.6.5}{Bug Reports}{section.6}% 22
-\BOOKMARK [1][-]{section.7}{Avoiding Text Overflows}{}% 23
-\BOOKMARK [2][-]{subsection.7.1}{Using the debug Option to Check for Overflows}{section.7}% 24
-\BOOKMARK [2][-]{subsection.7.2}{Tables}{section.7}% 25
-\BOOKMARK [2][-]{subsection.7.3}{Images}{section.7}% 26
-\BOOKMARK [2][-]{subsection.7.4}{A Universal Recipe}{section.7}% 27
-\BOOKMARK [1][-]{section.8}{Submitting Your Article for EasyChair Proceedings}{}% 28
-\BOOKMARK [2][-]{subsection.8.1}{Submitting the Article}{section.8}% 29
-\BOOKMARK [1][-]{section.9}{Future Work}{}% 30
-\BOOKMARK [2][-]{subsection.9.1}{Acknowledgments}{section.9}% 31
-\BOOKMARK [2][-]{subsection.9.2}{History}{section.9}% 32
-\BOOKMARK [1][-]{appendix.A}{easychair Requirements Specification}{}% 33
+\BOOKMARK [1][-]{section.2}{Basics of Session-Java}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Protocol Specification}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Higher Order Communication}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{Protocol Implementation using Session}{section.2}% 5
+\BOOKMARK [1][-]{section.3}{Business case studies}{}% 6
+\BOOKMARK [2][-]{subsection.3.1}{Simple Scenario}{section.3}% 7
+\BOOKMARK [2][-]{subsection.3.2}{Complicated Scenario}{section.3}% 8

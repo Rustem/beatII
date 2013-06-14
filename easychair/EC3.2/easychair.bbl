@@ -13,12 +13,22 @@ D.~Marlon B.~Alistair and O.~Phillipa.
   language}.
 \newblock BPTrends, 2005.
 
+\bibitem{alg-seq-processes}
+J.~A. Bergstra and J.~W. Klop.
+\newblock {\em Algebra of communicating processes}.
+\newblock Theoretical Computer Science, 1985.
+
 \bibitem{graphicx-package}
 David Carlisle.
 \newblock graphicx: Enhanced support for graphics.
 \newblock
   \url{http://www.ctan.org/tex-archive/help/Catalogue/entries/graphicx.html},
   last viewed April 2010, 1995--1999.
+
+\bibitem{chor-lang}
+M.~Carbone F.~Montesi.
+\newblock Chor - choreography programming language.
+\newblock Available by: \url{http://www.chor-lang.org/}.
 
 \bibitem{footmisc-package}
 Robin Fairbairns.
@@ -63,6 +73,11 @@ Carl Gutwin.
 \newblock \url{http://www.cs.usask.ca/~gutwin/gi/pdflatex.htm}, last viewed
   April 2010, 2006.
 
+\bibitem{cs-processes}
+C.A.R. Hoare.
+\newblock {\em Communicating Sequential Processes}.
+\newblock Prentice Hall, 1985.
+
 \bibitem{empheq-package}
 Morten H{\o}gholm.
 \newblock empheq: {EMPHasizing EQuations}.
@@ -80,6 +95,12 @@ Leslie Lamport.
 \newblock {\em \LaTeX: A Document Preparation System}.
 \newblock Addison-Wesley, 1986.
 
+\bibitem{session-types-sessions}
+Nobuko~Yoshida Marco~Carbone, Kohei~Honda and Robin Milner.
+\newblock A theoretical basic of communication-centred concurrent programming.
+\newblock Available at:
+  \url{http://www.eecs.qmul.ac.uk/~carbonem/cdlpaper/workingnote.pdf}, 2006.
+
 \bibitem{easychair-latex-class}
 Serguei~A. Mokhov, Geoff Sutcliffe, and Andrei Voronkov.
 \newblock The {\sf easychair} class file documentation and guide, for authors
@@ -94,21 +115,12 @@ Brooks Moses and Carsten Heinz.
   \url{http://www.ctan.org/tex-archive/help/Catalogue/entries/listings.html},
   last viewed April 2010, 2006--2007.
 
-\bibitem{wscdl}
-G.~Ritzinger N.~Kavantzas, D.~Burdett and Y.~Lafon.
-
 \bibitem{eso-pic-package}
 Rolf Niepraschk.
 \newblock eso-pic: Absolute positioning of graphics and ship out actions.
 \newblock
   \url{http://www.ctan.org/tex-archive/help/Catalogue/entries/eso-pic.html},
   last viewed April 2010, 1998--2009.
-
-\bibitem{btp_spec}
-OASIS.
-\newblock Business transaction protocol.
-\newblock \url{https://www.oasis-open.org/committees/download.php/
-  1184/2002-06-03.BTP_cttee_spec_1.0.pdf}, 3 June, 2002.
 
 \bibitem{pdflscape-package}
 Heiko Oberdiek.
@@ -130,6 +142,12 @@ Sebastian Rahtz, Karl Berry, Manuel P\'egouri\'e-Gonnard, Norbert Preining,
   Wawrykiewicz, Tomasz Trzeciak, Vladimir Volovich, and {\TeX user groups}.
 \newblock {{\TeX} Live}.
 \newblock \url{http://tug.org/texlive/}, last viewed April 2010, 1996--2009.
+
+\bibitem{sj-lang}
+Kohei~Honda Raymond~Hu, Nobuko~Yoshida.
+\newblock Session-based distributed programming in java.
+\newblock Available at:
+  \url{http://www.doc.ic.ac.uk/~rhu/sessionj/hyh08session-based.pdf}, 2008.
 
 \bibitem{v3na-cloud}
 Vadim V.~Kotov Rustem A.~Kamun, German~Ilyin.
@@ -156,6 +174,11 @@ Walter Schmidt and Sebastian Rahtz.
 \newblock
   \url{http://www.ctan.org/tex-archive/help/Catalogue/entries/psnfss.html},
   last viewed April 2010, 1995--2005.
+
+\bibitem{higher-order-comm}
+Malcolm~Hole Simon~Gay.
+\newblock Subtyping for session types in the pi calculus.
+\newblock Available at \url{http://goo.gl/Hi5i9}, 2005.
 
 \bibitem{led}
 Adam Sk\'orczy\'nski, Sebastian Deorowicz, and {LEd Contributors}.
@@ -238,6 +261,12 @@ Andrei Voronkov.
 Sven Wiegand and {{\TeX}nicCenter Contributors}.
 \newblock {{\TeX}nicCenter}.
 \newblock \url{http://texniccenter.org}, last viewed April 2010, 1998--2011.
+
+\bibitem{intercloud}
+{Wikipedia}.
+\newblock Intercloud.
+\newblock [online], 2013.
+\newblock \url{http://en.wikipedia.org/wiki/Intercloud}.
 
 \bibitem{chor-essence}
 X.~Zhao Z.~Qiu, C.~Cai and H.~Yang.
