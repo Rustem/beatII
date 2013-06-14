@@ -1,0 +1,15 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: easychair.aux
+The style file: plain.bst
+Database file #1: easychair.bib
+Warning--entry type for "btp_spec" isn't style-file defined
+--line 11618 of file easychair.bib
+I was expecting a `,' or a `}'---line 11649 of file easychair.bib
+ :  
+ :  title   = {Web Services Choreography Description Language Version 1.0}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Name 1 in "B. Alistair, D. Marlon, and O. Phillipa" has a comma at the end for entry ws-critical-overview
+while executing---line 1049 of file plain.bst
+Name 1 in "B. Alistair, D. Marlon, and O. Phillipa" has a comma at the end for entry ws-critical-overview
+while executing---line 1090 of file plain.bst
+(There were 3 error messages)
