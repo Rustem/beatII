@@ -1,0 +1,58 @@
+\begin{thebibliography}{10}
+
+\bibitem{ws-critical-overview}
+D.~Marlon B.~Alistair and O.~Phillipa.
+\newblock {\em A critical overview of the web service choreography description
+  language}.
+\newblock BPTrends, 2005.
+
+\bibitem{alg-seq-processes}
+J.~A. Bergstra and J.~W. Klop.
+\newblock {\em Algebra of communicating processes}.
+\newblock Theoretical Computer Science, 1985.
+
+\bibitem{chor-lang}
+M.~Carbone F.~Montesi.
+\newblock Chor - choreography programming language.
+\newblock Available by: \url{http://www.chor-lang.org/}.
+
+\bibitem{cs-processes}
+C.A.R. Hoare.
+\newblock {\em Communicating Sequential Processes}.
+\newblock Prentice Hall, 1985.
+
+\bibitem{session-types-sessions}
+Nobuko~Yoshida Marco~Carbone, Kohei~Honda and Robin Milner.
+\newblock A theoretical basic of communication-centred concurrent programming.
+\newblock Available at:
+  \url{http://www.eecs.qmul.ac.uk/~carbonem/cdlpaper/workingnote.pdf}, 2006.
+
+\bibitem{sj-lang}
+Kohei~Honda Raymond~Hu, Nobuko~Yoshida.
+\newblock Session-based distributed programming in java.
+\newblock Available at:
+  \url{http://www.doc.ic.ac.uk/~rhu/sessionj/hyh08session-based.pdf}, 2008.
+
+\bibitem{v3na-cloud}
+Vadim V.~Kotov Rustem A.~Kamun, German~Ilyin.
+\newblock Cloud platform for optimizing your business performance.
+\newblock [online], 2013.
+\newblock Available by \url{http://v3na.com}.
+
+\bibitem{higher-order-comm}
+Malcolm~Hole Simon~Gay.
+\newblock Subtyping for session types in the pi calculus.
+\newblock Available at \url{http://goo.gl/Hi5i9}, 2005.
+
+\bibitem{intercloud}
+{Wikipedia}.
+\newblock Intercloud.
+\newblock [online], 2013.
+\newblock \url{http://en.wikipedia.org/wiki/Intercloud}.
+
+\bibitem{chor-essence}
+X.~Zhao Z.~Qiu, C.~Cai and H.~Yang.
+\newblock {\em Exploring the essence of choreography}.
+\newblock Proceedings of the 16th international conference on WWW, 2007.
+
+\end{thebibliography}
