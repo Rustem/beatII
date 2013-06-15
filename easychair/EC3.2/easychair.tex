@@ -330,7 +330,7 @@ SJSocket s2 = s1.receive()
 
 V3na.com\footnote{\url{http://v3na.com}. Cloud platform for optimizing your business performance.}
 is an e-commerce Web portal that sells SaaS applications for business needs. V3na has developed on Django framework --- a high-level Web framework for python. %Further information: \url{https://www.djangoproject.com/}}.
-The persistence layer is based on MongoDB and Memcached. One of the challenging task was to automate the process of SaaS integration. By integration we understand the following processes with a particular SaaS application:
+The persistence layer is based on MongoDB and Memcached. One of the challenging task was to automate the process of SaaS integration. By integration we understand the following processes with a particular SaaS application\footnote{Source code is available at \url{https://github.com/Rustem/Master-thesis}.}:
 
 \begin{compactitem}
 \item  connection: SaaS user can connect SaaS for trial period by simply clicking on the button;
@@ -341,7 +341,6 @@ The persistence layer is based on MongoDB and Memcached. One of the challenging 
 
 \item one entry point to all user's applications.
 \end{compactitem}
-Full source  code is available at \url{https://github.com/Rustem/Master-thesis}.
 
 \subsection{Simple Scenario}
 \paragraph{Protocol declaration} As a starting point, let's specify simple business protocol of one of the processes just mentioned, SaaS connection. Informally, it may be interpreted as follows:
