@@ -58,12 +58,6 @@ Zongyan Qiu, Xiangpeng Zhao, Chao Cai, and Hongli Yang.
 \newblock In {\em Proceedings of the 16th international conference on World
   Wide Web}, pages 973--982. ACM, 2007.
 
-\bibitem{v3na-cloud}
-Vadim V.~Kotov Rustem A.~Kamun, German~Ilyin.
-\newblock Cloud platform for optimizing your business performance.
-\newblock [online], 2013.
-\newblock Available by \url{http://v3na.com}.
-
 \bibitem{higher-order-comm}
 Malcolm~Hole Simon~Gay.
 \newblock Subtyping for session types in the pi calculus.

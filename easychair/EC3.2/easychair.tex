@@ -84,14 +84,6 @@ morekeywords={*,...}            % if you want to add more keywords to the set
 %
 % \usepackage{algorithm2e}
 
-% Some of our commands for this guide.
-%
-%\newcommand{\easychair}{\textsf{easychair}}
-\newcommand{\miktex}{MiK{\TeX}}
-\newcommand{\texniccenter}{{\TeX}nicCenter}
-\newcommand{\makefile}{\texttt{Makefile}}
-\newcommand{\latexeditor}{LEd}
-
 %\makeindex
 
 %% Document
@@ -134,7 +126,7 @@ morekeywords={*,...}            % if you want to add more keywords to the set
 \authorrunning{Kamun \& Horne}
 
 
-\clearpage
+%\clearpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \maketitle
@@ -146,7 +138,7 @@ morekeywords={*,...}            % if you want to add more keywords to the set
   This work confirms the feasibility of application of session types on ``non-linear'' business protocols used by an e-commerce Cloud provider and developed in Session-Java, an extension of Java implementing Session-Based programming. Furthermore, we highlight the importance of this approach for services replicated across multiple Cloud providers each of which must correctly cooperate.
 \end{abstract}
 
-\setcounter{tocdepth}{2}
+%\setcounter{tocdepth}{2}
 %{\small\tableofcontents}
 
 %\section{To mention}
@@ -156,7 +148,7 @@ morekeywords={*,...}            % if you want to add more keywords to the set
 %Examples of how EasyChair processes papers. Caveats (replacement of EC
 %class, errors).
 
-\pagestyle{empty}
+%\pagestyle{empty}
 
 
 %------------------------------------------------------------------------------
@@ -164,7 +156,7 @@ morekeywords={*,...}            % if you want to add more keywords to the set
 \label{sect:introduction}
 
 %The growing needs for information availability and accessibility present new challenges for application development.
-The need for highly available services present challenges for application development.
+The need for highly available services presents challenges for application development.
 There are two forces working in parallel with regards to the need for integration.
 First, the necessity of application integration within a company (enterprise), and second, business-to-business integration.
 There is an increasingly widespread acceptance of Service-Oriented Architectures (SOA) as a paradigm for integrating software applications within and across organizational boundaries.
@@ -199,8 +191,8 @@ Aforementioned challenges can be tackled under a strong theoretical foundations.
 In this paper we will demonstrate a method of controlling process interactions represented by sessions. The formal theory based on session types ensures communication safety by verifying that session implementations of each engaged participant conform to the defined protocol specification. In order to prove the feasibility of this theory we utilized Session-Java, an extension to Java language. It works by specifying the intended process transaction protocol using session types and implementing the interaction using session operations.
 
 In Section~\ref{sect:basics} we provide fundamentals of SJ syntax and features.
-Next, in Section~\ref{sect:impl}, we provide detailed explanation of business protocols used by an e-commerce Cloud provider~\cite{v3na-cloud}. %Make this citation a footnote.
-Finally, in~Section \ref{sect:highlights} we highlight an idea to use session types in designing Intercloud~\cite{intercloud} communication protocols.
+Next, in Section~\ref{sect:impl}, we provide detailed explanation of business protocols used by an e-commerce Cloud provider\footnote{\url{http://v3na.com}. Cloud platform for optimizing your business performance.}. %~\cite{v3na-cloud}. Make this citation a footnote.
+Finally, in Section~\ref{sect:highlights} we highlight an idea to use session types in designing Intercloud~\cite{intercloud} communication protocols.
 
 Through these we are aiming to confirm the suitability of Session-Java as an implementation of business to business transactions. We want to explore the agility and robustness of the language and the scalability as scenarios vary in size but also complexity. In addition we will be looking for things such as ease of programming in SJ, any limitations, bugs or non-implementable scenarios.
 
@@ -491,7 +483,7 @@ Unlike the previous protocol, the Cloud-Saas protocol significantly altered, als
 
 corresponds to a higher-order message. The !$<\dots>$ means that it is the Cloud that is passing the high order message and everything inside it is the protocol of the session that Saas should perform with the User. In Saas --- Cloud, the protocol defined in more subtle way containing higher order messages by first defining them and then including them in the protocol. For syntactic convenience, one protocol can be referenced from another using @ operator. The $@p$ is syntactically substituted for the protocol of that name.
 
-\paragraph{Interactions.} Figure \ref{fig:seq-diagram-sc2} depicts the protocols provided above using an UML sequence diagram. The language of the artifacts has already presented in the first scenario.
+\paragraph{Interactions.} Figure~\ref{fig:seq-diagram-sc2} depicts the protocols provided above using an UML sequence diagram. The language of the artifacts has already presented in the first scenario.
 
 \begin{figure}
 \label{fig:seq-diagram-sc2}
@@ -532,6 +524,11 @@ v3na_user_socket = (@p_msg) v3na_sv.receive();
 Where p\_msg is defined in the protocols section. This is a reason why it is good practice to first exclusively write the protocol to be delegated and then include it in the final protocol.
 
 %------------------------------------------------------------------------------
+
+
+\section{Intercloud Communication}
+\label{sect:highlights}
+
 
 
 %------------------------------------------------------------------------------
