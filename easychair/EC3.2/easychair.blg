@@ -1,13 +1,46 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: easychair.aux
+This is BibTeX, Version 0.99d (TeX Live 2012/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: easychair.aux
 The style file: plain.bst
 Database file #1: easychair.bib
-I was expecting a `,' or a `}'---line 11433 of file easychair.bib
- :  
- :  title   = {Web Services Choreography Description Language Version 1.0}
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-Name 1 in "B. Alistair, D. Marlon, and O. Phillipa" has a comma at the end for entry ws-critical-overview
-while executing---line 1049 of file plain.bst
-Name 1 in "B. Alistair, D. Marlon, and O. Phillipa" has a comma at the end for entry ws-critical-overview
-while executing---line 1090 of file plain.bst
-(There were 3 error messages)
+You've used 11 entries,
+            2118 wiz_defined-function locations,
+            594 strings with 6434 characters,
+and the built_in function-call counts, 3692 in all, are:
+= -- 368
+> -- 169
+< -- 3
++ -- 69
+- -- 56
+* -- 224
+:= -- 613
+add.period$ -- 37
+call.type$ -- 11
+change.case$ -- 60
+chr.to.int$ -- 0
+cite$ -- 11
+duplicate$ -- 146
+empty$ -- 297
+format.name$ -- 56
+if$ -- 791
+int.to.chr$ -- 0
+int.to.str$ -- 11
+missing$ -- 10
+newline$ -- 59
+num.names$ -- 22
+pop$ -- 79
+preamble$ -- 1
+purify$ -- 50
+quote$ -- 0
+skip$ -- 101
+stack$ -- 0
+substring$ -- 199
+swap$ -- 34
+text.length$ -- 3
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 40
+warning$ -- 0
+while$ -- 36
+width$ -- 13
+write$ -- 123

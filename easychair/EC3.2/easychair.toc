@@ -2,14 +2,14 @@
 \contentsline {section}{\numberline {2}Basics of Session-Java}{3}{section.2}
 \contentsline {subsection}{\numberline {2.1}Protocol Specification}{3}{subsection.2.1}
 \contentsline {subsection}{\numberline {2.2}Higher Order Communication}{4}{subsection.2.2}
-\contentsline {subsection}{\numberline {2.3}Protocol Implementation using Session}{5}{subsection.2.3}
-\contentsline {paragraph}{Another meaning for sockets}{5}{section*.2}
+\contentsline {subsection}{\numberline {2.3}Protocol Implementation using Session}{4}{subsection.2.3}
+\contentsline {paragraph}{Another meaning for sockets}{4}{section*.2}
 \contentsline {paragraph}{Session operations}{5}{section*.3}
 \contentsline {section}{\numberline {3}Business case studies}{5}{section.3}
-\contentsline {subsection}{\numberline {3.1}Simple Scenario}{6}{subsection.3.1}
-\contentsline {paragraph}{Protocol declaration}{6}{section*.4}
-\contentsline {paragraph}{Interactions.}{7}{section*.5}
-\contentsline {subsection}{\numberline {3.2}Complicated Scenario}{7}{subsection.3.2}
-\contentsline {paragraph}{Protocols.}{8}{section*.6}
+\contentsline {subsection}{\numberline {3.1}Simple Scenario}{5}{subsection.3.1}
+\contentsline {paragraph}{Protocol declaration}{5}{section*.4}
+\contentsline {paragraph}{Interactions.}{6}{section*.5}
+\contentsline {subsection}{\numberline {3.2}Complicated Scenario}{6}{subsection.3.2}
+\contentsline {paragraph}{Protocols.}{7}{section*.6}
 \contentsline {paragraph}{Interactions.}{9}{section*.7}
 \contentsline {paragraph}{Implementation.}{9}{section*.8}

@@ -1,8 +1,8 @@
-\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
-\BOOKMARK [1][-]{section.2}{Basics of Session-Java}{}% 2
-\BOOKMARK [2][-]{subsection.2.1}{Protocol Specification}{section.2}% 3
-\BOOKMARK [2][-]{subsection.2.2}{Higher Order Communication}{section.2}% 4
-\BOOKMARK [2][-]{subsection.2.3}{Protocol Implementation using Session}{section.2}% 5
-\BOOKMARK [1][-]{section.3}{Business case studies}{}% 6
-\BOOKMARK [2][-]{subsection.3.1}{Simple Scenario}{section.3}% 7
-\BOOKMARK [2][-]{subsection.3.2}{Complicated Scenario}{section.3}% 8
+\BOOKMARK [1][-]{section.0.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.0.2}{Basics of Session-Java}{}% 2
+\BOOKMARK [2][-]{subsection.0.2.1}{Protocol Specification}{section.0.2}% 3
+\BOOKMARK [2][-]{subsection.0.2.2}{Higher Order Communication}{section.0.2}% 4
+\BOOKMARK [2][-]{subsection.0.2.3}{Protocol Implementation using Session}{section.0.2}% 5
+\BOOKMARK [1][-]{section.0.3}{Business case studies}{}% 6
+\BOOKMARK [2][-]{subsection.0.3.1}{Simple Scenario}{section.0.3}% 7
+\BOOKMARK [2][-]{subsection.0.3.2}{Complicated Scenario}{section.0.3}% 8
