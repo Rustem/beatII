@@ -133,7 +133,7 @@ morekeywords={*,...}            % if you want to add more keywords to the set
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{abstract}
-  An increasing scope and complexity of Web services raises a new challenge of controlling their interaction. The goal of this work is to ensure that processes in a production Cloud are correctly interacting according to a specification of their communication behaviour. To accomplish this goal, we employ session types to analyse the global and local communication patterns. Session types represents ``formal blueprints" of how communicating participants should behave and offers a concise view of the message flows.
+  An increasing scope and complexity of Web Services raises a new challenge of controlling their interaction. The goal of this work is to ensure that processes in a production Cloud are correctly interacting according to a specification of their communication behaviour. To accomplish this goal, we employ session types to analyse the global and local communication patterns. Session types represents ``formal blueprints" of how communicating participants should behave and offers a concise view of the message flows.
   
   This work confirms the feasibility of application of session types on ``non-linear'' business protocols used by an e-commerce Cloud provider and developed in Session-Java, an extension of Java implementing Session-Based programming. Furthermore, we highlight the importance of this approach for services replicated across multiple Cloud providers each of which must correctly cooperate.
 \end{abstract}
@@ -160,7 +160,7 @@ The need for highly available services presents challenges for application devel
 There are two forces working in parallel with regards to the need for integration.
 First, the necessity of application integration within a company (enterprise), and second, business-to-business integration.
 There is an increasingly widespread acceptance of Service-Oriented Architectures (SOA) as a paradigm for integrating software applications within and across organizational boundaries.
-In this paradigm, independently deployed applications are exposed as (Web) services which are then 
+In this paradigm, independently deployed applications are exposed as Web Services which are then 
 interconnected using a stack of standards, which depicted in Figure~\ref{fig:soa-stack}. 
 		
 		\begin{figure}[ht]
@@ -173,7 +173,7 @@ interconnected using a stack of standards, which depicted in Figure~\ref{fig:soa
 		\end{centering}
 		\end{figure}
 		
-However there remain open challenges when it comes to managing service interactions that go beyond simple sequences of requests and responses or involve large numbers of participants (multi-party communication). A need arises for new transaction implementations, more suitable for the web. One of those techniques for describing collaboration between a collection of services is a choreography model. It captures the interactions in which the participating services engage and interconnections between these interactions, including control-/data-flow dependencies. However, a choreography does not describe any internal action that occurs within a participating service. In turn, we do not have a clear idea how a global description can be executed, and, therefore, its functionality is not clear.
+However there remain open challenges when it comes to managing service interactions that go beyond simple sequences of requests and responses or involve large numbers of participants (multi-party communication). A need arises for new transaction implementations, more suitable for the Web. One of those techniques for describing collaboration between a collection of services is a choreography model. It captures the interactions in which the participating services engage and interconnections between these interactions, including control-/data-flow dependencies. However, a choreography does not describe any internal action that occurs within a participating service. In turn, we do not have a clear idea how a global description can be executed, and, therefore, its functionality is not clear.
 
 Much literature exist on the specification of systems that describe serives from the local viewpoint~\cite{cs-processes,alg-seq-processes}. In addition there is no special concept of the participants of communication. It is especially essential in complex interactions that take place today: 
 
@@ -183,7 +183,7 @@ Much literature exist on the specification of systems that describe serives from
 	\end{compactenum}
 These are the motivation under the design of WS-CDL (Web Services Choreography Description Language). However, WS-CDL working group discovers its issues that are critically exposed in \cite{ws-critical-overview}:
 \begin{compactenum}
-	\item tools to validate conformance to choreography specifications to ensure correct cooperation between web services;
+	\item tools to validate conformance to choreography specifications to ensure correct cooperation between Web Services;
 	\item design time validation and verification of choreographies to guarantee correctness of such properties like deadlock, livelock e.g. behaviour of participants conforms to the choreography interface.
 \end{compactenum}
 Aforementioned challenges can be tackled under a strong theoretical foundations. Fortunately, successful attempts has already made by F. Montesi, M. Carbone who developed Chor programming language \cite{chor-lang,carbone2013deadlock} based on sessions and theory of trace sets~\cite{chor-essence}, and N. Yoshida, K. Honda developed Session-Java language \cite{sj-lang}, based on session types \cite{session-types-sessions,carbone2007structured}.
@@ -234,7 +234,7 @@ $T$ & $::=T.T$ & Sequencing \\ \hline
 & @$p$ & Protocol reference. \\ \hline
 \end{longtable}
 
-The session type shows how a session should be designed in terms of actions that the participant should perform. The key point is that the implementation of a session is governed by associated protocol: the SJ compiler (Polyglot\footnote{Extensible compile framework available at \url{http://www.cs.cornell.edu/Projects/polyglot/}}). It can be clearly seen from the Table \ref{tab:prot-spec}, that SJ has enough constructs to describe diverse range of complex interactions: message passing, conditional and repeated expressions. Its worth noting, that each session type element has its dual element, because there is a requirement that two parties implement compatible protocol such as the specification of one party has dual relation to another party.
+The session type shows how a session should be designed in terms of actions that the participant should perform. The key point is that the implementation of a session is governed by associated protocol: the SJ compiler (Polyglot\footnote{\url{http://www.cs.cornell.edu/Projects/polyglot/}. Extensible compile framework.}). It can be clearly seen from the Table \ref{tab:prot-spec}, that SJ has enough constructs to describe diverse range of complex interactions: message passing, conditional and repeated expressions. Its worth noting, that each session type element has its dual element, because there is a requirement that two parties implement compatible protocol such as the specification of one party has dual relation to another party.
 
 \subsection{Higher Order Communication}
 In order to describe richer behaviour, SJ has a feature of subtyping. It means that message types can themselves be session types. It also enhances the agility of the type system by allowing the participants in a session to follow different protocols which are compatible \cite{higher-order-comm}. Such communication can be expressed by the following dual constructs:
@@ -291,7 +291,7 @@ SJSocket s2 = s1.receive()
 \section{Business case studies}
 \label{sect:impl}
 
-V3na.com is an e-commerce web portal that sells SaaS applications for business needs. V3na has developed on Django framework (Python)\footnote{ Django is a high-level python web framework that encourages rapid development and clean. Further information: \url{https://www.djangoproject.com/}}. The persistence layer is based on MongoDB and Memcached. One of the challenging task was to automate the process of SaaS integration. By integration we understand the following processes with a particular SaaS application:
+V3na.com is an e-commerce Web portal that sells SaaS applications for business needs. V3na has developed on Django framework (Python)\footnote{ Django is a high-level Python Web framework that encourages rapid development and clean. Further information: \url{https://www.djangoproject.com/}}. The persistence layer is based on MongoDB and Memcached. One of the challenging task was to automate the process of SaaS integration. By integration we understand the following processes with a particular SaaS application:
 
 \begin{compactitem}
 \item  connection: SaaS user can connect SaaS for trial period by simply clicking on the button;

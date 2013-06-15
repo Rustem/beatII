@@ -156,7 +156,7 @@ morekeywords={*,...}            % if you want to add more keywords to the set
 \label{sect:introduction}
 
 %The growing needs for information availability and accessibility present new challenges for application development.
-The need for highly available services present challenges for application development.
+The need for highly available services presents challenges for application development.
 There are two forces working in parallel with regards to the need for integration.
 First, the necessity of application integration within a company (enterprise), and second, business-to-business integration.
 There is an increasingly widespread acceptance of Service-Oriented Architectures (SOA) as a paradigm for integrating software applications within and across organizational boundaries.
@@ -234,7 +234,7 @@ $T$ & $::=T.T$ & Sequencing \\ \hline
 & @$p$ & Protocol reference. \\ \hline
 \end{longtable}
 
-The session type shows how a session should be designed in terms of actions that the participant should perform. The key point is that the implementation of a session is governed by associated protocol: the SJ compiler (Polyglot\footnote{Extensible compile framework available at \url{http://www.cs.cornell.edu/Projects/polyglot/}}). It can be clearly seen from the Table \ref{tab:prot-spec}, that SJ has enough constructs to describe diverse range of complex interactions: message passing, conditional and repeated expressions. Its worth noting, that each session type element has its dual element, because there is a requirement that two parties implement compatible protocol such as the specification of one party has dual relation to another party.
+The session type shows how a session should be designed in terms of actions that the participant should perform. The key point is that the implementation of a session is governed by associated protocol: the SJ compiler (Polyglot\footnote{\url{http://www.cs.cornell.edu/Projects/polyglot/}. Extensible compile framework.}). It can be clearly seen from the Table \ref{tab:prot-spec}, that SJ has enough constructs to describe diverse range of complex interactions: message passing, conditional and repeated expressions. Its worth noting, that each session type element has its dual element, because there is a requirement that two parties implement compatible protocol such as the specification of one party has dual relation to another party.
 
 \subsection{Higher Order Communication}
 In order to describe richer behaviour, SJ has a feature of subtyping. It means that message types can themselves be session types. It also enhances the agility of the type system by allowing the participants in a session to follow different protocols which are compatible \cite{higher-order-comm}. Such communication can be expressed by the following dual constructs:
