@@ -28,6 +28,7 @@
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{amsmath}
+\usepackage{verbatim}
 \hypersetup{
     colorlinks,
     citecolor=black,
@@ -156,13 +157,19 @@ morekeywords={*,...}            % if you want to add more keywords to the set
 \label{sect:introduction}
 
 %The growing needs for information availability and accessibility present new challenges for application development.
-The need for highly available services presents challenges for application development.
-There are two forces working in parallel with regards to the need for integration.
-First, the necessity of application integration within a company (enterprise), and second, business-to-business integration.
-There is an increasingly widespread acceptance of Service-Oriented Architectures (SOA) as a paradigm for integrating software applications within and across organizational boundaries.
+The need for distributed highly available services presents challenges for application development.
+%Two forces working in parallel with regards to the need for integration.
+It is necessary for applications to be integrated both within an enterprise, and between businesses.
+Service-Oriented Architectures (SOA) are widely acepted as a paradigm for integrating software applications within and across organizational boundaries.
 In this paradigm, independently deployed applications are exposed as Web Services which are then 
-interconnected using a stack of standards, which depicted in Figure~\ref{fig:soa-stack}. 
+interconnected using a stack of standards (depicted in Figure~\ref{fig:soa-stack}). 
 		
+There remain open challenges when it comes to managing service interactions that go beyond simple sequences of requests and responses or involve large numbers of participants (multi-party communication). A need arises for new transaction implementations, more suitable for the Web.
+One technique for describing collaboration between a collection of services is a choreography model.
+Choreographies capture the interactions in which the participating services engage and interconnections between these interactions, including control-/data-flow dependencies.
+However, a choreography does not describe internal effects within a participating service. Furthermore, a choreography does not specify how a global description can be executed.
+%, and, therefore, its functionality is not clear.
+
 		\begin{figure}[ht]
 		\begin{centering}
 		\scalebox{0.7}{
@@ -172,29 +179,36 @@ interconnected using a stack of standards, which depicted in Figure~\ref{fig:soa
 		\label{fig:soa-stack}
 		\end{centering}
 		\end{figure}
-		
-However there remain open challenges when it comes to managing service interactions that go beyond simple sequences of requests and responses or involve large numbers of participants (multi-party communication). A need arises for new transaction implementations, more suitable for the Web. One of those techniques for describing collaboration between a collection of services is a choreography model. It captures the interactions in which the participating services engage and interconnections between these interactions, including control-/data-flow dependencies. However, a choreography does not describe any internal action that occurs within a participating service. In turn, we do not have a clear idea how a global description can be executed, and, therefore, its functionality is not clear.
 
-Much literature exist on the specification of systems that describe serives from the local viewpoint~\cite{cs-processes,alg-seq-processes}. In addition there is no special concept of the participants of communication. It is especially essential in complex interactions that take place today: 
+Much literature exist on the specification of systems that describe serives from the local viewpoint~\cite{cs-processes,alg-seq-processes}.
+The concept of a participant in a communication is essential in complex interactions. Applications include business transactions with short life span, operating in closely coupled context (e.g.\ the online stock exchange (ForEX), and e-commerce services based on the Buyer-Seller-Shipper (BSH) protocol). In the closely coupled setting, the SOA standards may incurr a significant performance overhead.
+Highly available services are likely to have a long life span that may result in deadlock.
+%In addition there is no special concept of the participants of communication. 
 
+\begin{comment}
 	\begin{compactenum}
 	   \item business transactions with short life span, operating in closely coupled context, where SOA standards may become a trap (online stock exchange(ForEX), services based on BSH protocol\footnote{Buyer-Seller-Shipper protocol} such as e-commerce services);
 	   \item applications with a long life span that may result in deadlock.
 	\end{compactenum}
-These are the motivation under the design of WS-CDL (Web Services Choreography Description Language). However, WS-CDL working group discovers its issues that are critically exposed in \cite{ws-critical-overview}:
+\end{comment}
+
+Such challenges motivated the design of Web Services Choreography Description Language (WS-CDL)~\cite{session-types-sessions}. The WS-CDL working group identified critical issues~\cite{ws-critical-overview} including:
 \begin{compactenum}
-	\item tools to validate conformance to choreography specifications to ensure correct cooperation between Web Services;
+	\item the need for tools to validate conformance to choreography specifications to ensure correct cooperation between Web Services;
 	\item design time validation and verification of choreographies to guarantee correctness of such properties like deadlock, livelock e.g. behaviour of participants conforms to the choreography interface.
 \end{compactenum}
-Aforementioned challenges can be tackled under a strong theoretical foundations. Fortunately, successful attempts has already made by F. Montesi, M. Carbone who developed Chor programming language \cite{chor-lang,carbone2013deadlock} based on sessions and theory of trace sets~\cite{chor-essence}, and N. Yoshida, K. Honda developed Session-Java language \cite{sj-lang}, based on session types \cite{session-types-sessions,carbone2007structured}.
 
-In this paper we will demonstrate a method of controlling process interactions represented by sessions. The formal theory based on session types ensures communication safety by verifying that session implementations of each engaged participant conform to the defined protocol specification. In order to prove the feasibility of this theory we utilized Session-Java, an extension to Java language. It works by specifying the intended process transaction protocol using session types and implementing the interaction using session operations.
+The aforementioned challenges can be tackled by adoping a solid foundataional model. Successful approaches based on session types~\cite{session-types-sessions,carbone2007structured} include: the Chor and Jolie programming language of Carbone and Montesi~\cite{chor-lang,carbone2013deadlock} based on sessions and trace sets~\cite{chor-essence}; Session-Java~\cite{sj-lang}, Scribble~\cite{honda2011scribbling} and Session C~\cite{ng2012multiparty} due to Honda and Yoshida; Sing\#~\cite{basu2012deciding} that extend Spec\# with choreogrphies; and UBF(B)~\cite{armstrong2002getting} for Erlang.
 
-In Section~\ref{sect:basics} we provide fundamentals of SJ syntax and features.
-Next, in Section~\ref{sect:impl}, we provide detailed explanation of business protocols used by an e-commerce Cloud provider\footnote{\url{http://v3na.com}. Cloud platform for optimizing your business performance.}. %~\cite{v3na-cloud}. Make this citation a footnote.
+In this paper, we demonstrate a method of controlling process interactions represented by sessions. The formal theory based on session types ensures communication safety by verifying that session implementations of each engaged participant conform to the defined protocol specification. In order to evaluate the feasibility of this theory we use Session-Java, an extension to Java language. Session Java works by specifying the intended process transaction protocol using session types and implementing the interaction using session operations.
+
+%Through these we are aiming to confirm the suitability of Session-Java as an implementation of business to business transactions. We want to explore the agility and robustness of the language and the scalability as scenarios vary in size but also complexity. In addition we will be looking for things such as ease of programming in SJ, any limitations, bugs or non-implementable scenarios.
+
+
+In Section~\ref{sect:basics} we provide an overview of SJ.
+In Section~\ref{sect:impl}, we provide detailed explanation of business protocols used by an e-commerce Cloud provider.
 Finally, in Section~\ref{sect:highlights} we highlight an idea to use session types in designing Intercloud~\cite{intercloud} communication protocols.
 
-Through these we are aiming to confirm the suitability of Session-Java as an implementation of business to business transactions. We want to explore the agility and robustness of the language and the scalability as scenarios vary in size but also complexity. In addition we will be looking for things such as ease of programming in SJ, any limitations, bugs or non-implementable scenarios.
 
 %------------------------------------------------------------------------------
 \section{Basics of Session-Java}
@@ -291,7 +305,9 @@ SJSocket s2 = s1.receive()
 \section{Business case studies}
 \label{sect:impl}
 
-V3na.com is an e-commerce Web portal that sells SaaS applications for business needs. V3na has developed on Django framework (Python)\footnote{ Django is a high-level Python Web framework that encourages rapid development and clean. Further information: \url{https://www.djangoproject.com/}}. The persistence layer is based on MongoDB and Memcached. One of the challenging task was to automate the process of SaaS integration. By integration we understand the following processes with a particular SaaS application:
+V3na.com\footnote{\url{http://v3na.com}. Cloud platform for optimizing your business performance.}
+is an e-commerce Web portal that sells SaaS applications for business needs. V3na has developed on Django framework --- a high-level Web framework for python. %Further information: \url{https://www.djangoproject.com/}}.
+The persistence layer is based on MongoDB and Memcached. One of the challenging task was to automate the process of SaaS integration. By integration we understand the following processes with a particular SaaS application:
 
 \begin{compactitem}
 \item  connection: SaaS user can connect SaaS for trial period by simply clicking on the button;
