@@ -30,6 +30,13 @@ Marco Carbone, Kohei Honda, Nobuko Yoshida, Robin Milner, Gary Brown, and Steve
 \newblock A theoretical basis of communication-centred concurrent programming.
 \newblock {WS-CDL} working report, W3C, 2006.
 
+\bibitem{carbone2013deadlock}
+Marco Carbone and Fabrizio Montesi.
+\newblock Deadlock-freedom-by-design: Multiparty asynchronous global
+  programming.
+\newblock In {\em Proceedings of the 40th annual ACM SIGPLAN-SIGACT symposium
+  on Principles of programming languages}, pages 263--274. ACM, 2013.
+
 \bibitem{chor-lang}
 M.~Carbone F.~Montesi.
 \newblock Chor - choreography programming language.
@@ -45,6 +52,12 @@ Raymond Hu, Nobuko Yoshida, and Kohei Honda.
 \newblock Session-based distributed programming in java.
 \newblock In {\em ECOOP 2008}, pages 516--541. Springer, 2008.
 
+\bibitem{chor-essence}
+Zongyan Qiu, Xiangpeng Zhao, Chao Cai, and Hongli Yang.
+\newblock Towards the theoretical foundation of choreography.
+\newblock In {\em Proceedings of the 16th international conference on World
+  Wide Web}, pages 973--982. ACM, 2007.
+
 \bibitem{v3na-cloud}
 Vadim V.~Kotov Rustem A.~Kamun, German~Ilyin.
 \newblock Cloud platform for optimizing your business performance.
@@ -55,10 +68,5 @@ Vadim V.~Kotov Rustem A.~Kamun, German~Ilyin.
 Malcolm~Hole Simon~Gay.
 \newblock Subtyping for session types in the pi calculus.
 \newblock {\em Journal Acta Informatica}, 42(2-3):191--225, 2005.
-
-\bibitem{chor-essence}
-X.~Zhao Z.~Qiu, C.~Cai and H.~Yang.
-\newblock {\em Exploring the essence of choreography}.
-\newblock Proceedings of the 16th international conference on WWW, 2007.
 
 \end{thebibliography}

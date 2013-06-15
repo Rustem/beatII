@@ -3,44 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: easychair.aux
 The style file: plain.bst
 Database file #1: easychair.bib
-You've used 11 entries,
+You've used 12 entries,
             2118 wiz_defined-function locations,
-            594 strings with 6434 characters,
-and the built_in function-call counts, 3692 in all, are:
-= -- 368
-> -- 169
-< -- 3
-+ -- 69
-- -- 56
-* -- 224
-:= -- 613
-add.period$ -- 37
-call.type$ -- 11
-change.case$ -- 60
+            599 strings with 6717 characters,
+and the built_in function-call counts, 4433 in all, are:
+= -- 454
+> -- 192
+< -- 5
++ -- 78
+- -- 64
+* -- 271
+:= -- 709
+add.period$ -- 42
+call.type$ -- 12
+change.case$ -- 68
 chr.to.int$ -- 0
-cite$ -- 11
-duplicate$ -- 146
-empty$ -- 297
-format.name$ -- 56
-if$ -- 791
+cite$ -- 12
+duplicate$ -- 180
+empty$ -- 357
+format.name$ -- 64
+if$ -- 970
 int.to.chr$ -- 0
-int.to.str$ -- 11
+int.to.str$ -- 12
 missing$ -- 10
-newline$ -- 59
-num.names$ -- 22
-pop$ -- 79
+newline$ -- 64
+num.names$ -- 24
+pop$ -- 88
 preamble$ -- 1
-purify$ -- 50
+purify$ -- 56
 quote$ -- 0
-skip$ -- 101
+skip$ -- 131
 stack$ -- 0
-substring$ -- 199
-swap$ -- 34
-text.length$ -- 3
+substring$ -- 268
+swap$ -- 55
+text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 40
+type$ -- 46
 warning$ -- 0
-while$ -- 36
-width$ -- 13
-write$ -- 123
+while$ -- 44
+width$ -- 14
+write$ -- 137

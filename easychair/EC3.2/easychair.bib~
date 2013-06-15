@@ -11457,7 +11457,7 @@ misc
   title={A theoretical basis of communication-centred concurrent programming},
   author={Carbone, Marco and Honda, Kohei and Yoshida, Nobuko and Milner, Robin and Brown, Gary and Ross-Talbot, Steve},
   institution = {W3C},
-  type = {WS-CDL working report},
+  type = {{WS-CDL} working report},
   year={2006}
 }
 

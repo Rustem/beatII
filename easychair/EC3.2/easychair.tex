@@ -163,8 +163,13 @@ morekeywords={*,...}            % if you want to add more keywords to the set
 \section{Introduction}
 \label{sect:introduction}
 
-The growing needs for information availability and accessibility present new challenges for application development. There are two forces working in parallel with regard to the need for integration. First, the necessity of application integration within a company (enterprise), and second, business-to-business integration. There is an increasingly widespread acceptance of Service-Oriented Architectures (SOA) as a paradigm for integrating software applications within and across organizational boundaries. In this paradigm, independently developed and operated applications are exposed as (Web) services which are then 
-interconnected using a stack of standards, which depicted in Figure \ref{fig:soa-stack}. 
+%The growing needs for information availability and accessibility present new challenges for application development.
+The need for highly available services present challenges for application development.
+There are two forces working in parallel with regards to the need for integration.
+First, the necessity of application integration within a company (enterprise), and second, business-to-business integration.
+There is an increasingly widespread acceptance of Service-Oriented Architectures (SOA) as a paradigm for integrating software applications within and across organizational boundaries.
+In this paradigm, independently deployed applications are exposed as (Web) services which are then 
+interconnected using a stack of standards, which depicted in Figure~\ref{fig:soa-stack}. 
 		
 		\begin{figure}[ht]
 		\begin{centering}
@@ -178,7 +183,7 @@ interconnected using a stack of standards, which depicted in Figure \ref{fig:soa
 		
 However there remain open challenges when it comes to managing service interactions that go beyond simple sequences of requests and responses or involve large numbers of participants (multi-party communication). A need arises for new transaction implementations, more suitable for the web. One of those techniques for describing collaboration between a collection of services is a choreography model. It captures the interactions in which the participating services engage and interconnections between these interactions, including control-/data-flow dependencies. However, a choreography does not describe any internal action that occurs within a participating service. In turn, we do not have a clear idea how a global description can be executed, and, therefore, its functionality is not clear.
 
-Massive literature exist on the specification of systems that describe them from the local viewpoint like \cite{cs-processes} or \cite{alg-seq-processes}. In addition there is no special concept of the participants of communication. It is especially essential in complex interactions that take place today: 
+Much literature exist on the specification of systems that describe serives from the local viewpoint~\cite{cs-processes,alg-seq-processes}. In addition there is no special concept of the participants of communication. It is especially essential in complex interactions that take place today: 
 
 	\begin{compactenum}
 	   \item business transactions with short life span, operating in closely coupled context, where SOA standards may become a trap (online stock exchange(ForEX), services based on BSH protocol\footnote{Buyer-Seller-Shipper protocol} such as e-commerce services);
@@ -189,11 +194,13 @@ These are the motivation under the design of WS-CDL (Web Services Choreography D
 	\item tools to validate conformance to choreography specifications to ensure correct cooperation between web services;
 	\item design time validation and verification of choreographies to guarantee correctness of such properties like deadlock, livelock e.g. behaviour of participants conforms to the choreography interface.
 \end{compactenum}
-Aforementioned challenges can be tackled under a strong theoretical foundations. Fortunately, successful attempts has already made by F. Montesi, M. Carbone who developed Chor programming language \cite{chor-lang} based on sessions and theory of trace sets \cite{chor-essence}, and N. Yoshida, K. Honda developed Session-Java language \cite{sj-lang}, based on session types \cite{session-types-sessions,carbone2007structured}.
+Aforementioned challenges can be tackled under a strong theoretical foundations. Fortunately, successful attempts has already made by F. Montesi, M. Carbone who developed Chor programming language \cite{chor-lang,carbone2013deadlock} based on sessions and theory of trace sets~\cite{chor-essence}, and N. Yoshida, K. Honda developed Session-Java language \cite{sj-lang}, based on session types \cite{session-types-sessions,carbone2007structured}.
 
 In this paper we will demonstrate a method of controlling process interactions represented by sessions. The formal theory based on session types ensures communication safety by verifying that session implementations of each engaged participant conform to the defined protocol specification. In order to prove the feasibility of this theory we utilized Session-Java, an extension to Java language. It works by specifying the intended process transaction protocol using session types and implementing the interaction using session operations.
 
-In Section \ref{sect:basics} we provide fundamentals of SJ syntax and features. Next, in Section \ref{sect:impl} we provide detailed explanation of business protocols used by an e-commerce Cloud provider \cite{v3na-cloud}. Finally, in Section \ref{sect:highlights} we highlight an idea to use session types in designing Intercloud \cite{intercloud} communication protocol.
+In Section~\ref{sect:basics} we provide fundamentals of SJ syntax and features.
+Next, in Section~\ref{sect:impl}, we provide detailed explanation of business protocols used by an e-commerce Cloud provider~\cite{v3na-cloud}. %Make this citation a footnote.
+Finally, in~Section \ref{sect:highlights} we highlight an idea to use session types in designing Intercloud~\cite{intercloud} communication protocols.
 
 Through these we are aiming to confirm the suitability of Session-Java as an implementation of business to business transactions. We want to explore the agility and robustness of the language and the scalability as scenarios vary in size but also complexity. In addition we will be looking for things such as ease of programming in SJ, any limitations, bugs or non-implementable scenarios.
 
