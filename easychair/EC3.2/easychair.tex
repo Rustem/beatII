@@ -257,14 +257,14 @@ $T$ & $::=T.T$ & Sequencing \\ \hline
 \begin{figure}
 \begin{gather*}
 \begin{array}{rlr}
-T \Coloneqq & T.T & \mbox{Sequencing} \\ 
-       \mid & begin & \mbox{Session initiation} \\
-       \mid & !<M> & \mbox{Message send} \\ 
-       \mid & ?(M) & \mbox{Message receive} \\
-       \mid & \oplus \{L_1:T_1,\dots, L_n:T_n \} & \mbox{Session branching} \\ 
-       \mid & \oplus [T]* & \mbox{Session iteration} \\ 
-       \mid & \text{rec }L[T] & \mbox{Session recursion scope} \\ 
-       \mid & \#L & \mbox{Recursive jump} \\ 
+T \Coloneqq & T\mathbin{.}T & \mbox{Sequencing} \\ 
+       \mid & \texttt{begin} & \mbox{Session initiation} \\
+       \mid & \mathopen{!}\left<M\right> & \mbox{Message send} \\ 
+       \mid & \mathopen{?}\left(M\right) & \mbox{Message receive} \\
+       \mid & \oplus \left\{L_1 \colon T_1,\dots, L_n \colon T_n \right\} & \mbox{Session branching} \\ %??Why not use the ASCII syntax, since you use it in examples.
+       \mid & \oplus \left[T\right]* & \mbox{Session iteration} \\ 
+       \mid & \texttt{rec}\,L\left[T\right] & \mbox{Session recursion scope} \\ 
+       \mid & \mathopen{\#}L & \mbox{Recursive jump} \\ 
        \mid & \mathopen{@}p & \mbox{Protocol reference} \\
 \end{array}
 \end{gather*}
@@ -277,10 +277,10 @@ The session type shows how a session should be designed in terms of actions that
 In order to describe richer behaviour, SJ has a feature of subtyping. It means that message types can themselves be session types. It also enhances the agility of the type system by allowing the participants in a session to follow different protocols which are compatible \cite{higher-order-comm}. Such communication can be expressed by the following dual constructs:
 
 \begin{equation*}
-!<?(\text{int})> \hspace{2cm} ?(?(\text{int}))
+\mathopen{!}\left<\mathopen{?}\left(\text{int}\right)\right> \hspace{2cm} \mathopen{?}\left(\mathopen{?}\left(\text{int}\right)\right)
 \end{equation*}
 
-In short, it says that we are expected to send and receive a session of type ?(int). Higher order communication, as we will convince further, is often referred to a session delegation. Figure \ref{fig:sj-delegation} shows a basic delegation scenario.
+In short, it says that we are expected to send and receive a session of type $\mathopen{?}\left(\text{int}\right)$. Higher order communication, as we will convince further, is often referred to a session delegation. Figure \ref{fig:sj-delegation} shows a basic delegation scenario.
 
 \begin{figure}[ht]
 \centering
@@ -289,7 +289,7 @@ In short, it says that we are expected to send and receive a session of type ?(i
 \caption{Session delegation}\label{fig:sj-delegation}
 \end{figure}
 
-The left part illustrates the session configuration before the delegation is performed: User engaged in a session $s$ of type $!<$int$>$ with V3na (Cloud), while Cloud is also involved in a session $s'$ with SaaS of type $!<?($int$)>$. So, instead of accepting the integer from User himself, Cloud delegates his role in $s$ to SaaS, so that he will receive this message. This delegation action corresponds to higher-order send type for the session $s'$ between Cloud and SaaS. The right part of figure illustrates the change in session configuration after the delegation has been performed: User now directly interacting with SaaS for the session $s$.
+The left part illustrates the session configuration before the delegation is performed: User engaged in a session $s$ of type $\mathopen{!}\left<\text{int}\right>$ with V3na (Cloud), while Cloud is also involved in a session $s'$ with SaaS of type $\mathopen{!}\left<\mathopen{?}\left(\text{int}\right)\right>$. So, instead of accepting the integer from User himself, Cloud delegates his role in $s$ to SaaS, so that he will receive this message. This delegation action corresponds to higher-order send type for the session $s'$ between Cloud and SaaS. The right part of figure illustrates the change in session configuration after the delegation has been performed: User now directly interacting with SaaS for the session $s$.
 
 \subsection{Protocol Implementation using Session}
 \paragraph{Another meaning for sockets}
@@ -300,15 +300,15 @@ After creating a protocol (session type) and encapsulating the session into SJ s
 
 \begin{longtable}{|p{0.4\textwidth}|p{0.4\textwidth}|}
 \caption{Session operations specification}\label{tab:session-ops}\\ \hline
-s.request() & begin \\ \hline 
-s.send(m) & $!<M>$ \\ \hline
-s.receive() & $?(M)$ \\ \hline
-s.outbranch(L) \{P\} & $!\{L:T\}$ \\ \hline
-s.inbranch() \{case L1: {P1}\dots case Ln:{Pn}\} & $?\{L_1:T_1,\dots, L_n:T_n\}$ \\ \hline
-s.outwhile(cond) \{P\} & $[T]*$ \\ \hline
-s.inwhile() \{P\} & $?[T]*$ \\ \hline
-s.recursion(L) \{P\} & rec $L[T]$ \\ \hline
-s.recurse(L) & $\#L$ \\ \hline
+s.request() & \texttt{begin} \\ \hline 
+s.send(m) & $\mathopen{!}\left<M\right>$ \\ \hline
+s.receive() & $\mathopen{?}\left(M\right)$ \\ \hline
+s.outbranch(L) \{P\} & $\mathopen{!}\left\{L\colon T\right\}$ \\ \hline
+s.inbranch() \{case L1: {P1}\dots case Ln:{Pn}\} & $\mathopen{?}\left\{L_1\colon T_1,\dots, L_n\colon T_n\right\}$ \\ \hline
+s.outwhile(cond) \{P\} & $\left[T\right]*$ \\ \hline
+s.inwhile() \{P\} & $\mathopen{?}\left[T\right]*$ \\ \hline
+s.recursion(L) \{P\} & $\texttt{rec}\,L\left[T\right]$ \\ \hline
+s.recurse(L) & $\mathopen{\#}L$ \\ \hline
 \end{longtable}
 
 The session operations are invoked via session in a method call-like manner. To delegate a session, the session socket variable must be passed to a send operation on the target session.
