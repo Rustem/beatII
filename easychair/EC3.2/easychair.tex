@@ -27,8 +27,12 @@
 \usepackage{algpseudocode}
 \usepackage{hyperref}
 \usepackage{graphicx}
+\usepackage{mathtools}
+\usepackage{amsfonts}
+\usepackage{stmaryrd}
 \usepackage{amsmath}
 \usepackage{verbatim}
+\usepackage{txfonts}
 \hypersetup{
     colorlinks,
     citecolor=black,
@@ -160,7 +164,7 @@ morekeywords={*,...}            % if you want to add more keywords to the set
 The need for distributed highly available services presents challenges for application development.
 %Two forces working in parallel with regards to the need for integration.
 It is necessary for applications to be integrated both within an enterprise, and between businesses.
-Service-Oriented Architectures (SOA) are widely acepted as a paradigm for integrating software applications within and across organizational boundaries.
+Service-Oriented Architectures (SOA) are widely accepted as a paradigm for integrating software applications within and across organizational boundaries.
 In this paradigm, independently deployed applications are exposed as Web Services which are then 
 interconnected using a stack of standards (depicted in Figure~\ref{fig:soa-stack}). 
 		
@@ -180,8 +184,8 @@ However, a choreography does not describe internal effects within a participatin
 		\end{centering}
 		\end{figure}
 
-Much literature exist on the specification of systems that describe serives from the local viewpoint~\cite{cs-processes,alg-seq-processes}.
-The concept of a participant in a communication is essential in complex interactions. Applications include business transactions with short life span, operating in closely coupled context (e.g.\ the online stock exchange (ForEX), and e-commerce services based on the Buyer-Seller-Shipper (BSH) protocol). In the closely coupled setting, the SOA standards may incurr a significant performance overhead.
+Much literature exist on the specification of systems that describe services from the local viewpoint~\cite{cs-processes,alg-seq-processes}.
+The concept of a participant in a communication is essential in complex interactions. Applications include business transactions with short life span, operating in closely coupled context (e.g.\ the online stock exchange (ForEX), and e-commerce services based on Buyer-Seller-Shipper (BSH) protocols). Although, in closely coupled settings, the SOA standards may incur a significant performance overhead.
 Highly available services are likely to have a long life span that may result in deadlock.
 %In addition there is no special concept of the participants of communication. 
 
@@ -195,10 +199,10 @@ Highly available services are likely to have a long life span that may result in
 Such challenges motivated the design of Web Services Choreography Description Language (WS-CDL)~\cite{session-types-sessions}. The WS-CDL working group identified critical issues~\cite{ws-critical-overview} including:
 \begin{compactenum}
 	\item the need for tools to validate conformance to choreography specifications to ensure correct cooperation between Web Services;
-	\item design time validation and verification of choreographies to guarantee correctness of such properties like deadlock, livelock e.g. behaviour of participants conforms to the choreography interface.
+	\item design time validation and verification of choreographies to guarantee correctness of such properties like deadlock, livelock e.g.\ behaviour of participants conforms to the choreography interface.
 \end{compactenum}
 
-The aforementioned challenges can be tackled by adoping a solid foundataional model. Successful approaches based on session types~\cite{session-types-sessions,carbone2007structured} include: the Chor and Jolie programming language of Carbone and Montesi~\cite{chor-lang,carbone2013deadlock} based on sessions and trace sets~\cite{chor-essence}; Session-Java~\cite{sj-lang}, Scribble~\cite{honda2011scribbling} and Session C~\cite{ng2012multiparty} due to Honda and Yoshida; Sing\#~\cite{basu2012deciding} that extend Spec\# with choreogrphies; and UBF(B)~\cite{armstrong2002getting} for Erlang.
+The aforementioned challenges can be tackled by adopting a solid foundational model. Successful approaches based on session types~\cite{session-types-sessions,carbone2007structured} include: the Chor and Jolie programming languages of Carbone and Montesi~\cite{chor-lang,carbone2013deadlock} based on sessions and trace sets~\cite{chor-essence}; Session-Java~\cite{sj-lang}, Scribble~\cite{honda2011scribbling} and Session C~\cite{ng2012multiparty} due to Honda and Yoshida; Sing\#~\cite{basu2012deciding} that extend Spec\# with choreogrphies; and UBF(B)~\cite{armstrong2002getting} for Erlang.
 
 In this paper, we demonstrate a method of controlling process interactions represented by sessions. The formal theory based on session types ensures communication safety by verifying that session implementations of each engaged participant conform to the defined protocol specification. In order to evaluate the feasibility of this theory we use Session-Java, an extension to Java language. Session Java works by specifying the intended process transaction protocol using session types and implementing the interaction using session operations.
 
@@ -214,13 +218,13 @@ Finally, in Section~\ref{sect:highlights}, we highlight how session types can im
 \section{Basics of Session-Java}
 \label{sect:basics}
 
-Session programming begins from the protocols specification for interaction (using session types), which can then be concretely implemented using a set of structured communication operations available on session sockets. Session programming is applicable for applications where the parties or components cooperate according to specified protocols: session types are formal specifications of such protocols. Session types describe structured sequences of interaction including basic message passing, branching, branching and repetition. A session is an instance of a session type, i.e. the unit of interaction encapsulating one run of a protocol. From the perspective of abstraction, each session, is conducted on a separate channel. 
+Session programming begins from the protocols specification for interaction (using session types), which can then be concretely implemented using structured communication operations available on session sockets. Session programming is applicable for applications where the parties or components cooperate according to specified protocols: session types are formal specifications of such protocols. Session types describe structured sequences of interaction including basic message passing, branching and recursion. A session is an instance of a session type, i.e.\ the unit of interaction encapsulating one run of a protocol. From the perspective of abstraction, each session, is conducted on a separate channel. 
 
 Session programming in SJ consists of the following ordered actions:
 
 \begin{compactenum}
   \item design specification (protocol) of target communication;
-  \item mapping protocols into the programs for each participant. For instance, in BSH protocol, we can distinguish three main participants whose actions (processes) are mapped to corresponding programs (software component);
+  \item mapping protocols into the programs for each participant. For instance, in BSH protocols, we can distinguish three main participants whose actions (processes) are mapped to corresponding programs (software component);
   \item By utilizing session programming constructs, implementing the protocol, where each operation is performed as method call;
   \item verification of sessions fulfilment by  compiler;
   \item execution and system testing.
@@ -232,8 +236,9 @@ Session programming begins by declaring the protocol for the intended cooperatio
 \begin{equation*}
 \text{protocol name \{\dots\}}
 \end{equation*}
-where name identifies the protocol, following the standard Java naming rules. The body of the protocol is \textit{session type}, given by the syntax rules in Table \ref{tab:prot-spec}, below.
+where name identifies the protocol, following the standard Java naming rules. The body of the protocol defines a \textit{session type}, according to the grammar in Figure~\ref{tab:prot-spec}.
 
+\begin{comment}
 \begin{longtable}{|p{0.15\textwidth}|p{0.3\textwidth}|p{0.3\textwidth}|}
 \caption{SJ protocol specification}\label{tab:prot-spec} \\
 \hline
@@ -247,8 +252,26 @@ $T$ & $::=T.T$ & Sequencing \\ \hline
 & \#$L$ & Recursive jump. \\ \hline
 & @$p$ & Protocol reference. \\ \hline
 \end{longtable}
+\end{comment}
 
-The session type shows how a session should be designed in terms of actions that the participant should perform. The key point is that the implementation of a session is governed by associated protocol: the SJ compiler (Polyglot\footnote{\url{http://www.cs.cornell.edu/Projects/polyglot/}. Extensible compile framework.}). It can be clearly seen from the Table \ref{tab:prot-spec}, that SJ has enough constructs to describe diverse range of complex interactions: message passing, conditional and repeated expressions. Its worth noting, that each session type element has its dual element, because there is a requirement that two parties implement compatible protocol such as the specification of one party has dual relation to another party.
+\begin{figure}
+\begin{gather*}
+\begin{array}{rlr}
+T \Coloneqq & T.T & \mbox{Sequencing} \\ 
+       \mid & begin & \mbox{Session initiation} \\
+       \mid & !<M> & \mbox{Message send} \\ 
+       \mid & ?(M) & \mbox{Message receive} \\
+       \mid & \oplus \{L_1:T_1,\dots, L_n:T_n \} & \mbox{Session branching} \\ 
+       \mid & \oplus [T]* & \mbox{Session iteration} \\ 
+       \mid & \text{rec }L[T] & \mbox{Session recursion scope} \\ 
+       \mid & \#L & \mbox{Recursive jump} \\ 
+       \mid & \mathopen{@}p & \mbox{Protocol reference} \\
+\end{array}
+\end{gather*}
+\caption{SJ protocol specification}\label{tab:prot-spec} 
+\end{figure}
+
+The session type shows how a session should be designed in terms of actions that the participant should perform. The key point is that the implementation of a session is governed by associated protocol: the SJ compiler (Polyglot\footnote{\url{http://www.cs.cornell.edu/Projects/polyglot/}. Extensible compile framework.}). It can be clearly seen from the Table \ref{tab:prot-spec}, that SJ has enough constructs to describe a diverse range of complex interactions: message passing, conditional and repeated expressions. Its worth noting, that each session type element has its dual element, because there is a requirement that two parties implement compatible protocol such as the specification of one party has dual relation to another party.
 
 \subsection{Higher Order Communication}
 In order to describe richer behaviour, SJ has a feature of subtyping. It means that message types can themselves be session types. It also enhances the agility of the type system by allowing the participants in a session to follow different protocols which are compatible \cite{higher-order-comm}. Such communication can be expressed by the following dual constructs:
