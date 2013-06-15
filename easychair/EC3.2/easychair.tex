@@ -8,7 +8,7 @@
 % the former being the default if omitted as in the example
 % below.
 %
-\documentclass{easychair}
+\documentclass[a4paper]{easychair}
 %\documentclass[debug]{easychair}
 %\documentclass[verbose]{easychair}
 %\documentclass[notimes]{easychair}
@@ -19,6 +19,7 @@
 % This provides the \BibTeX macro
 \usepackage{doc}
 \usepackage{makeidx}
+\usepackage{fancyvrb}
 \usepackage{listings}
 \usepackage{longtable}
 \usepackage{paralist}
@@ -31,6 +32,41 @@
     filecolor=blue,
     linkcolor=black,
     urlcolor=blue
+}
+
+% Let's style the code!
+% Set-up code visualisation
+\lstset{fancyvrb=true}
+\lstset{
+language=java,                % the language of the code
+basicstyle=\footnotesize,       % the size of the fonts that are used for the code
+numbers=left,                   % where to put the line-numbers
+numberstyle=\footnotesize,      % the size of the fonts that are used for the line-numbers
+stepnumber=1,                   % the step between two line-numbers. If it's 1, each line 
+                                % will be numbered
+numbersep=5pt,                  % how far the line-numbers are from the code
+keywordstyle=\color{blue},
+commentstyle=\color{green},
+stringstyle=\color{red},
+backgroundcolor=\color{white},  % choose the background color. You must add \usepackage{color}
+showspaces=false,               % show spaces adding particular underscores
+showstringspaces=false,         % underline spaces within strings
+showtabs=false,                 % show tabs within strings adding particular underscores
+frame=single,                   % adds a frame around the code
+tabsize=2,                      % sets default tabsize to 2 spaces
+captionpos=t,                   % sets the caption-position to bottom
+breaklines=true,                % sets automatic line breaking
+breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+%title=\lstname,                 % show the filename of files included with \lstinputlisting;
+                                % also try caption instead of title
+escapeinside={\%*}{*)},         % if you want to add a comment within your code
+morekeywords={*,...}            % if you want to add more keywords to the set
+}
+\lstset {
+    keywordstyle=\color[rgb]{0,0,1},          % keywords in blue
+    commentstyle=\mcommentfont,               % comments
+    stringstyle=\color[rgb]{.627,.126,.941},  % strings in purple
+    commentstyle=\color[rgb]{.133,.545,.133}
 }
 
 % In order to save space or manage large tables or figures in a
@@ -125,6 +161,7 @@
 %------------------------------------------------------------------------------
 \section{Introduction}
 \label{sect:introduction}
+
 \begin{figure}[tb]
 	\begin{centering}
 	\includegraphics[width=0.5\textwidth]{logoEC}
@@ -132,8 +169,10 @@
 	\label{fig:easychair-logo}
 	\end{centering}
 \end{figure}
+
 The growing needs for information availability and accessibility present new challenges for application development. There are two forces working in parallel with regard to the need for integration. First, the necessity of application integration within a company (enterprise), and second, business-to-business integration. There is an increasingly widespread acceptance of Service-Oriented Architectures (SOA) as a paradigm for integrating software applications within and across organizational boundaries. In this paradigm, independently developed and operated applications are exposed as (Web) services which are then 
 interconnected using a stack of standards, which depicted in Figure \ref{fig:soa-stack}. 
+		
 		\begin{figure}[ht]
 		\begin{centering}
 		\scalebox{0.7}{
@@ -142,9 +181,11 @@ interconnected using a stack of standards, which depicted in Figure \ref{fig:soa
 		\label{fig:soa-stack}
 		\end{centering}
 		\end{figure}
+		
 However there remain open challenges when it comes to managing service interactions that go beyond simple sequences of requests and responses or involve large numbers of participants (multi-party communication). A need arises for new transaction implementations, more suitable for the web. One of those techniques for describing collaboration between a collection of services is a choreography model. It captures the interactions in which the participating services engage and interconnections between these interactions, including control-/data-flow dependencies. However, a choreography does not describe any internal action that occurs within a participating service. In turn, we do not have a clear idea how a global description can be executed, and, therefore, its functionality is not clear.
 
 Massive literature exist on the specification of systems that describe them from the local viewpoint like \cite{cs-processes} or \cite{alg-seq-processes}. In addition there is no special concept of the participants of communication. It is especially essential in complex interactions that take place today: 
+
 	\begin{compactenum}
 	   \item business transactions with short life span, operating in closely coupled context, where SOA standards may become a trap (online stock exchange(ForEX), services based on BSH protocol\footnote{Buyer-Seller-Shipper protocol} such as e-commerce services);
 	   \item applications with a long life span that may result in deadlock.
@@ -154,6 +195,7 @@ These are the motivation under the design of WS-CDL (Web Services Choreography D
 	\item tools to validate conformance to choreography specifications to ensure correct cooperation between web services;
 	\item design time validation and verification of choreographies to guarantee correctness of such properties like deadlock, livelock e.g. behaviour of participants conforms to the choreography interface.
 \end{compactenum}
+
 Aforementioned challenges can be tackled under a strong theoretical foundations. Fortunately, successful attempts has already made by F. Montesi, M. Carbone who developed Chor programming language \cite{chor-lang} based on sessions and theory of trace sets \cite{chor-essence}, and N. Yoshida, K. Honda developed Session-Java language \cite{sj-lang}, based on session types \cite{session-types-sessions}.
 
 In this paper we will demonstrate a method of controlling process interactions represented by sessions. The formal theory based on session types ensures communication safety by verifying that session implementations of each engaged participant conform to the defined protocol specification. In order to prove the feasibility of this theory we utilized Session-Java, an extension to Java language. It works by specifying the intended process transaction protocol using session types and implementing the interaction using session operations.
@@ -165,9 +207,11 @@ Through these we are aiming to confirm the suitability of Session-Java as an imp
 %------------------------------------------------------------------------------
 \section{Basics of Session-Java}
 \label{sect:basics}
+
 Session programming begins from the protocols specification for interaction (using session types), which can then be concretely implemented using a set of structured communication operations available on session sockets. Session programming is applicable for applications where the parties or components cooperate according to specified protocols: session types are formal specifications of such protocols. Session types describe structured sequences of interaction including basic message passing, branching, branching and repetition. A session is an instance of a session type, i.e. the unit of interaction encapsulating one run of a protocol. From the perspective of abstraction, each session, is conducted on a separate channel. 
 
 Session programming in SJ consists of the following ordered actions:
+
 \begin{compactenum}
   \item design specification (protocol) of target communication;
   \item mapping protocols into the programs for each participant. For instance, in BSH protocol, we can distinguish three main participants whose actions (processes) are mapped to corresponding programs (software component);
@@ -183,6 +227,7 @@ Session programming begins by declaring the protocol for the intended cooperatio
 \text{protocol name \{\dots\}}
 \end{equation*}
 where name identifies the protocol, following the standard Java naming rules. The body of the protocol is \textit{session type}, given by the syntax rules in Table \ref{tab:prot-spec}, below.
+
 \begin{longtable}{|p{0.15\textwidth}|p{0.3\textwidth}|p{0.3\textwidth}|}
 \caption{SJ protocol specification}\label{tab:prot-spec} \\
 \hline
@@ -196,27 +241,34 @@ $T$ & $::=T.T$ & Sequencing \\ \hline
 & \#$L$ & Recursive jump. \\ \hline
 & @$p$ & Protocol reference. \\ \hline
 \end{longtable}
+
 The session type shows how a session should be designed in terms of actions that the participant should perform. The key point is that the implementation of a session is governed by associated protocol: the SJ compiler (Polyglot\footnote{Extensible compile framework available at \url{http://www.cs.cornell.edu/Projects/polyglot/}}). It can be clearly seen from the Table \ref{tab:prot-spec}, that SJ has enough constructs to describe diverse range of complex interactions: message passing, conditional and repeated expressions. Its worth noting, that each session type element has its dual element, because there is a requirement that two parties implement compatible protocol such as the specification of one party has dual relation to another party.
 
 \subsection{Higher Order Communication}
 In order to describe richer behaviour, SJ has a feature of subtyping. It means that message types can themselves be session types. It also enhances the agility of the type system by allowing the participants in a session to follow different protocols which are compatible \cite{higher-order-comm}. Such communication can be expressed by the following dual constructs:
+
 \begin{equation*}
 !<?(\text{int})> \hspace{2cm} ?(?(\text{int}))
 \end{equation*}
+
 In short, it says that we are expected to send and receive a session of type ?(int). Higher order communication, as we will convince further, is often referred to a session delegation. Figure \ref{fig:sj-delegation} shows a basic delegation scenario.
+
 \begin{figure}[ht]
 \centering
 \scalebox{0.7}{
 \includegraphics[width=0.8\textwidth]{sj-delegation.png}}
 \caption{Session delegation}\label{fig:sj-delegation}
 \end{figure}
+
 The left part illustrates the session configuration before the delegation is performed: User engaged in a session $s$ of type $!<$int$>$ with V3na (Cloud), while Cloud is also involved in a session $s'$ with SaaS of type $!<?($int$)>$. So, instead of accepting the integer from User himself, Cloud delegates his role in $s$ to SaaS, so that he will receive this message. This delegation action corresponds to higher-order send type for the session $s'$ between Cloud and SaaS. The right part of figure illustrates the change in session configuration after the delegation has been performed: User now directly interacting with SaaS for the session $s$.
 
 \subsection{Protocol Implementation using Session}
 \paragraph{Another meaning for sockets}
 Session sockets are implementing the actual session code according to the specified session type (protocol). They are represent the endpoints (participants) of a session connection: each of the parties owns one endpoint and performs the specified interactions via the SJ session operations on that endpoint. In SJ session sockets are objects that extend the abstract \textit{SJSocket} class. \textit{SJRSocket::SJSocket} and \textit{SJFSocket::SJSocket}, both, employ TCP as underlying transport. SJ is distinguishing session client and server sockets, where the former are used to request sessions from the latter.
+
 \paragraph{Session operations}
 After creating a protocol (session type) and encapsulating the session into SJ socket, it can be implemented within a session-try scope using the session operations depicted in Table \ref{tab:session-ops}.
+
 \begin{longtable}{|p{0.4\textwidth}|p{0.4\textwidth}|}
 \caption{Session operations specification}\label{tab:session-ops}\\ \hline
 s.request() & begin \\ \hline 
@@ -235,6 +287,8 @@ The session operations are invoked via session in a method call-like manner. To 
 \begin{lstlisting}
 s1.send(s2) // !<T>, where T is the remaining session type of 's2'
 \end{lstlisting}
+
+
 Only active session sockets can be delegated. The receive operation receives delegated sessions:
 
 \begin{lstlisting}
@@ -244,6 +298,7 @@ SJSocket s2 = s1.receive()
 %------------------------------------------------------------------------------
 \section{Business case studies}
 \label{sect:impl}
+
 V3na.com is an e-commerce web portal that sells SaaS applications for business needs. V3na has developed on Django framework (Python)\footnote{ Django is a high-level python web framework that encourages rapid development and clean. Further information: \url{https://www.djangoproject.com/}}. The persistence layer is based on MongoDB and Memcached. One of the challenging task was to automate the process of SaaS integration. By integration we understand the following processes with a particular SaaS application:
 
 \begin{compactitem}
@@ -273,11 +328,12 @@ Full source  code is available at \url{https://github.com/Rustem/Master-thesis}.
 
 \textit{Protocols.} The decision in the protocol will be incorporated through the use of outbranch. So the whole scenario is presented on Table \ref{tab:protocols-sc1}.
 
-{\lstset{
+{
+\lstset{
 framerule=0pt,
 numbers=none
 }
-\begin{longtable}{|p{0.25\textwidth}|p{0.25\textwidth}|p{0.25\textwidth}|}
+\begin{longtable}{|p{0.3\textwidth}|p{0.3\textwidth}|p{0.3\textwidth}|}
 \caption{Protocols of scenario \# 1}
 \label{tab:protocols-sc1} \\ \hline
 User & Cloud (V3na) & SaaS \\ \hline
@@ -346,14 +402,15 @@ New scenario is a bit harder in complexity. We are going to utilize looping cons
 
 \item  SaaS continues interaction with user by session s. By steps of validation-verification, SaaS either responds User to proceed interaction by branch OK or FAIL. In both cases User receives from SaaS directly the reason and status of his request. Session s is terminated.
 \end{compactenum}
-\paragraph{Protocols.} First of all, the protocol provided with iterations using $![\dots]*$ $?[\dots]*$. Then protocol introduces higher order operations of type $!<T>\ \ ?<T>$. Full description is provided in tables \ref{tab:user-cloud-protocols} and \ref{tab:cloud-saas-providers}.
+
+\paragraph{Protocols.} First of all, the protocol provided with iterations using $![\dots]*$ $?[\dots]*$. Then protocol introduces higher order operations of type $!<T>\ \ ?<T>$. Full description is provided in tables \ref{tab:user-cloud-protocol} and \ref{tab:cloud-saas-providers}.
 
 {
 \lstset{
 framerule=0pt,
 numbers=none
 }
-\begin{longtable}{|p{0.4\textwidth}|p{0.4\textwidth}|}
+\begin{longtable}{|p{0.45\textwidth}|p{0.45\textwidth}|}
 \caption{User-Cloud protocols}\label{tab:user-cloud-protocol} \\ \hline
 User & Cloud \\ \hline \endhead
 \begin{lstlisting}
@@ -388,12 +445,13 @@ private protocol p_vu {
 }
 
 
+
 {
 \lstset{
 framerule=0pt,
 numbers=none
 }
-\begin{longtable}{|p{0.4\textwidth}|p{0.4\textwidth}|}
+\begin{longtable}{|p{0.45\textwidth}|p{0.45\textwidth}|}
 \caption{Cloud-SaaS protocols}\label{tab:cloud-saas-providers} \\ \hline
 Cloud & Saas \\ \hline \endhead
 \begin{lstlisting}
@@ -425,13 +483,12 @@ protocol p_sv {
 Unlike the previous protocol, the Cloud-Saas protocol significantly altered, also authentication process is added to the protocol in interaction between User --- Cloud. It is important to note that 
 
 \begin{lstlisting}
-!<
-    !{
+!<!{
         OK: !<JSONMessage>,
         FAIL: !<JSONMessage> 
-    }
->
+}>
 \end{lstlisting}
+
 corresponds to a higher-order message. The !$<\dots>$ means that it is the Cloud that is passing the high order message and everything inside it is the protocol of the session that Saas should perform with the User. In Saas --- Cloud, the protocol defined in more subtle way containing higher order messages by first defining them and then including them in the protocol. For syntactic convenience, one protocol can be referenced from another using @ operator. The $@p$ is syntactically substituted for the protocol of that name.
 
 \paragraph{Interactions.} Figure \ref{fig:seq-diagram-sc2} depicts the protocols provided above using an UML sequence diagram. The language of the artifacts has already presented in the first scenario.
