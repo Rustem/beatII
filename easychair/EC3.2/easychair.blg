@@ -1,17 +1,15 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: easychair.aux
 The style file: plain.bst
 Database file #1: easychair.bib
-Repeated entry---line 11466 of file easychair.bib
+Warning--entry type for "event-driven-sj" isn't style-file defined
+--line 11421 of file easychair.bib
+Repeated entry---line 11478 of file easychair.bib
  : @techreport{session-types-sessions
  :                                   ,
 I'm skipping whatever remains of this entry
-Too many commas in name 1 of "E. Cavalcante, F. Lopes, T. Batista, N. Cacho, F. Delicato and P. Pires" for entry cloud-integrator
+Warning--I didn't find a database entry for ""
+Too many commas in name 1 of "Oliver Pernet, Nobuko Yoshida, Yiannos Kryftis, Raymond Hu and Nicholas Ng" for entry sj-parallel
 while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "E. Cavalcante, F. Lopes, T. Batista, N. Cacho, F. Delicato and P. Pires" for entry cloud-integrator
-while executing---line 1049 of file plain.bst
-Warning--empty year in xmpp-intercloud-transport
-Too many commas in name 1 of "E. Cavalcante, F. Lopes, T. Batista, N. Cacho, F. Delicato and P. Pires" for entry cloud-integrator
+Too many commas in name 1 of "Oliver Pernet, Nobuko Yoshida, Yiannos Kryftis, Raymond Hu and Nicholas Ng" for entry sj-parallel
 while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "E. Cavalcante, F. Lopes, T. Batista, N. Cacho, F. Delicato and P. Pires" for entry cloud-integrator
-while executing---line 1090 of file plain.bst
-(There were 5 error messages)
+(There were 3 error messages)

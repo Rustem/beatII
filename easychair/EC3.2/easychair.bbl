@@ -48,17 +48,11 @@ Marco Carbone and Fabrizio Montesi.
 \newblock In {\em Proceedings of the 40th annual ACM SIGPLAN-SIGACT symposium
   on Principles of programming languages}, pages 263--274. ACM, 2013.
 
-\bibitem{xmpp-intercloud-transport}
-Vij D.~Bernstein.
-\newblock Using xmpp as a transport in intercloud protocols.
-\newblock In {\em In Proceedings of CloudComp 2010, the 2nd International
-  Conference on Cloud Computing}, pages 973--982. CiteSeer.
-
-\bibitem{cloud-integrator}
-T.~Batista N. Cacho F.~Delicato E.~Cavalcante, F.~Lopes and P.~Pires.
-\newblock Cloud integrator: Building value-added services on the cloud.
-\newblock In {\em Network Cloud Computing and Applications (NCCA), 2011 First
-  International Symposium on}, pages 135 -- 142, 2011.
+\bibitem{sj-business-protocols}
+Michael Emmanuel.
+\newblock Session-based web service programming for business protocols.
+\newblock Available at:
+  \url{http://www.doc.ic.ac.uk/~yoshida/CDL_USECASE/sj/report/report.pdf}.
 
 \bibitem{cs-processes}
 C.A.R. Hoare.
@@ -81,6 +75,12 @@ Fabrizio Montesi and Marco Carbone.
 \newblock Chor --- choreography programming language.
 \newblock \url{http://www.chor-lang.org/}.
 
+\bibitem{safe-conver-prog-python}
+Rumyana Neykova.
+\newblock Session types go dynamic or how to verify your python conversations.
+\newblock In {\em Programming Language Approaches to Communication- and
+  Concurrency-cEntric Software}, pages 34--39, 2013.
+
 \bibitem{ng2012multiparty}
 Nicholas Ng, Nobuko Yoshida, and Kohei Honda.
 \newblock Multiparty session c: Safe parallel programming with message
@@ -88,18 +88,23 @@ Nicholas Ng, Nobuko Yoshida, and Kohei Honda.
 \newblock In {\em Objects, Models, Components, Patterns}, pages 202--218.
   Springer, 2012.
 
+\bibitem{sj-parallel}
+Yiannos Kryftis Raymond~Hu Oliver~Pernet, Nobuko~Yoshida and Nicholas Ng.
+\newblock Safe parallel programming with session java.
+\newblock In {\em COORDINATION'11 Proceedings of the 13th international
+  conference on Coordination models and languages}, pages 110--126. acm, 2010.
+
 \bibitem{chor-essence}
 Zongyan Qiu, Xiangpeng Zhao, Chao Cai, and Hongli Yang.
 \newblock Towards the theoretical foundation of choreography.
 \newblock In {\em Proceedings of the 16th international conference on World
   Wide Web}, pages 973--982. ACM, 2007.
 
-\bibitem{utility-driven-fed}
-Rajiv~Ranjan Rajkumar~Buyya and Rodrigo~N. Calheiros.
-\newblock Intercloud: Utility-oriented federation of cloud computing
-  environments for scaling of application services.
-\newblock {\em Proceedings of the 10th International Conference on Algorithms
-  and Architectures for Parallel Processing}, 2010.
+\bibitem{event-driven-sj}
+Andi~Bejleri Raymond~Hu, Nobuko~Yoshida and Kohei Honda.
+\newblock The sj framework for transport-independent, type-safe,
+  object-oriented communications programming.
+\newblock \url{http://arxiv.org/pdf/1002.0933.pdf}.
 
 \bibitem{higher-order-comm}
 Malcolm~Hole Simon~Gay.

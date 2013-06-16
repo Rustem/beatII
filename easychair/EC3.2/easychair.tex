@@ -554,36 +554,21 @@ Where p\_msg is defined in the protocols section. This is a reason why it is goo
 %------------------------------------------------------------------------------
 
 
-\section{Intercloud Communication}
+\section{Future Work: InterCloud and Session Types}
 \label{sect:highlights}
-Nowadays, Cloud computing is moving to the provisioning their data centres as a network of virtual services (hardware, storage, UI, software), so that consumers may access and deploy applications from anywhere in the world in a ``pay-as-you-g'' manner at competitive costs depending on provided QoS characteristics. 
+Cloud computing is moving to the concept where cloud operated by one enterprise interoperating with a clouds of another is powerful idea. So far that is limited to use cases where code running on one cloud explicitly references a service on another cloud. There is no implicit and transparent interoperability. 
+Different visions has already proposed in papers \cite{}. The most full picture of cloud inter-networking is depicted by \cite{}. They emphasized the main components of general inter-networking architecture:
+\begin{inparaenum}[(\bgroup\bfseries a\egroup)]
+\item \textit{Cloud Coordinator}, for bringing out Cloud services;
+\item \textit{Cloud Brocker}, ``for mediating between service consumers and Cloud coordinators'';
+\item \textit{Cloud Exchange} (e.g. Cloud Integrator), for collecting consumers' demands and locating Cloud providers with them with offers.
+\end{inparaenum}
 
-Existing systems that utilized by cloud providers do not support mechanisms and policies for dynamically balancing load among different Cloud-based data centres in order to determine optimal location for hosting application services to achieve rational QoS levels. Cloud providers, Amazon, Google, etc. has the following limitations in their approach:
-\begin{compactitem}
-    \item \textit{no seamless dynamic scaling} It is difficult for Cloud customers to determine in advance the best location for hosting their services.
-    \item \textit{no general standard for Cloud vendors} SaaS providers may unable to meet QoS characteristics of consumers originating from multiple geographical location.
-\end{compactitem}
+Our approach is to employ multiparty session types \cite{ng2012multiparty} for type-safe conversation between Cloud providers and Cloud Integrators (many-to-many conversation). It starts by specifying the intended interactions as an inter Cloud protocol in the, contract checker, UBF. Then processes for each role (either Cloud provider or Cloud Exchange) are implemented in Erlang or Python (they are best for working with high load applications). Since all the roles should be aware of each other in global network in order to dialog with each other, we are going to use SockJS\footnote{SockJS is an effort to define a protocol between in-browser SockJS-client and its server-side counterparts} protocol for presence and AMQP messaging (it's thin, flexible). Moreover, there is an idea, to extend SockJS protocol during communication initiation to check at runtime that each interaction is correct and as a result the whole communication is safe. As a starting point for dynamic verification observers, we referred to \cite{safe-conver-prog-python} work.
 
-Besides accomplishment of SLAs (Service-Level Agreements), it is necessary to consider QoS characteristics of service behaviour provided by Cloud vendors, such as request-response rate, service time distributions as well as additional metadata like price, etc. For example, consider a situation that  in which Cloud consumer (SaaS owner) needs to use a storage service. Some of them offer this service but with different price and response time. It means that the service provided better quality in terms of mentioned characteristics will be chosen to be included in composition.
-
-We need a middleware platform for composing services provided by Cloud Computing platforms. In paper  
-\cite{utility-driven-fed} is called Cloud Exchange, while in \cite{cloud-integrator} is called Cloud Integrator. This middleware must act as a market maker for bringing together service producers and consumers. In short, it aggregates the users technical requirements, and composes the most suitable package of services from different providers. In order to select the most suitable services, paper [Cloud Integrator: Building Value added services] suggests to distinguish types of services provided by different Cloud platforms such as resources as services, applications services, etc., and define each of these services according to its execution flow in an ordered set of tuples (execution plan) like (task, object), e.g. ( (store, data), (send, letters), etc.). Such description of services helps to automate selection process, making inferences by Cloud Integrator. It is also important to note that, after finding required execution plans, the selection algorithm must account the metadata to choose the best one.
-
-The author of aforementioned algorithm, suggests an architecture based on SOA standards. His layering model comprised of:
-\begin{compactitem}
-
-\item \textit{Service Layer}, which is responsible for interacting with Cloud platforms in order to create and execute workflows, select and compose services.
-
-\item \textit{Integration Layer},which is responsible to expose a unified API, by building binders per each cloud platform.
-\end{compactitem}
-First of all, applying SOA standards in such situation is limitation. For instance, Service Layer includes a lot of subcomponents that must interoperate with each other by using middlewares such as CORBA, RPC. In addition, Service Layer interoperate with Cloud platforms through the WSDL. It means that the first part of architecture will lose in performance and flexibility. Also, interactions with Cloud vendors are constant and may result in deadlock.
-
-Secondly, Integration Layer is not standardized. There will be a lot of ground coding work to build specific binder per Cloud provider.
-
-For such a complex system like Cloud Integrator, it is essential to be ensured in faultless behaviour of Web services. Our approach in refining this architecture is to incorporate session types in designing intercloud protocol based on XMPP extension \footnote{Extensible Messaging and Presence Protocol, originally created by Jabber} as a transport \cite{xmpp-intercloud-transport}.
-
-
-
+\section{Conclusion}
+\label{sect:conclusion}
+In today's time, there is an actual need to develop structured, high-level and type-safe techniques for programming and interaction. The presented case studies demonstrated how communication safety can be guaranteed through a combination of static and dynamic type verification. Although session-based programming is on its infancy, it's developed with huge steps and already proved its feasibility in various fields: parallel algorithms \cite{sj-parallel}, event-driven programming \cite{event-driven-sj}, multiparty conversations \cite{sj-business-protocols}. 
 %------------------------------------------------------------------------------
 % Refs:
 %
