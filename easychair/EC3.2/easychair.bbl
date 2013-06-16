@@ -1,0 +1,109 @@
+\begin{thebibliography}{10}
+
+\bibitem{armstrong2002getting}
+Joe Armstrong.
+\newblock Getting erlang to talk to the outside world.
+\newblock In {\em Proceedings of the 2002 ACM SIGPLAN workshop on Erlang},
+  pages 64--72. ACM, 2002.
+
+\bibitem{ws-critical-overview}
+Alistair Barros, Marlon Dumas, and Phillipa Oaks.
+\newblock A critical overview of the web services choreography description
+  language.
+\newblock {\em BPTrends Newsletter}, 3:1--24, 2005.
+
+\bibitem{basu2012deciding}
+Samik Basu, Tevfik Bultan, and Meriem Ouederni.
+\newblock Deciding choreography realizability.
+\newblock {\em ACM SIGPLAN Notices}, 47(1):191--202, 2012.
+
+\bibitem{alg-seq-processes}
+Jan~A. Bergstra and Jan~Willem Klop.
+\newblock Algebra of communicating processes with abstraction.
+\newblock {\em Theoretical computer science}, 37:77--121, 1985.
+
+\bibitem{intercloud}
+David Bernstein, Erik Ludvigson, Krishna Sankar, Steve Diamond, and Monique
+  Morrow.
+\newblock Blueprint for the intercloud-protocols and formats for cloud
+  computing interoperability.
+\newblock In {\em ICIW'09.}, pages 328--336. IEEE, 2009.
+
+\bibitem{carbone2007structured}
+Marco Carbone, Kohei Honda, and Nobuko Yoshida.
+\newblock Structured communication-centred programming for {Web} services.
+\newblock In {\em Programming Languages and Systems}, pages 2--17. Springer,
+  2007.
+
+\bibitem{session-types-sessions}
+Marco Carbone, Kohei Honda, Nobuko Yoshida, and Robin Milner.
+\newblock A theoretical basic of communication-centred concurrent programming.
+\newblock Available at:
+  \url{http://www.eecs.qmul.ac.uk/~carbonem/cdlpaper/workingnote.pdf}, 2006.
+
+\bibitem{carbone2013deadlock}
+Marco Carbone and Fabrizio Montesi.
+\newblock Deadlock-freedom-by-design: Multiparty asynchronous global
+  programming.
+\newblock In {\em Proceedings of the 40th annual ACM SIGPLAN-SIGACT symposium
+  on Principles of programming languages}, pages 263--274. ACM, 2013.
+
+\bibitem{xmpp-intercloud-transport}
+Vij D.~Bernstein.
+\newblock Using xmpp as a transport in intercloud protocols.
+\newblock In {\em In Proceedings of CloudComp 2010, the 2nd International
+  Conference on Cloud Computing}, pages 973--982. CiteSeer.
+
+\bibitem{cloud-integrator}
+T.~Batista N. Cacho F.~Delicato E.~Cavalcante, F.~Lopes and P.~Pires.
+\newblock Cloud integrator: Building value-added services on the cloud.
+\newblock In {\em Network Cloud Computing and Applications (NCCA), 2011 First
+  International Symposium on}, pages 135 -- 142, 2011.
+
+\bibitem{cs-processes}
+C.A.R. Hoare.
+\newblock {\em Communicating Sequential Processes}.
+\newblock Prentice Hall, 1985.
+
+\bibitem{honda2011scribbling}
+Kohei Honda, Aybek Mukhamedov, Gary Brown, Tzu-Chun Chen, and Nobuko Yoshida.
+\newblock Scribbling interactions with a formal foundation.
+\newblock In {\em Distributed Computing and Internet Technology}, pages 55--75.
+  Springer, 2011.
+
+\bibitem{sj-lang}
+Raymond Hu, Nobuko Yoshida, and Kohei Honda.
+\newblock Session-based distributed programming in java.
+\newblock In {\em ECOOP 2008}, pages 516--541. Springer, 2008.
+
+\bibitem{chor-lang}
+Fabrizio Montesi and Marco Carbone.
+\newblock Chor --- choreography programming language.
+\newblock \url{http://www.chor-lang.org/}.
+
+\bibitem{ng2012multiparty}
+Nicholas Ng, Nobuko Yoshida, and Kohei Honda.
+\newblock Multiparty session c: Safe parallel programming with message
+  optimisation.
+\newblock In {\em Objects, Models, Components, Patterns}, pages 202--218.
+  Springer, 2012.
+
+\bibitem{chor-essence}
+Zongyan Qiu, Xiangpeng Zhao, Chao Cai, and Hongli Yang.
+\newblock Towards the theoretical foundation of choreography.
+\newblock In {\em Proceedings of the 16th international conference on World
+  Wide Web}, pages 973--982. ACM, 2007.
+
+\bibitem{utility-driven-fed}
+Rajiv~Ranjan Rajkumar~Buyya and Rodrigo~N. Calheiros.
+\newblock Intercloud: Utility-oriented federation of cloud computing
+  environments for scaling of application services.
+\newblock {\em Proceedings of the 10th International Conference on Algorithms
+  and Architectures for Parallel Processing}, 2010.
+
+\bibitem{higher-order-comm}
+Malcolm~Hole Simon~Gay.
+\newblock Subtyping for session types in the pi calculus.
+\newblock {\em Journal Acta Informatica}, 42(2-3):191--225, 2005.
+
+\end{thebibliography}

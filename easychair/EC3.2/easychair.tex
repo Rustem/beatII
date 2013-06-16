@@ -177,7 +177,7 @@ However, a choreography does not describe internal effects within a participatin
 		\begin{figure}[ht]
 		\begin{centering}
 		\scalebox{0.7}{
-		\includegraphics[width=0.5\textwidth]{WS_stack.png}
+		\includegraphics[width=0.5\textwidth]{resources/WS_stack.png}
                 }
 		\caption{Stack of WS Standards}
 		\label{fig:soa-stack}
@@ -238,22 +238,6 @@ Session programming begins by declaring the protocol for the intended cooperatio
 \end{equation*}
 where name identifies the protocol, following the standard Java naming rules. The body of the protocol defines a \textit{session type}, according to the grammar in Figure~\ref{tab:prot-spec}.
 
-\begin{comment}
-\begin{longtable}{|p{0.15\textwidth}|p{0.3\textwidth}|p{0.3\textwidth}|}
-\caption{SJ protocol specification}\label{tab:prot-spec} \\
-\hline
-$T$ & $::=T.T$ & Sequencing \\ \hline
-& begin & Session initiation \\ \hline
-& $!<M>$ & Message send \\ \hline 
-& $?(M)$ & Message receive \\ \hline
-& $\oplus \{L_1:T_1,\dots, L_n:T_n \}$ & Session branching \\ \hline
-& $\oplus [T]*$ & Session iteration. \\ \hline 
-& $\text{rec }L[T]$ & Session recursion scope. \\ \hline
-& \#$L$ & Recursive jump. \\ \hline
-& @$p$ & Protocol reference. \\ \hline
-\end{longtable}
-\end{comment}
-
 \begin{figure}
 \begin{gather*}
 \begin{array}{rlr}
@@ -285,7 +269,7 @@ In short, it says that we are expected to send and receive a session of type $\m
 \begin{figure}[ht]
 \centering
 \scalebox{0.7}{
-\includegraphics[width=0.8\textwidth]{sj-delegation.png}}
+\includegraphics[width=0.8\textwidth]{resources/sj-delegation.png}}
 \caption{Session delegation}\label{fig:sj-delegation}
 \end{figure}
 
@@ -296,20 +280,26 @@ The left part illustrates the session configuration before the delegation is per
 Session sockets are implementing the actual session code according to the specified session type (protocol). They are represent the endpoints (participants) of a session connection: each of the parties owns one endpoint and performs the specified interactions via the SJ session operations on that endpoint. In SJ session sockets are objects that extend the abstract \textit{SJSocket} class. \textit{SJRSocket::SJSocket} and \textit{SJFSocket::SJSocket}, both, employ TCP as underlying transport. SJ is distinguishing session client and server sockets, where the former are used to request sessions from the latter.
 
 \paragraph{Session operations}
-After creating a protocol (session type) and encapsulating the session into SJ socket, it can be implemented within a session-try scope using the session operations depicted in Table \ref{tab:session-ops}.
+After creating a protocol (session type) and encapsulating the session into SJ socket, it can be implemented within a session-try scope using the session operations depicted in Figure \ref{tab:session-ops}.
 
-\begin{longtable}{|p{0.4\textwidth}|p{0.4\textwidth}|}
-\caption{Session operations specification}\label{tab:session-ops}\\ \hline
-s.request() & \texttt{begin} \\ \hline 
-s.send(m) & $\mathopen{!}\left<M\right>$ \\ \hline
-s.receive() & $\mathopen{?}\left(M\right)$ \\ \hline
-s.outbranch(L) \{P\} & $\mathopen{!}\left\{L\colon T\right\}$ \\ \hline
-s.inbranch() \{case L1: {P1}\dots case Ln:{Pn}\} & $\mathopen{?}\left\{L_1\colon T_1,\dots, L_n\colon T_n\right\}$ \\ \hline
-s.outwhile(cond) \{P\} & $\left[T\right]*$ \\ \hline
-s.inwhile() \{P\} & $\mathopen{?}\left[T\right]*$ \\ \hline
-s.recursion(L) \{P\} & $\texttt{rec}\,L\left[T\right]$ \\ \hline
-s.recurse(L) & $\mathopen{\#}L$ \\ \hline
-\end{longtable}
+
+\begin{figure}
+\begin{gather*}
+\begin{array}{lrr}
+s.request() 	& \mid 		    & \mbox{\texttt{begin}} \\
+s.send(m)   	& \mid	 		& \mathopen{!}\left<M\right> \\
+s.receive() 	& \mid	 		& \mathopen{?}\left(M\right) \\
+s.outbranch(L) \ \{P\} & \mid		& \mathopen{!}\left\{L\mathopen{:} T\right\} \\
+\texttt{s.inbranch()} \ \{case L1\mathopen{:} {P1}\dots case Ln\mathopen{:}{Pn}\} & \mid & \mathopen{?}\left\{L_1\colon 
+                                        T_1,\dots, L_n\colon T_n\right\} \\
+s.outwhile(cond) \ \{P\} 		& \mid & \left[T\right]\mathopen{*} \\
+s.inwhile() \ \{P\} 		 	& \mid & \mathopen{?}\left[T\right]\mathopen{*} \\
+s.recursion(L) \ \{P\} & \mid & \texttt{rec}\,L\left[T\right] \\
+s.recurse(L) & \mid & \mathopen{\#}L \\
+\end{array}
+\end{gather*}
+\caption{SJ protocol specification}\label{tab:session-ops} 
+\end{figure}
 
 The session operations are invoked via session in a method call-like manner. To delegate a session, the session socket variable must be passed to a send operation on the target session.
 
@@ -410,7 +400,7 @@ protocol p_sv {
 \begin{figure}[ht]
 \centering
 \scalebox{0.3}{
-\includegraphics{interaction-sc1.png}}
+\includegraphics{resources/interaction-sc1.png}}
 \caption{Overview of interactions for Scenario \# 1}
 \label{fig:interaction-overview-sc1}
 \end{figure}
@@ -526,7 +516,7 @@ corresponds to a higher-order message. The !$<\dots>$ means that it is the Cloud
 \begin{figure}
 \label{fig:seq-diagram-sc2}
 \centering
-\includegraphics[width=0.8\textwidth]{interaction-sc2.png}
+\includegraphics[width=0.8\textwidth]{resources/interaction-sc2.png}
 \caption{Sequence diagram of interactions for Scenario \# 2}
 \label{fig:}
 \end{figure}
@@ -566,6 +556,31 @@ Where p\_msg is defined in the protocols section. This is a reason why it is goo
 
 \section{Intercloud Communication}
 \label{sect:highlights}
+Nowadays, Cloud computing is moving to the provisioning their data centres as a network of virtual services (hardware, storage, UI, software), so that consumers may access and deploy applications from anywhere in the world in a ``pay-as-you-g'' manner at competitive costs depending on provided QoS characteristics. 
+
+Existing systems that utilized by cloud providers do not support mechanisms and policies for dynamically balancing load among different Cloud-based data centres in order to determine optimal location for hosting application services to achieve rational QoS levels. Cloud providers, Amazon, Google, etc. has the following limitations in their approach:
+\begin{compactitem}
+    \item \textit{no seamless dynamic scaling} It is difficult for Cloud customers to determine in advance the best location for hosting their services.
+    \item \textit{no general standard for Cloud vendors} SaaS providers may unable to meet QoS characteristics of consumers originating from multiple geographical location.
+\end{compactitem}
+
+Besides accomplishment of SLAs (Service-Level Agreements), it is necessary to consider QoS characteristics of service behaviour provided by Cloud vendors, such as request-response rate, service time distributions as well as additional metadata like price, etc. For example, consider a situation that  in which Cloud consumer (SaaS owner) needs to use a storage service. Some of them offer this service but with different price and response time. It means that the service provided better quality in terms of mentioned characteristics will be chosen to be included in composition.
+
+We need a middleware platform for composing services provided by Cloud Computing platforms. In paper  
+\cite{utility-driven-fed} is called Cloud Exchange, while in \cite{cloud-integrator} is called Cloud Integrator. This middleware must act as a market maker for bringing together service producers and consumers. In short, it aggregates the users technical requirements, and composes the most suitable package of services from different providers. In order to select the most suitable services, paper [Cloud Integrator: Building Value added services] suggests to distinguish types of services provided by different Cloud platforms such as resources as services, applications services, etc., and define each of these services according to its execution flow in an ordered set of tuples (execution plan) like (task, object), e.g. ( (store, data), (send, letters), etc.). Such description of services helps to automate selection process, making inferences by Cloud Integrator. It is also important to note that, after finding required execution plans, the selection algorithm must account the metadata to choose the best one.
+
+The author of aforementioned algorithm, suggests an architecture based on SOA standards. His layering model comprised of:
+\begin{compactitem}
+
+\item \textit{Service Layer}, which is responsible for interacting with Cloud platforms in order to create and execute workflows, select and compose services.
+
+\item \textit{Integration Layer},which is responsible to expose a unified API, by building binders per each cloud platform.
+\end{compactitem}
+First of all, applying SOA standards in such situation is limitation. For instance, Service Layer includes a lot of subcomponents that must interoperate with each other by using middlewares such as CORBA, RPC. In addition, Service Layer interoperate with Cloud platforms through the WSDL. It means that the first part of architecture will lose in performance and flexibility. Also, interactions with Cloud vendors are constant and may result in deadlock.
+
+Secondly, Integration Layer is not standardized. There will be a lot of ground coding work to build specific binder per Cloud provider.
+
+For such a complex system like Cloud Integrator, it is essential to be ensured in faultless behaviour of Web services. Our approach in refining this architecture is to incorporate session types in designing intercloud protocol based on XMPP extension \footnote{Extensible Messaging and Presence Protocol, originally created by Jabber} as a transport \cite{xmpp-intercloud-transport}.
 
 
 
