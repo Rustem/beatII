@@ -231,22 +231,29 @@ Session programming in SJ consists of the following ordered actions:
 \end{compactenum}
 
 \subsection{Protocol Specification}
-Session programming begins by declaring the protocol for the intended cooperation as follows:
-
-\begin{equation*}
-\text{protocol name \{\dots\}}
-\end{equation*}
-where name identifies the protocol, following the standard Java naming rules. The body of the protocol defines a \textit{session type}, according to the grammar in Figure~\ref{tab:prot-spec}.
+Session programming begins by declaring the protocol for the intended cooperation, where a name identifies the protocol.
+%following the standard Java naming rules. %What are the standard Java naming rules. Can we not put these in the same figure.
+The body of the protocol defines a \textit{session type}, according to the grammar in Figure~\ref{tab:prot-spec}.
 
 \begin{figure}
 \begin{gather*}
+\begin{array}{c}
+M\quad\mbox{message}
+\\[10pt]
+L_1, L_2\quad\mbox{tag}
+\\[10pt]
+p\quad\mbox{protocol name}
+\\[10pt]
+S \Coloneqq  p\left\{ T \right\} \quad \mbox{session}
+\end{array}
+\qquad
 \begin{array}{rlr}
 T \Coloneqq & T\mathbin{.}T & \mbox{Sequencing} \\ 
        \mid & \texttt{begin} & \mbox{Session initiation} \\
        \mid & \mathopen{!}\left<M\right> & \mbox{Message send} \\ 
        \mid & \mathopen{?}\left(M\right) & \mbox{Message receive} \\
-       \mid & \oplus \left\{L_1 \colon T_1,\dots, L_n \colon T_n \right\} & \mbox{Session branching} \\ %??Why not use the ASCII syntax, since you use it in examples.
-       \mid & \oplus \left[T\right]* & \mbox{Session iteration} \\ 
+       \mid & \left\{L_1 \colon T_1,\dots, L_n \colon T_n \right\} & \mbox{Session branching} \\ %??Why not use the ASCII syntax, since you use it in examples. was \oplus \left\{L_1 \colon T_1,\dots, L_n \colon T_n \right\}
+       \mid & \left[T\right]* & \mbox{Session iteration} \\ 
        \mid & \texttt{rec}\,L\left[T\right] & \mbox{Session recursion scope} \\ 
        \mid & \mathopen{\#}L & \mbox{Recursive jump} \\ 
        \mid & \mathopen{@}p & \mbox{Protocol reference} \\
@@ -255,7 +262,7 @@ T \Coloneqq & T\mathbin{.}T & \mbox{Sequencing} \\
 \caption{SJ protocol specification}\label{tab:prot-spec} 
 \end{figure}
 
-The session type shows how a session should be designed in terms of actions that the participant should perform. The key point is that the implementation of a session is governed by associated protocol: the SJ compiler (Polyglot\footnote{\url{http://www.cs.cornell.edu/Projects/polyglot/}. Extensible compile framework.}). It can be clearly seen from the Table \ref{tab:prot-spec}, that SJ has enough constructs to describe a diverse range of complex interactions: message passing, conditional and repeated expressions. Its worth noting, that each session type element has its dual element, because there is a requirement that two parties implement compatible protocol such as the specification of one party has dual relation to another party.
+The session type specifies the actions that the participant in a session should perform. In SJ, the behaviour of an implementation of a session is monitored by the associated protocol, as enforced by the SJ compiler (Polyglot\footnote{\url{http://www.cs.cornell.edu/Projects/polyglot/}. Extensible compile framework.}). The constructs in Figure~\ref{tab:prot-spec} can describe a diverse range of complex interactions: message passing, conditional and iteration. Each session type construct has its dual construct, because a typical requirement is that two parties implement compatible protocols such that the specification of one party is dual to another party.
 
 \subsection{Higher Order Communication}
 In order to describe richer behaviour, SJ has a feature of subtyping. It means that message types can themselves be session types. It also enhances the agility of the type system by allowing the participants in a session to follow different protocols which are compatible \cite{higher-order-comm}. Such communication can be expressed by the following dual constructs:

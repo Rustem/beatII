@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.1.18)  16 JUN 2013 19:59
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.1.18)  16 JUN 2013 20:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -734,47 +734,46 @@ Package pdftex.def Info: resources/WS_stack.png used on input line 181.
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [2 <./resources/WS_stack.png>]
-LaTeX Font Info:    Try loading font information for OMS+txr on input line 237.
-
- (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omstxr.fd
-File: omstxr.fd 2000/12/15 v3.1
-)
-LaTeX Font Info:    Font shape `OMS/txr/m/n' in size <10> not available
-(Font)              Font shape `OMS/txsy/m/n' tried instead on input line 237.
- [3] <resources/sj-delegation.png, id=97, 567.11874pt x 243.91125pt>
+ [2 <./resources/WS_stack.png>] [3]
+<resources/sj-delegation.png, id=98, 567.11874pt x 243.91125pt>
 File: resources/sj-delegation.png Graphic file (type png)
 
 <use resources/sj-delegation.png>
-Package pdftex.def Info: resources/sj-delegation.png used on input line 272.
+Package pdftex.def Info: resources/sj-delegation.png used on input line 279.
 (pdftex.def)             Requested size: 277.69987pt x 119.43939pt.
  [4 <./resources/sj-delegation.png>]
-LaTeX Font Info:    Try loading font information for OML+txr on input line 307.
+LaTeX Font Info:    Try loading font information for OML+txr on input line 314.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxr.fd
 File: omltxr.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `OML/txr/m/n' in size <9> not available
-(Font)              Font shape `OML/txmi/m/it' tried instead on input line 307.
+(Font)              Font shape `OML/txmi/m/it' tried instead on input line 314.
 
  [5]
+LaTeX Font Info:    Try loading font information for OMS+txr on input line 370.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/txfonts/omstxr.fd
+File: omstxr.fd 2000/12/15 v3.1
+)
 LaTeX Font Info:    Font shape `OMS/txr/m/n' in size <9> not available
-(Font)              Font shape `OMS/txsy/m/n' tried instead on input line 363.
+(Font)              Font shape `OMS/txsy/m/n' tried instead on input line 370.
  [6]
 <resources/interaction-sc1.png, id=140, 1228.59pt x 827.09pt>
 File: resources/interaction-sc1.png Graphic file (type png)
 
 <use resources/interaction-sc1.png>
-Package pdftex.def Info: resources/interaction-sc1.png used on input line 403.
+Package pdftex.def Info: resources/interaction-sc1.png used on input line 410.
 (pdftex.def)             Requested size: 1228.587pt x 827.08797pt.
 
-Overfull \hbox (22.13132pt too wide) in paragraph at lines 403--404
+Overfull \hbox (22.13132pt too wide) in paragraph at lines 410--411
  [][] 
  []
 
 [7]
-Overfull \hbox (2.57597pt too wide) in paragraph at lines 423--424
+Overfull \hbox (2.57597pt too wide) in paragraph at lines 430--431
 []\OT1/txr/m/n/10 SaaS con-tin-ues in-ter-ac-tion with user by ses-sion s. By s
 teps of validation-verification,
  []
@@ -784,7 +783,7 @@ teps of validation-verification,
 File: resources/interaction-sc2.png Graphic file (type png)
 
 <use resources/interaction-sc2.png>
-Package pdftex.def Info: resources/interaction-sc2.png used on input line 519.
+Package pdftex.def Info: resources/interaction-sc2.png used on input line 526.
 (pdftex.def)             Requested size: 277.69987pt x 198.57066pt.
  [10 <./resources/interaction-sc2.png>]
 (./easychair.bbl [11]
@@ -794,21 +793,21 @@ or busi-ness pro-to-
  []
 
 [12])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 592.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 599.
  [13]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 592.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 599.
  (./easychair.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 592.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 592.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 599.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 599.
 Package rerunfilecheck Info: File `easychair.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 592.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 599.
  ) 
 Here is how much of TeX's memory you used:
- 10299 strings out of 493485
- 147261 string characters out of 3143526
+ 10295 strings out of 493485
+ 147205 string characters out of 3143526
  402958 words of memory out of 3000000
- 13233 multiletter control sequences out of 15000+200000
+ 13229 multiletter control sequences out of 15000+200000
  40813 words of font info for 102 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
  33i,17n,40p,1094b,1699s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -820,7 +819,7 @@ onts/txsyc.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txtt.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on easychair.pdf (13 pages, 199096 bytes).
+Output written on easychair.pdf (13 pages, 198848 bytes).
 PDF statistics:
  389 PDF objects out of 1000 (max. 8388607)
  329 compressed objects within 4 object streams
