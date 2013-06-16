@@ -48,6 +48,18 @@ Marco Carbone and Fabrizio Montesi.
 \newblock In {\em Proceedings of the 40th annual ACM SIGPLAN-SIGACT symposium
   on Principles of programming languages}, pages 263--274. ACM, 2013.
 
+\bibitem{xmpp-intercloud-transport}
+Vij D.~Bernstein.
+\newblock Using xmpp as a transport in intercloud protocols.
+\newblock In {\em In Proceedings of CloudComp 2010, the 2nd International
+  Conference on Cloud Computing}, pages 973--982. CiteSeer.
+
+\bibitem{cloud-integrator}
+T.~Batista N. Cacho F.~Delicato E.~Cavalcante, F.~Lopes and P.~Pires.
+\newblock Cloud integrator: Building value-added services on the cloud.
+\newblock In {\em Network Cloud Computing and Applications (NCCA), 2011 First
+  International Symposium on}, pages 135 -- 142, 2011.
+
 \bibitem{sj-business-protocols}
 Michael Emmanuel.
 \newblock Session-based web service programming for business protocols.
@@ -99,6 +111,13 @@ Zongyan Qiu, Xiangpeng Zhao, Chao Cai, and Hongli Yang.
 \newblock Towards the theoretical foundation of choreography.
 \newblock In {\em Proceedings of the 16th international conference on World
   Wide Web}, pages 973--982. ACM, 2007.
+
+\bibitem{utility-driven-fed}
+Rajiv~Ranjan Rajkumar~Buyya and Rodrigo~N. Calheiros.
+\newblock Intercloud: Utility-oriented federation of cloud computing
+  environments for scaling of application services.
+\newblock {\em Proceedings of the 10th International Conference on Algorithms
+  and Architectures for Parallel Processing}, 2010.
 
 \bibitem{event-driven-sj}
 Andi~Bejleri Raymond~Hu, Nobuko~Yoshida and Kohei Honda.

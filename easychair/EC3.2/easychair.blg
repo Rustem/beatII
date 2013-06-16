@@ -7,9 +7,17 @@ Repeated entry---line 11478 of file easychair.bib
  : @techreport{session-types-sessions
  :                                   ,
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for ""
-Too many commas in name 1 of "Oliver Pernet, Nobuko Yoshida, Yiannos Kryftis, Raymond Hu and Nicholas Ng" for entry sj-parallel
+Too many commas in name 1 of "E. Cavalcante, F. Lopes, T. Batista, N. Cacho, F. Delicato and P. Pires" for entry cloud-integrator
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "E. Cavalcante, F. Lopes, T. Batista, N. Cacho, F. Delicato and P. Pires" for entry cloud-integrator
 while executing---line 1049 of file plain.bst
 Too many commas in name 1 of "Oliver Pernet, Nobuko Yoshida, Yiannos Kryftis, Raymond Hu and Nicholas Ng" for entry sj-parallel
+while executing---line 1049 of file plain.bst
+Warning--empty year in xmpp-intercloud-transport
+Too many commas in name 1 of "E. Cavalcante, F. Lopes, T. Batista, N. Cacho, F. Delicato and P. Pires" for entry cloud-integrator
 while executing---line 1090 of file plain.bst
-(There were 3 error messages)
+Too many commas in name 1 of "E. Cavalcante, F. Lopes, T. Batista, N. Cacho, F. Delicato and P. Pires" for entry cloud-integrator
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "Oliver Pernet, Nobuko Yoshida, Yiannos Kryftis, Raymond Hu and Nicholas Ng" for entry sj-parallel
+while executing---line 1090 of file plain.bst
+(There were 7 error messages)
