@@ -1,23 +1,49 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: easychair.aux
+This is BibTeX, Version 0.99d (TeX Live 2012/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: easychair.aux
 The style file: plain.bst
 Database file #1: easychair.bib
-Warning--entry type for "event-driven-sj" isn't style-file defined
---line 11421 of file easychair.bib
-Repeated entry---line 11478 of file easychair.bib
- : @techreport{session-types-sessions
- :                                   ,
-I'm skipping whatever remains of this entry
-Too many commas in name 1 of "E. Cavalcante, F. Lopes, T. Batista, N. Cacho, F. Delicato and P. Pires" for entry cloud-integrator
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "E. Cavalcante, F. Lopes, T. Batista, N. Cacho, F. Delicato and P. Pires" for entry cloud-integrator
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "Oliver Pernet, Nobuko Yoshida, Yiannos Kryftis, Raymond Hu and Nicholas Ng" for entry sj-parallel
-while executing---line 1049 of file plain.bst
+Warning--empty note in event-driven-sj
 Warning--empty year in xmpp-intercloud-transport
-Too many commas in name 1 of "E. Cavalcante, F. Lopes, T. Batista, N. Cacho, F. Delicato and P. Pires" for entry cloud-integrator
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "E. Cavalcante, F. Lopes, T. Batista, N. Cacho, F. Delicato and P. Pires" for entry cloud-integrator
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "Oliver Pernet, Nobuko Yoshida, Yiannos Kryftis, Raymond Hu and Nicholas Ng" for entry sj-parallel
-while executing---line 1090 of file plain.bst
-(There were 7 error messages)
+You've used 22 entries,
+            2118 wiz_defined-function locations,
+            657 strings with 8654 characters,
+and the built_in function-call counts, 8805 in all, are:
+= -- 901
+> -- 375
+< -- 13
++ -- 150
+- -- 126
+* -- 547
+:= -- 1360
+add.period$ -- 76
+call.type$ -- 22
+change.case$ -- 129
+chr.to.int$ -- 0
+cite$ -- 24
+duplicate$ -- 376
+empty$ -- 711
+format.name$ -- 126
+if$ -- 1957
+int.to.chr$ -- 0
+int.to.str$ -- 22
+missing$ -- 19
+newline$ -- 113
+num.names$ -- 44
+pop$ -- 171
+preamble$ -- 1
+purify$ -- 107
+quote$ -- 0
+skip$ -- 284
+stack$ -- 0
+substring$ -- 559
+swap$ -- 133
+text.length$ -- 13
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 86
+warning$ -- 2
+while$ -- 88
+width$ -- 24
+write$ -- 246
+(There were 2 warnings)

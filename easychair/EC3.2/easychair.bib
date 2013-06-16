@@ -11418,17 +11418,28 @@ paper for the above
   organization={ACM}
 }
 
-@paper{event-driven-sj,
-   title={The SJ Framework for Transport-Independent, Type-Safe, Object-Oriented Communications 
-          Programming},
-   author={Raymond Hu, Nobuko Yoshida, Andi Bejleri and Kohei Honda},
-   howpublished={\url{http://arxiv.org/pdf/1002.0933.pdf}},
+
+Following howpublished I found  the following details.   howpublished={\url{http://arxiv.org/pdf/1002.0933.pdf}},
+@unpublished{event-driven-sj,
+   title={Session-Based Programming for Parallel Algorithms},
+   author={Andi Bejleri and Raymond Hu and Nobuko Yoshida},
+   editor = "Alastair R. Beresford and Simon Gay",
+   booktitle = "PLACES'10",
+   series = "EPTCS",
+   volume = 17,
+   year = 2010,
+   pages = "17-–29",
+   doi = "10.4204/EPTCS.17.2",
 }
+
+It's better to use a published source.
 @misc{sj-business-protocols,
    title={Session-Based Web Service Programming for Business Protocols},
    author={Michael Emmanuel},
    howpublished={Available at: \url{http://www.doc.ic.ac.uk/~yoshida/CDL_USECASE/sj/report/report.pdf}}
 }
+
+
 
 misc
 {
@@ -11465,9 +11476,8 @@ misc
 
 
 
-@misc
+misc
 {
-    session-types-sessions,
     author		 = {Marco Carbone and Kohei Honda and Nobuko Yoshida and Robin Milner},
     title		 = {A Theoretical Basic of Communication-Centred Concurrent Programming},
     publisher 	 = {WCD-Working Note},
@@ -11530,21 +11540,26 @@ Update of above
   organization={ACM}
 }
 
-@article{utility-driven-fed,
-  title={InterCloud: Utility-Oriented Federation of Cloud Computing Environments for Scaling of 
+@incollection{utility-driven-fed,
+  title={{InterCloud}: Utility-Oriented Federation of {Cloud Computing} Environments for Scaling of 
          Application Services},
   author={Rajkumar Buyya, Rajiv Ranjan and Rodrigo N. Calheiros},
   journal={Proceedings of the 10th International Conference on Algorithms and Architectures for Parallel 
            Processing},
   year={2010},
+  pages={13--31},
+  publisher={Springer},
+  booktitle={Algorithms and architectures for parallel processing},
 }
 
+
 @inproceedings{cloud-integrator,
-  title={Cloud Integrator: Building Value-Added Services on the Cloud},
-  author={E. Cavalcante, F. Lopes, T. Batista, N. Cacho, F. Delicato and P. Pires},
-  booktitle={Network Cloud Computing and Applications (NCCA), 2011 First International Symposium on},
-  pages={135 - 142},
+  title={Cloud Integrator: Building Value-Added Services on the {Cloud}},
+  author={Cavalcante, E. and Lopes, F. and Batista, T. and Cacho, N. and Delicato, F.C. and Pires, P.F.}, 
+  booktitle={Network Cloud Computing and Applications (NCCA'11)},
+  pages={135--142},
   year={2011},
+  doi={10.1109/NCCA.2011.29},
 }
 
 @inproceedings{xmpp-intercloud-transport,
@@ -17001,45 +17016,30 @@ Update of above
 %% Model Checking
 %%
 
-@misc
-{
-	prism,
-	author       = {{The PRISM Team}},
-	title        = {{PRISM}: a probabilistic model checker},
-	howpublished = {[online]},
-	year         = {2004--2011},
-	note         = {\url{http://www.prismmodelchecker.org/}, last viewed June 2010}
-}
 
-@book
-{
-	modelCheckingBook,
-	author    = {E. Clarke and O. Grumberg and D. Peled},
-	title     = {Model Checking},
-	publisher = {MIT Press},
-	year      = 2002
-}
 
-@article
-{
-	mdl-chckng-java-pthfndr,
-	author  = {K. Havelund and T. Pressburger},
-	title   = {Model Checking {Java} Programs Using {Java PathFinder}},
-	journal = {STTT},
-	volume  = 2,
-	number  = 4,
-	year    = 2000,
-	pages   = {366--381}
-}
-
-@inproceedings{sj-parallel,
-	title={Safe Parallel Programming with Session Java},
-	author={Oliver Pernet, Nobuko Yoshida, Yiannos Kryftis, Raymond Hu and Nicholas Ng},
-	booktitle={COORDINATION'11 Proceedings of the 13th international conference on Coordination models and 
-	           languages},
+inproceedings{
+	title={Safe Parallel Programming with {Session Java}},
+	author={Oliver Pernet and Nobuko Yoshida and Yiannos Kryftis and Raymond Hu and Nicholas Ng},
+	booktitle={COORDINATION'11},
 	year={2010},
 	pages={110-126},
 	organization={acm},
+}
+
+correction of above
+@inproceedings{sj-parallel,
+  author    = {Nicholas Ng and
+               Nobuko Yoshida and
+               Olivier Pernet and
+               Raymond Hu and
+               Yiannos Kryftis},
+  title     = {Safe Parallel Programming with {Session Java}},
+  booktitle = {COORDINATION},
+  year      = {2011},
+  pages     = {110-126},
+  ee        = {http://dx.doi.org/10.1007/978-3-642-21464-6_8},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
 }
 
 misc
@@ -17072,7 +17072,7 @@ replacing the above with cited paper
 }
 
 @incollection{ng2012multiparty,
-  title={Multiparty Session C: Safe parallel programming with message optimisation},
+  title={{Multiparty Session C}: Safe parallel programming with message optimisation},
   author={Ng, Nicholas and Yoshida, Nobuko and Honda, Kohei},
   booktitle={Objects, Models, Components, Patterns},
   pages={202--218},
@@ -17081,7 +17081,7 @@ replacing the above with cited paper
 }
 
 @inproceedings{armstrong2002getting,
-  title={Getting Erlang to talk to the outside world},
+  title={Getting {Erlang} to talk to the outside world},
   author={Armstrong, Joe},
   booktitle={Proceedings of the 2002 ACM SIGPLAN workshop on Erlang},
   pages={64--72},
@@ -17090,9 +17090,9 @@ replacing the above with cited paper
 }
 
 @inproceedings{safe-conver-prog-python,
-  title={Session Types Go Dynamic or How to Verify Your Python Conversations},
+  title={Session Types Go Dynamic or How to Verify Your {Python} Conversations},
   author={Rumyana Neykova},
-  booktitle={Programming Language Approaches to Communication- and Concurrency-cEntric Software},
+  booktitle={PLACES'13. Rome, Italy, 23 March},
   year={2013},
   pages={34-39}
 }
@@ -17107,4 +17107,6 @@ replacing the above with cited paper
   year={2012},
   organization={ACM}
 }
+
+
 % EOF

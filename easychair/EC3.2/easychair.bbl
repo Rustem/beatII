@@ -2,7 +2,7 @@
 
 \bibitem{armstrong2002getting}
 Joe Armstrong.
-\newblock Getting erlang to talk to the outside world.
+\newblock Getting {Erlang} to talk to the outside world.
 \newblock In {\em Proceedings of the 2002 ACM SIGPLAN workshop on Erlang},
   pages 64--72. ACM, 2002.
 
@@ -16,6 +16,11 @@ Alistair Barros, Marlon Dumas, and Phillipa Oaks.
 Samik Basu, Tevfik Bultan, and Meriem Ouederni.
 \newblock Deciding choreography realizability.
 \newblock {\em ACM SIGPLAN Notices}, 47(1):191--202, 2012.
+
+\bibitem{event-driven-sj}
+Andi Bejleri, Raymond Hu, and Nobuko Yoshida.
+\newblock Session-based programming for parallel algorithms.
+\newblock 2010.
 
 \bibitem{alg-seq-processes}
 Jan~A. Bergstra and Jan~Willem Klop.
@@ -36,10 +41,10 @@ Marco Carbone, Kohei Honda, and Nobuko Yoshida.
   2007.
 
 \bibitem{session-types-sessions}
-Marco Carbone, Kohei Honda, Nobuko Yoshida, and Robin Milner.
-\newblock A theoretical basic of communication-centred concurrent programming.
-\newblock Available at:
-  \url{http://www.eecs.qmul.ac.uk/~carbonem/cdlpaper/workingnote.pdf}, 2006.
+Marco Carbone, Kohei Honda, Nobuko Yoshida, Robin Milner, Gary Brown, and Steve
+  Ross-Talbot.
+\newblock A theoretical basis of communication-centred concurrent programming.
+\newblock {WS-CDL} working report, W3C, 2006.
 
 \bibitem{carbone2013deadlock}
 Marco Carbone and Fabrizio Montesi.
@@ -48,17 +53,17 @@ Marco Carbone and Fabrizio Montesi.
 \newblock In {\em Proceedings of the 40th annual ACM SIGPLAN-SIGACT symposium
   on Principles of programming languages}, pages 263--274. ACM, 2013.
 
+\bibitem{cloud-integrator}
+E.~Cavalcante, F.~Lopes, T.~Batista, N.~Cacho, F.C. Delicato, and P.F. Pires.
+\newblock Cloud integrator: Building value-added services on the {Cloud}.
+\newblock In {\em Network Cloud Computing and Applications (NCCA'11)}, pages
+  135--142, 2011.
+
 \bibitem{xmpp-intercloud-transport}
 Vij D.~Bernstein.
 \newblock Using xmpp as a transport in intercloud protocols.
 \newblock In {\em In Proceedings of CloudComp 2010, the 2nd International
   Conference on Cloud Computing}, pages 973--982. CiteSeer.
-
-\bibitem{cloud-integrator}
-T.~Batista N. Cacho F.~Delicato E.~Cavalcante, F.~Lopes and P.~Pires.
-\newblock Cloud integrator: Building value-added services on the cloud.
-\newblock In {\em Network Cloud Computing and Applications (NCCA), 2011 First
-  International Symposium on}, pages 135 -- 142, 2011.
 
 \bibitem{sj-business-protocols}
 Michael Emmanuel.
@@ -89,22 +94,21 @@ Fabrizio Montesi and Marco Carbone.
 
 \bibitem{safe-conver-prog-python}
 Rumyana Neykova.
-\newblock Session types go dynamic or how to verify your python conversations.
-\newblock In {\em Programming Language Approaches to Communication- and
-  Concurrency-cEntric Software}, pages 34--39, 2013.
+\newblock Session types go dynamic or how to verify your {Python}
+  conversations.
+\newblock In {\em PLACES'13. Rome, Italy, 23 March}, pages 34--39, 2013.
 
 \bibitem{ng2012multiparty}
 Nicholas Ng, Nobuko Yoshida, and Kohei Honda.
-\newblock Multiparty session c: Safe parallel programming with message
+\newblock {Multiparty Session C}: Safe parallel programming with message
   optimisation.
 \newblock In {\em Objects, Models, Components, Patterns}, pages 202--218.
   Springer, 2012.
 
 \bibitem{sj-parallel}
-Yiannos Kryftis Raymond~Hu Oliver~Pernet, Nobuko~Yoshida and Nicholas Ng.
-\newblock Safe parallel programming with session java.
-\newblock In {\em COORDINATION'11 Proceedings of the 13th international
-  conference on Coordination models and languages}, pages 110--126. acm, 2010.
+Nicholas Ng, Nobuko Yoshida, Olivier Pernet, Raymond Hu, and Yiannos Kryftis.
+\newblock Safe parallel programming with {Session Java}.
+\newblock In {\em COORDINATION}, pages 110--126, 2011.
 
 \bibitem{chor-essence}
 Zongyan Qiu, Xiangpeng Zhao, Chao Cai, and Hongli Yang.
@@ -114,16 +118,10 @@ Zongyan Qiu, Xiangpeng Zhao, Chao Cai, and Hongli Yang.
 
 \bibitem{utility-driven-fed}
 Rajiv~Ranjan Rajkumar~Buyya and Rodrigo~N. Calheiros.
-\newblock Intercloud: Utility-oriented federation of cloud computing
+\newblock {InterCloud}: Utility-oriented federation of {Cloud Computing}
   environments for scaling of application services.
-\newblock {\em Proceedings of the 10th International Conference on Algorithms
-  and Architectures for Parallel Processing}, 2010.
-
-\bibitem{event-driven-sj}
-Andi~Bejleri Raymond~Hu, Nobuko~Yoshida and Kohei Honda.
-\newblock The sj framework for transport-independent, type-safe,
-  object-oriented communications programming.
-\newblock \url{http://arxiv.org/pdf/1002.0933.pdf}.
+\newblock In {\em Algorithms and architectures for parallel processing}, pages
+  13--31. Springer, 2010.
 
 \bibitem{higher-order-comm}
 Malcolm~Hole Simon~Gay.
