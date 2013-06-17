@@ -1,27 +1,24 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.1.18)  16 JUN 2013 20:23
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.6.3)  17 JUN 2013 22:48
 entering extended mode
- restricted \write18 enabled.
- %&-line parsing enabled.
-**easychair
-(./easychair.tex
+**easychair.tex
+(D:\Rustem\BEAT\beatII\easychair\EC3.2\easychair.tex
 LaTeX2e <2011/06/27>
-Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, et
-hiopic, farsi, arabic, pinyin, croatian, bulgarian, ukrainian, russian, slovak,
- czech, danish, dutch, usenglishmax, ukenglish, finnish, french, basque, ngerma
-n, german, swissgerman, ngerman-x-2012-05-30, german-x-2012-05-30, monogreek, g
-reek, ibycus, ancientgreek, hungarian, bengali, tamil, hindi, telugu, gujarati,
- sanskrit, malayalam, kannada, assamese, marathi, oriya, panjabi, italian, lati
-n, latvian, lithuanian, mongolian, mongolianlmc, nynorsk, bokmal, indonesian, e
-speranto, coptic, welsh, irish, interlingua, serbian, serbianc, slovenian, friu
-lan, romansh, estonian, romanian, armenian, uppersorbian, turkish, afrikaans, i
-celandic, kurmanji, polish, portuguese, galician, catalan, spanish, swedish, th
-ai, loaded.
-(./llncs.cls
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2009-06-19, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, lao, latin, lat
+vian, lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerm
+an, ngerman-x-2009-06-19, nynorsk, oriya, panjabi, pinyin, polish, portuguese, 
+romanian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swis
+sgerman, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, u
+senglishmax, welsh, loaded.
+(D:\Rustem\BEAT\beatII\easychair\EC3.2\llncs.cls
 Document Class: llncs 2010/07/12 v2.17 
  LaTeX document class for Lecture Notes in Computer Science
-(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+("C:\Program Files\Tex\tex\latex\base\article.cls"
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
-(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+("C:\Program Files\Tex\tex\latex\base\size10.clo"
 File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -36,7 +33,7 @@ File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
+("C:\Program Files\Tex\tex\latex\tools\multicol.sty"
 Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
 \c@tracingmulticols=\count87
 \mult@box=\box26
@@ -83,10 +80,11 @@ Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
 \mult@nat@firstbox=\box50
 \colbreak@box=\box51
 \multicol@sort@counter=\count95
-) (./aliascnt.sty
+)
+(D:\Rustem\BEAT\beatII\easychair\EC3.2\aliascnt.sty
 Package: aliascnt 2009/09/08 v1.3 Alias counter (HO)
 
-(./remreset.sty))
+(D:\Rustem\BEAT\beatII\easychair\EC3.2\remreset.sty))
 \c@chapter=\count96
 LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 362.
 LaTeX Font Info:    Redeclaring math symbol \Delta on input line 363.
@@ -137,7 +135,8 @@ LaTeX Font Info:    Redeclaring math symbol \Omega on input line 372.
 \c@solution=\count114
 \c@remark=\count115
 \headlineindent=\dimen123
-) (/usr/share/texlive/texmf-dist/tex/latex/base/doc.sty
+)
+("C:\Program Files\Tex\tex\latex\base\doc.sty"
 Package: doc 2010/02/04 v2.1e Standard LaTeX documentation package (FMi)
 \c@StandardModuleDepth=\count116
 \guard@level=\count117
@@ -150,19 +149,20 @@ Package: doc 2010/02/04 v2.1e Standard LaTeX documentation package (FMi)
 \c@IndexColumns=\count119
 \GlossaryMin=\dimen126
 \c@GlossaryColumns=\count120
+\l@nohyphenation=\language70
 \check@sum=\count121
 \bslash@cnt=\count122
 \wrong@table=\toks19
 \c@CodelineNo=\count123
 )
-(/usr/share/texlive/texmf-dist/tex/latex/base/makeidx.sty
+("C:\Program Files\Tex\tex\latex\base\makeidx.sty"
 Package: makeidx 2000/03/29 v1.0m Standard LaTeX package
 )
-(/usr/share/texlive/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+("C:\Program Files\Tex\tex\latex\fancyvrb\fancyvrb.sty"
 Package: fancyvrb 2008/02/07
 
 Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
-<2008/02/07> (tvz) (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+<2008/02/07> (tvz) ("C:\Program Files\Tex\tex\latex\graphics\keyval.sty"
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks20
 )
@@ -172,7 +172,8 @@ Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \c@FancyVerbLine=\count125
 \FV@StepNumber=\count126
 \FV@OutFile=\write3
-) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+)
+("C:\Program Files\Tex\tex\latex\listings\listings.sty"
 \lst@mode=\count127
 \lst@gtempboxa=\box55
 \lst@token=\toks21
@@ -186,18 +187,18 @@ Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \lst@lineno=\count132
 \lst@maxwidth=\dimen130
 
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+("C:\Program Files\Tex\tex\latex\listings\lstmisc.sty"
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
 \c@lstnumber=\count133
 \lst@skipnumbers=\count134
 \lst@framebox=\box56
 )
-(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+("C:\Program Files\Tex\tex\latex\listings\listings.cfg"
 File: listings.cfg 2007/02/22 1.4 listings configuration
 ))
 Package: listings 2007/02/22 1.4 (Carsten Heinz)
 
-(/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty
+("C:\Program Files\Tex\tex\latex\tools\longtable.sty"
 Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
 \LTleft=\skip47
 \LTright=\skip48
@@ -215,7 +216,7 @@ Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
 \c@LT@chunks=\count139
 \LT@p@ftn=\toks22
 )
-(/usr/share/texlive/texmf-dist/tex/latex/paralist/paralist.sty
+("C:\Program Files\Tex\tex\latex\paralist\paralist.sty"
 Package: paralist 2002/03/18 v2.3b Extended list environments (BS)
 \pltopsep=\skip51
 \plpartopsep=\skip52
@@ -223,32 +224,32 @@ Package: paralist 2002/03/18 v2.3b Extended list environments (BS)
 \plparsep=\skip54
 \pl@lab=\toks23
 )
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+("C:\Program Files\Tex\tex\latex\graphics\color.sty"
 Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
 
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+("C:\Program Files\Tex\tex\latex\00miktex\color.cfg"
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package color Info: Driver file: pdftex.def on input line 130.
 
-(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+("C:\Program Files\Tex\tex\latex\pdftex-def\pdftex.def"
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+("C:\Program Files\Tex\tex\generic\oberdiek\infwarerr.sty"
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+("C:\Program Files\Tex\tex\generic\oberdiek\ltxcmds.sty"
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count140
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+("C:\Program Files\Tex\tex\latex\algorithmicx\algpseudocode.sty"
 Package: algpseudocode 
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+("C:\Program Files\Tex\tex\latex\base\ifthen.sty"
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+("C:\Program Files\Tex\tex\latex\algorithmicx\algorithmicx.sty"
 Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
 
 Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
@@ -264,16 +265,16 @@ Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
 \ALG@tmplength=\skip57
 )
 Document Style - pseudocode environments for use with the `algorithmicx' style
-) (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+) ("C:\Program Files\Tex\tex\latex\hyperref\hyperref.sty"
 Package: hyperref 2012/05/13 v6.82q Hypertext links for LaTeX
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
-Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
+("C:\Program Files\Tex\tex\generic\oberdiek\hobsub-hyperref.sty"
+Package: hobsub-hyperref 2012/04/25 v1.12 Bundle oberdiek, subset hyperref (HO)
 
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
-Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
-Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
+("C:\Program Files\Tex\tex\generic\oberdiek\hobsub-generic.sty"
+Package: hobsub-generic 2012/04/25 v1.12 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/04/25 v1.12 Construct package bundles (HO)
 Package hobsub Info: Skipping package `infwarerr' (already loaded).
 Package hobsub Info: Skipping package `ltxcmds' (already loaded).
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
@@ -304,7 +305,7 @@ Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
 )
 Package hobsub Info: Skipping package `hobsub' (already loaded).
 Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
-Package: hopatch 2012/05/28 v1.2 Wrapper for package hooks (HO)
+Package: hopatch 2011/06/24 v1.1 Wrapper for package hooks (HO)
 Package: xcolor-patch 2011/01/30 xcolor patch
 Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
 Package atveryend Info: \enddocument detected (standard20110627).
@@ -312,22 +313,22 @@ Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
 Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
 Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+("C:\Program Files\Tex\tex\generic\ifxetex\ifxetex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+("C:\Program Files\Tex\tex\latex\oberdiek\kvoptions.sty"
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
 \@linkdim=\dimen132
 \Hy@linkcounter=\count148
 \Hy@pagecounter=\count149
 
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+("C:\Program Files\Tex\tex\latex\hyperref\pd1enc.def"
 File: pd1enc.def 2012/05/13 v6.82q Hyperref: PDFDocEncoding definition (HO)
 )
 \Hy@SavedSpaceFactor=\count150
 
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+("C:\Program Files\Tex\tex\latex\00miktex\hyperref.cfg"
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
 Package hyperref Info: Hyper figures OFF on input line 4062.
@@ -339,7 +340,7 @@ Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4300.
 \c@Hy@tempcnt=\count151
 
-(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+("C:\Program Files\Tex\tex\latex\ltxmisc\url.sty"
 \Urlmuskip=\muskip10
 Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 )
@@ -363,39 +364,39 @@ LaTeX Info: Redefining \pageref on input line 5847.
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+("C:\Program Files\Tex\tex\latex\hyperref\hpdftex.def"
 File: hpdftex.def 2012/05/13 v6.82q Hyperref driver for pdfTeX
 \Fld@listcount=\count156
 \c@bookmark@seq@number=\count157
 
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+("C:\Program Files\Tex\tex\latex\oberdiek\rerunfilecheck.sty"
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
 \Hy@SectionHShift=\skip58
 )
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+("C:\Program Files\Tex\tex\latex\graphics\graphicx.sty"
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+("C:\Program Files\Tex\tex\latex\graphics\graphics.sty"
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+("C:\Program Files\Tex\tex\latex\graphics\trig.sty"
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
-File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+("C:\Program Files\Tex\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 )
 \Gin@req@height=\dimen135
 \Gin@req@width=\dimen136
 )
-(/usr/share/texlive/texmf-dist/tex/latex/mh/mathtools.sty
+("C:\Program Files\Tex\tex\latex\mh\mathtools.sty"
 Package: mathtools 2012/04/24 v1.12 mathematical typesetting tools
 
-(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+("C:\Program Files\Tex\tex\latex\tools\calc.sty"
 Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count158
 \calc@Bcount=\count159
@@ -408,27 +409,27 @@ LaTeX Info: Redefining \addtolength on input line 77.
 \calc@Ccount=\count160
 \calc@Cskip=\skip61
 )
-(/usr/share/texlive/texmf-dist/tex/latex/mh/mhsetup.sty
+("C:\Program Files\Tex\tex\latex\mh\mhsetup.sty"
 Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+("C:\Program Files\Tex\tex\latex\ams\math\amsmath.sty"
 Package: amsmath 2000/07/18 v2.13 AMS math features
 \@mathmargin=\skip62
 
 For additional information on amsmath, use the `?' option.
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+("C:\Program Files\Tex\tex\latex\ams\math\amstext.sty"
 Package: amstext 2000/06/29 v2.01
 
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+("C:\Program Files\Tex\tex\latex\ams\math\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks24
 \ex@=\dimen139
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+("C:\Program Files\Tex\tex\latex\ams\math\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen140
 )
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+("C:\Program Files\Tex\tex\latex\ams\math\amsopn.sty"
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count161
@@ -482,26 +483,26 @@ LaTeX Info: Redefining \] on input line 2667.
 \l_MT_below_intertext_dim=\dimen152
 \l_MT_above_shortintertext_dim=\dimen153
 \l_MT_below_shortintertext_dim=\dimen154
-) (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+) ("C:\Program Files\Tex\tex\latex\amsfonts\amsfonts.sty"
 Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/stmaryrd/stmaryrd.sty
+("C:\Program Files\Tex\tex\latex\stmaryrd\stmaryrd.sty"
 Package: stmaryrd 1994/03/03 St Mary's Road symbol package
 \symstmry=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `stmry' in version `bold'
 (Font)                  U/stmry/m/n --> U/stmry/b/n on input line 89.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
+("C:\Program Files\Tex\tex\latex\tools\verbatim.sty"
 Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks29
 \verbatim@line=\toks30
 \verbatim@in@stream=\read2
 )
-(/usr/share/texlive/texmf-dist/tex/latex/txfonts/txfonts.sty
+("C:\Program Files\Tex\tex\latex\txfonts\txfonts.sty"
 Package: txfonts 2008/01/22 v3.2.1
 LaTeX Font Info:    Redeclaring symbol font `operators' on input line 21.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
@@ -588,241 +589,501 @@ LaTeX Info: Redefining \not on input line 1043.
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 42.
 
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+("C:\Program Files\Tex\tex\latex\caption\caption.sty"
+Package: caption 2012/02/19 v3.2f Customizing captions (AR)
+
+("C:\Program Files\Tex\tex\latex\caption\caption3.sty"
+Package: caption3 2012/01/12 v1.4b caption3 kernel (AR)
+\captionmargin=\dimen155
+\captionmargin@=\dimen156
+\captionwidth=\dimen157
+\caption@indent=\dimen158
+\caption@parindent=\dimen159
+\caption@hangindent=\dimen160
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+)
+
+Package caption Warning: Unsupported document class (or package) detected,
+(caption)                usage of the caption package is not recommended.
+See the caption package documentation for explanation.
+
+Package caption Info: \@makecaption = \long macro:#1#2->\small \vskip \abovecap
+tionskip \sbox \@tempboxa {{\bfseries #1.} #2}\ifdim \wd \@tempboxa >\hsize {\b
+fseries #1.} #2\par \else \global \@minipagefalse \hb@xt@ \hsize {\hfil \box \@
+tempboxa \hfil }\fi \vskip \belowcaptionskip .
+\c@ContinuedFloat=\count174
+Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
+Package caption Info: longtable package is loaded.
+("C:\Program Files\Tex\tex\latex\caption\ltcaption.sty"
+Package: ltcaption 2011/09/12 v1.3 longtable captions (AR)
+))
+("C:\Program Files\Tex\tex\latex\listings\lstmisc.sty"
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
 \lstFV@gtempboxa=\box63
 )
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+("C:\Program Files\Tex\tex\latex\listings\lstlang1.sty"
 File: lstlang1.sty 2004/09/05 1.3 listings language file
 )
-(./easychair.aux)
-\openout1 = `easychair.aux'.
+(D:\Rustem\BEAT\beatII\easychair\EC3.2\easychair.aux)
+LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 99.
+LaTeX Font Info:    Try loading font information for OML+txmi on input line 99.
 
-LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 96.
-LaTeX Font Info:    Try loading font information for OML+txmi on input line 96.
 
- (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
+("C:\Program Files\Tex\tex\latex\txfonts\omltxmi.fd"
 File: omltxmi.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 96.
-LaTeX Font Info:    Try loading font information for OMS+txsy on input line 96.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 99.
+LaTeX Font Info:    Try loading font information for OMS+txsy on input line 99.
 
 
-(/usr/share/texlive/texmf-dist/tex/latex/txfonts/omstxsy.fd
+("C:\Program Files\Tex\tex\latex\txfonts\omstxsy.fd"
 File: omstxsy.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 96.
-LaTeX Font Info:    Try loading font information for OMX+txex on input line 96.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 99.
+LaTeX Font Info:    Try loading font information for OMX+txex on input line 99.
 
 
-(/usr/share/texlive/texmf-dist/tex/latex/txfonts/omxtxex.fd
+("C:\Program Files\Tex\tex\latex\txfonts\omxtxex.fd"
 File: omxtxex.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 96.
-LaTeX Font Info:    Try loading font information for U+txexa on input line 96.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 99.
+LaTeX Font Info:    Try loading font information for U+txexa on input line 99.
 
-(/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxexa.fd
+("C:\Program Files\Tex\tex\latex\txfonts\utxexa.fd"
 File: utxexa.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Try loading font information for OT1+txr on input line 96.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Try loading font information for OT1+txr on input line 99.
 
-(/usr/share/texlive/texmf-dist/tex/latex/txfonts/ot1txr.fd
+("C:\Program Files\Tex\tex\latex\txfonts\ot1txr.fd"
 File: ot1txr.fd 2000/12/15 v3.1
 )
-\c@lstlisting=\count174
+\c@lstlisting=\count175
 
-(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+("C:\Program Files\Tex\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count175
-\scratchdimen=\dimen155
+\scratchcounter=\count176
+\scratchdimen=\dimen161
 \scratchbox=\box64
-\nofMPsegments=\count176
-\nofMParguments=\count177
+\nofMPsegments=\count177
+\nofMParguments=\count178
 \everyMPshowfont=\toks31
-\MPscratchCnt=\count178
-\MPscratchDim=\dimen156
-\MPnumerator=\count179
-\makeMPintoPDFobject=\count180
+\MPscratchCnt=\count179
+\MPscratchDim=\dimen162
+\MPnumerator=\count180
+\makeMPintoPDFobject=\count181
 \everyMPtoPDFconversion=\toks32
 )
 \AtBeginShipoutBox=\box65
-Package hyperref Info: Link coloring ON on input line 96.
- (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package hyperref Info: Link coloring ON on input line 99.
+ ("C:\Program Files\Tex\tex\latex\hyperref\nameref.sty"
 Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+("C:\Program Files\Tex\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count181
+\c@section@level=\count182
 )
-LaTeX Info: Redefining \ref on input line 96.
-LaTeX Info: Redefining \pageref on input line 96.
-LaTeX Info: Redefining \nameref on input line 96.
+LaTeX Info: Redefining \ref on input line 99.
+LaTeX Info: Redefining \pageref on input line 99.
+LaTeX Info: Redefining \nameref on input line 99.
 
-(./easychair.out) (./easychair.out)
+(D:\Rustem\BEAT\beatII\easychair\EC3.2\easychair.out)
+(D:\Rustem\BEAT\beatII\easychair\EC3.2\easychair.out)
 \@outlinefile=\write4
-\openout4 = `easychair.out'.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Try loading font information for U+txsya on input line 142.
 
 
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
-
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
-)
-Package grfext Info: Graphics extension search list:
-(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 452.
-
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
-))
-LaTeX Font Info:    Try loading font information for U+txsya on input line 139.
-
-
-(/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsya.fd
+("C:\Program Files\Tex\tex\latex\txfonts\utxsya.fd"
 File: utxsya.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txsyb on input line 139.
+LaTeX Font Info:    Try loading font information for U+txsyb on input line 142.
 
 
-(/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyb.fd
+("C:\Program Files\Tex\tex\latex\txfonts\utxsyb.fd"
 File: utxsyb.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+stmry on input line 139.
+LaTeX Font Info:    Try loading font information for U+stmry on input line 142.
 
 
-(/usr/share/texlive/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
-LaTeX Font Info:    Try loading font information for U+txmia on input line 139.
+("C:\Program Files\Tex\tex\latex\stmaryrd\ustmry.fd")
+LaTeX Font Info:    Try loading font information for U+txmia on input line 142.
 
 
-(/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxmia.fd
+("C:\Program Files\Tex\tex\latex\txfonts\utxmia.fd"
 File: utxmia.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txsyc on input line 139.
+LaTeX Font Info:    Try loading font information for U+txsyc on input line 142.
 
 
-(/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyc.fd
+("C:\Program Files\Tex\tex\latex\txfonts\utxsyc.fd"
 File: utxsyc.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for OT1+txtt on input line 139
+LaTeX Font Info:    Try loading font information for OT1+txtt on input line 142
 .
 
-(/usr/share/texlive/texmf-dist/tex/latex/txfonts/ot1txtt.fd
+("C:\Program Files\Tex\tex\latex\txfonts\ot1txtt.fd"
 File: ot1txtt.fd 2000/12/15 v3.1
 )
-<resources/WS_stack.png, id=5, 380.42125pt x 423.5825pt>
+<resources/WS_stack.png, id=4, 380.42125pt x 423.5825pt>
 File: resources/WS_stack.png Graphic file (type png)
 
 <use resources/WS_stack.png>
-Package pdftex.def Info: resources/WS_stack.png used on input line 181.
+Package pdftex.def Info: resources/WS_stack.png used on input line 184.
 (pdftex.def)             Requested size: 173.56177pt x 193.26033pt.
- [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+ [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [2 <./resources/WS_stack.png>] [3]
-<resources/sj-delegation.png, id=98, 567.11874pt x 243.91125pt>
+ [2 <D:/Rustem/BEAT/beatII/easychair/EC3.2/resources/WS_stack.png>] [3]
+<resources/sj-delegation.png, id=97, 567.11874pt x 243.91125pt>
 File: resources/sj-delegation.png Graphic file (type png)
 
 <use resources/sj-delegation.png>
-Package pdftex.def Info: resources/sj-delegation.png used on input line 279.
+Package pdftex.def Info: resources/sj-delegation.png used on input line 282.
 (pdftex.def)             Requested size: 277.69987pt x 119.43939pt.
- [4 <./resources/sj-delegation.png>]
-LaTeX Font Info:    Try loading font information for OML+txr on input line 314.
+ [4 <D:/Rustem/BEAT/beatII/easychair/EC3.2/resources/sj-delegation.png>]
+LaTeX Font Info:    Try loading font information for OML+txr on input line 317.
 
-
-(/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxr.fd
+ ("C:\Program Files\Tex\tex\latex\txfonts\omltxr.fd"
 File: omltxr.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `OML/txr/m/n' in size <9> not available
-(Font)              Font shape `OML/txmi/m/it' tried instead on input line 314.
+(Font)              Font shape `OML/txmi/m/it' tried instead on input line 317.
 
- [5]
-LaTeX Font Info:    Try loading font information for OMS+txr on input line 370.
-
-
-(/usr/share/texlive/texmf-dist/tex/latex/txfonts/omstxr.fd
-File: omstxr.fd 2000/12/15 v3.1
-)
-LaTeX Font Info:    Font shape `OMS/txr/m/n' in size <9> not available
-(Font)              Font shape `OMS/txsy/m/n' tried instead on input line 370.
- [6]
-<resources/interaction-sc1.png, id=140, 1228.59pt x 827.09pt>
+[5] [6] <resources/interaction-sc1.png, id=168, 1228.59pt x 827.09pt>
 File: resources/interaction-sc1.png Graphic file (type png)
 
 <use resources/interaction-sc1.png>
-Package pdftex.def Info: resources/interaction-sc1.png used on input line 410.
+Package pdftex.def Info: resources/interaction-sc1.png used on input line 418.
 (pdftex.def)             Requested size: 1228.587pt x 827.08797pt.
 
-Overfull \hbox (22.13132pt too wide) in paragraph at lines 410--411
+Overfull \hbox (22.13132pt too wide) in paragraph at lines 418--419
  [][] 
  []
 
-[7]
-Overfull \hbox (2.57597pt too wide) in paragraph at lines 430--431
+[7 <D:/Rustem/BEAT/beatII/easychair/EC3.2/resources/interaction-sc1.png>]
+Overfull \hbox (2.57597pt too wide) in paragraph at lines 438--439
 []\OT1/txr/m/n/10 SaaS con-tin-ues in-ter-ac-tion with user by ses-sion s. By s
 teps of validation-verification,
  []
 
-[8 <./resources/interaction-sc1.png>] [9]
-<resources/interaction-sc2.png, id=245, 1250.6725pt x 894.34125pt>
+pdfTeX warning (ext4): destination with the same identifier (name{lstlisting.0.
+1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.453 \begin{lstlisting}[caption=User]
+                                      pdfTeX warning (ext4): destination with t
+he same identifier (name{lstnumber.1.1}) has been already used, duplicate ignor
+ed
+<to be read again> 
+                   \relax 
+l.455 protocol 
+               p_uv {pdfTeX warning (ext4): destination with the same identifie
+r (name{lstnumber.1.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.455 protocol 
+               p_uv {pdfTeX warning (ext4): destination with the same identifie
+r (name{lstnumber.1.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.456   begin.
+              ?[!<String>.!<String> ]*.pdfTeX warning (ext4): destination with 
+the same identifier (name{lstnumber.1.4}) has been already used, duplicate igno
+red
+<to be read again> 
+                   \relax 
+l.457   ?{
+          pdfTeX warning (ext4): destination with the same identifier (name{lst
+number.1.5}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.458    ACCESS:
+                 !<JSONMsg>.pdfTeX warning (ext4): destination with the same id
+entifier (name{lstnumber.1.6}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.459    ?{
+           pdfTeX warning (ext4): destination with the same identifier (name{ls
+tnumber.1.7}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.460      OK:
+               ?(JSONMsg), FAIL: ?(JSONMsg)pdfTeX warning (ext4): destination w
+ith the same identifier (name{lstnumber.1.8}) has been already used, duplicate 
+ignored
+<to be read again> 
+                   \relax 
+l.461    },
+           pdfTeX warning (ext4): destination with the same identifier (name{ls
+tlisting.0.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.469 \begin{lstlisting}[caption=Cloud]
+                                       pdfTeX warning (ext4): destination with 
+the same identifier (name{lstnumber.2.1}) has been already used, duplicate igno
+red
+<to be read again> 
+                   \relax 
+l.471 private 
+              protocol p_vu {pdfTeX warning (ext4): destination with the same i
+dentifier (name{lstnumber.2.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.471 private 
+              protocol p_vu {pdfTeX warning (ext4): destination with the same i
+dentifier (name{lstnumber.2.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.472   begin.
+              pdfTeX warning (ext4): destination with the same identifier (name
+{lstnumber.2.4}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.473    ![ 
+            ?(String).?(String) // login passwordpdfTeX warning (ext4): destina
+tion with the same identifier (name{lstnumber.2.5}) has been already used, dupl
+icate ignored
+<to be read again> 
+                   \relax 
+l.474      ]*.
+              pdfTeX warning (ext4): destination with the same identifier (name
+{lstnumber.2.6}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.475   !{
+          pdfTeX warning (ext4): destination with the same identifier (name{lst
+number.2.7}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.476     ACCESS:
+                  ?(JSONMsg).pdfTeX warning (ext4): destination with the same i
+dentifier (name{lstnumber.2.8}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.477     !{
+            pdfTeX warning (ext4): destination with the same identifier (name{l
+stnumber.2.9}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.478       OK:
+                !<JSONMsg>, FAIL: !<JSONMsg>pdfTeX warning (ext4): destination 
+with the same identifier (name{lstnumber.2.10}) has been already used, duplicat
+e ignored
+<to be read again> 
+                   \relax 
+l.479      },
+             pdfTeX warning (ext4): destination with the same identifier (name{
+lstnumber.2.11}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.480       DENY:
+                  !<String>pdfTeX warning (ext4): destination with the same ide
+ntifier (name{lstnumber.2.12}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.481    }
+          
+Overfull \hbox (1.71pt too wide) in paragraph at lines 452--486
+[][] [] 
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{lstlisting.0.
+1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.502 \begin{lstlisting}[caption=Cloud]
+                                       pdfTeX warning (ext4): destination with 
+the same identifier (name{lstnumber.1.1}) has been already used, duplicate igno
+red
+<to be read again> 
+                   \relax 
+l.504 protocol 
+               p_vs {pdfTeX warning (ext4): destination with the same identifie
+r (name{lstnumber.1.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.504 protocol 
+               p_vs {pdfTeX warning (ext4): destination with the same identifie
+r (name{lstnumber.1.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.505   begin.
+              pdfTeX warning (ext4): destination with the same identifier (name
+{lstnumber.1.4}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.506   !< 
+           !{pdfTeX warning (ext4): destination with the same identifier (name{
+lstnumber.1.5}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.507     OK:
+              !<JSONMsg>,pdfTeX warning (ext4): destination with the same ident
+ifier (name{lstnumber.1.6}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.508     FAIL:
+                !<JSONMsg>pdfTeX warning (ext4): destination with the same iden
+tifier (name{lstnumber.1.7}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.509   } 
+          >.!<JSONMsg>pdfTeX warning (ext4): destination with the same identifi
+er (name{lstnumber.1.8}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.510 }
+       pdfTeX warning (ext4): destination with the same identifier (name{lstlis
+ting.0.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.515 \begin{lstlisting}[caption=Cloud]
+                                       pdfTeX warning (ext4): destination with 
+the same identifier (name{lstnumber.2.1}) has been already used, duplicate igno
+red
+<to be read again> 
+                   \relax 
+l.517 protocol 
+               p_msg {pdfTeX warning (ext4): destination with the same identifi
+er (name{lstnumber.2.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.517 protocol 
+               p_msg {pdfTeX warning (ext4): destination with the same identifi
+er (name{lstnumber.2.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.518   !{
+          pdfTeX warning (ext4): destination with the same identifier (name{lst
+number.2.4}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.519     OK:
+              !<JSONMsg>,pdfTeX warning (ext4): destination with the same ident
+ifier (name{lstnumber.2.5}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.520     FAIL:
+                !<JSONMsg>pdfTeX warning (ext4): destination with the same iden
+tifier (name{lstnumber.2.6}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.521   }
+         pdfTeX warning (ext4): destination with the same identifier (name{lstn
+umber.2.7}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.522 }
+       pdfTeX warning (ext4): destination with the same identifier (name{lstnum
+ber.2.8}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.524 protocol 
+               p_sv {pdfTeX warning (ext4): destination with the same identifie
+r (name{lstnumber.2.9}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.524 protocol 
+               p_sv {pdfTeX warning (ext4): destination with the same identifie
+r (name{lstnumber.2.10}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.525   begin.
+              ?(@p_msg).?(JSONMsg)pdfTeX warning (ext4): destination with the s
+ame identifier (name{lstnumber.2.11}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.526 }
+       pdfTeX warning (ext4): destination with the same identifier (name{lstnum
+ber.2.12}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.528 \end{lstlisting}
+                      
+Overfull \hbox (1.71pt too wide) in paragraph at lines 501--530
+[][] [] 
+ []
+
+[8]
+LaTeX Font Info:    Try loading font information for OMS+txr on input line 538.
+
+ ("C:\Program Files\Tex\tex\latex\txfonts\omstxr.fd"
+File: omstxr.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    Font shape `OMS/txr/m/n' in size <9> not available
+(Font)              Font shape `OMS/txsy/m/n' tried instead on input line 538.
+
+
+Package caption Warning: \label without proper \caption on input line 549.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:seq-diagram-sc2' on page 9 undefined on input lin
+e 546.
+
+<resources/interaction-sc2.png, id=199, 1250.6725pt x 894.34125pt>
 File: resources/interaction-sc2.png Graphic file (type png)
 
 <use resources/interaction-sc2.png>
-Package pdftex.def Info: resources/interaction-sc2.png used on input line 526.
+Package pdftex.def Info: resources/interaction-sc2.png used on input line 551.
 (pdftex.def)             Requested size: 277.69987pt x 198.57066pt.
- [10 <./resources/interaction-sc2.png>]
-(./easychair.bbl [11]
+ [9 <D:/Rustem/BEAT/beatII/easychair/EC3.2/resources/interaction-sc2.png>] [10]
+
+(D:\Rustem\BEAT\beatII\easychair\EC3.2\easychair.bbl [11]
 Underfull \hbox (badness 2073) in paragraph at lines 69--73
 []\OT1/txr/m/n/9 Michael Em-manuel.  Session-based web ser-vice pro-gram-ming f
 or busi-ness pro-to-
  []
 
-[12])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 599.
- [13]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 599.
- (./easychair.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 599.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 599.
+)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 626.
+ [12]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 626.
+ (D:\Rustem\BEAT\beatII\easychair\EC3.2\easychair.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 626.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 626.
 Package rerunfilecheck Info: File `easychair.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 599.
+
+
+LaTeX Warning: There were undefined references.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 626.
  ) 
 Here is how much of TeX's memory you used:
- 10295 strings out of 493485
- 147205 string characters out of 3143526
- 402958 words of memory out of 3000000
- 13229 multiletter control sequences out of 15000+200000
- 40813 words of font info for 102 fonts, out of 3000000 for 9000
- 957 hyphenation exceptions out of 8191
- 33i,17n,40p,1094b,1699s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txf
-onts/txsyc.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txtt.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on easychair.pdf (13 pages, 198848 bytes).
+ 11138 strings out of 494045
+ 162035 string characters out of 3151206
+ 411922 words of memory out of 3000000
+ 14097 multiletter control sequences out of 15000+200000
+ 41365 words of font info for 104 fonts, out of 3000000 for 9000
+ 715 hyphenation exceptions out of 8191
+ 36i,17n,40p,1269b,1668s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/Tex/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files/Tex/f
+onts/type1/public/txfonts/rtxmi.pfb><C:/Program Files/Tex/fonts/type1/public/tx
+fonts/rtxr.pfb><C:/Program Files/Tex/fonts/type1/public/txfonts/txsy.pfb><C:/Pr
+ogram Files/Tex/fonts/type1/public/txfonts/txsyc.pfb><C:/Program Files/Tex/font
+s/type1/public/txfonts/txtt.pfb><C:/Program Files/Tex/fonts/type1/urw/times/utm
+b8a.pfb><C:/Program Files/Tex/fonts/type1/urw/times/utmr8a.pfb><C:/Program File
+s/Tex/fonts/type1/urw/times/utmri8a.pfb>
+Output written on easychair.pdf (12 pages, 231658 bytes).
 PDF statistics:
- 389 PDF objects out of 1000 (max. 8388607)
- 329 compressed objects within 4 object streams
- 183 named destinations out of 1000 (max. 500000)
+ 338 PDF objects out of 1000 (max. 8388607)
+ 145 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

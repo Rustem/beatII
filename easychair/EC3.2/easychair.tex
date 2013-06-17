@@ -41,6 +41,9 @@
     urlcolor=blue
 }
 
+% for overriding caption view
+\usepackage{caption}
+\captionsetup[lstlisting]{ singlelinecheck=false, margin=0pt, font={it,footnotesize} }
 % Let's style the code!
 % Set-up code visualisation
 \lstset{fancyvrb=true}
@@ -292,17 +295,17 @@ After creating a protocol (session type) and encapsulating the session into SJ s
 
 \begin{figure}
 \begin{gather*}
-\begin{array}{lrr}
-s.request() 	& \mid 		    & \mbox{\texttt{begin}} \\
-s.send(m)   	& \mid	 		& \mathopen{!}\left<M\right> \\
-s.receive() 	& \mid	 		& \mathopen{?}\left(M\right) \\
-s.outbranch(L) \ \{P\} & \mid		& \mathopen{!}\left\{L\mathopen{:} T\right\} \\
-\texttt{s.inbranch()} \ \{case L1\mathopen{:} {P1}\dots case Ln\mathopen{:}{Pn}\} & \mid & \mathopen{?}\left\{L_1\colon 
+\begin{array}{lrl}
+s.request() 	&   		    & \mbox{\texttt{begin}} \\
+s.send(m)   	&  	 		& \mathopen{!}\left<M\right> \\
+s.receive() 	&  	 		& \mathopen{?}\left(M\right) \\
+s.outbranch(L) \ \{P\} &  		& \mathopen{!}\left\{L\mathopen{:} T\right\} \\
+s.inbranch() \ \{case L1\mathopen{:} {P1}\dots case Ln\mathopen{:}{Pn}\} &   & \mathopen{?}\left\{L_1\colon 
                                         T_1,\dots, L_n\colon T_n\right\} \\
-s.outwhile(cond) \ \{P\} 		& \mid & \left[T\right]\mathopen{*} \\
-s.inwhile() \ \{P\} 		 	& \mid & \mathopen{?}\left[T\right]\mathopen{*} \\
-s.recursion(L) \ \{P\} & \mid & \texttt{rec}\,L\left[T\right] \\
-s.recurse(L) & \mid & \mathopen{\#}L \\
+s.outwhile(cond) \ \{P\} 		&   & \left[T\right]\mathopen{*} \\
+s.inwhile() \ \{P\} 		 	&   & \mathopen{?}\left[T\right]\mathopen{*} \\
+s.recursion(L) \ \{P\} &   & \texttt{rec}\,L\left[T\right] \\
+s.recurse(L) &   & \mathopen{\#}L \\
 \end{array}
 \end{gather*}
 \caption{SJ protocol specification}\label{tab:session-ops} 
@@ -340,67 +343,72 @@ The persistence layer is based on MongoDB and Memcached. One of the challenging 
 \end{compactitem}
 
 \subsection{Simple Scenario}
-\paragraph{Protocol declaration} As a starting point, let's specify simple business protocol of one of the processes just mentioned, SaaS connection. Informally, it may be interpreted as follows:
+As a starting point, let's specify simple business protocol of one of the processes just mentioned, SaaS connection. Informally, it may be interpreted as follows:
 \begin{enumerate}
-\item  User begins a request session (s) with cloud service (V3na) and sends the request ``Connect SaaS'' as JSON-encoded message.
+\item  User begins a request session (s) with Cloud service (V3na) and sends the request ``Connect SaaS'' as JSON-encoded message.
 
 \item  V3na sends either:
 
 \item  FAIL, if user has no active session (not signed in on V3na) and further interaction terminates 
 
-\item  OK, if user has logged in and request data has passed validation steps. Then Cloud initiates a new session (s') with SaaS and requests it for new user connection with HttpRequestJSONMessage.
+\item  or OK, if user has logged in and request data has passed validation steps. Then Cloud initiates a new session (s') with SaaS and requests it for new user connection with message details in JSONMsg.
 
-\item  If OK label take place, Cloud initiates a new session (s') with SaaS and requests it for new user connection with HttpRequestJSONMessage. finally SaaS responds to Cloud with connection status (OK, FAIL) and V3na sends this status to User. Both sessions have to be terminated.
+\item  If OK label take place, Cloud initiates a new session (s') with SaaS and requests it for new user connection with message details in JSONMsg.
+\item In the end, SaaS responds to Cloud with connection status OK or FAIL and V3na sends this status to User. Both sessions have to be terminated.
 \end{enumerate}
 
-\textit{Protocols.} The decision in the protocol will be incorporated through the use of outbranch. So the whole scenario is presented on Table \ref{tab:protocols-sc1}.
+\paragraph{Protocols.} In Figure \ref{fig:protocols-sc1} depicted protocol specifications for each involved component (or participant): Cloud, SaaS, User. It can be clearly seen that protocols between User and Cloud and Cloud and SaaS are dual, e.g. specification of interaction from one perspective is opposite from another. Later we will see how decision (choice) in the protocol will be incorporated through the use of dual construct \texttt{outbranch} and \texttt{inbranch}. So the whole scenario is presented in Figure \ref{fig:protocols-sc1}.
 
 {
 \lstset{
-framerule=0pt,
-numbers=none
+  framerule=0pt,
+  numbers=none,
+  basicstyle=\ttfamily\scriptsize,
 }
-\begin{longtable}{|p{0.3\textwidth}|p{0.3\textwidth}|p{0.3\textwidth}|}
-\caption{Protocols of scenario \# 1}
-\label{tab:protocols-sc1} \\ \hline
-User & Cloud (V3na) & SaaS \\ \hline
-\endhead
+\renewcommand\lstlistingname{Protocol}
+\begin{figure}
 
-\begin{lstlisting}
+\begin{minipage}[t]{0.30\textwidth}
+\begin{lstlisting}[caption=User]
 protocol p_uv { 
   begin.
-  !<JSONMessage>. 
+  !<JSONMsg>. 
   ?{
-    OK: ?(JSONMessage).?(int),
+    OK: ?(JSONMsg).?(int),
     FAIL: 
   }
 }
 \end{lstlisting}
-&
-\begin{lstlisting}
+\end{minipage}
+\begin{minipage}[t]{0.35\textwidth}
+\begin{lstlisting}[caption=Cloud]
 p_vu { 
-  begin.?(JSONMessage).!{
-    OK: !<JSONMessage>.!<int>,
+  begin.?(JSONMsg).!{
+    OK: !<JSONMsg>.!<int>,
     FAIL: 
   }
 protocol http_req_rep {
-  !<JSONMessage>.
-  ? (JSONMessage)
+  !<JSONMsg>.
+  ? (JSONMsg)
 }
 protocol p_vs { 
   begin.@http_req_rep 
 }
 \end{lstlisting}
-&
-\begin{lstlisting}
+\end{minipage}
+\begin{minipage}[t]{0.30\textwidth}
+\begin{lstlisting}[caption=SaaS]
 protocol p_sv { 
   begin.
-  ?(JSONMessage). !<JSONMessage> 
+  ?(JSONMsg).!<JSONMsg> 
 }
 \end{lstlisting}
-\\ \hline
-\end{longtable}
+\end{minipage}
+\caption{Protocol specifications for Scenario 1}\label{fig:protocols-sc1} 
+\end{figure}
+
 }
+
 
 \paragraph{Interactions.} The general syntax for global description has been interpreted into a sequence UML diagram, as depicted in Figure \ref{fig:interaction-overview-sc1}. The whole syntax is on the down-left side of the figure. In case of choice, terminated branches are out of scope of the main picture, but still a subpart of the whole diagram. Next step is implementation of this diagram in Session-Java.
 
@@ -412,7 +420,7 @@ protocol p_sv {
 \label{fig:interaction-overview-sc1}
 \end{figure}
 
-The main feature of SJ in this scenario is that choice can be expressed by using \textit{outbranch} construct.
+\paragraph{Implementation.} The main point of SJ in this scenario is that choice can be clearly expressed by employing \texttt{outbranch}, \texttt{inbranch} pair.
 
 \subsection{Complicated Scenario}
 New scenario is a bit harder in complexity. We are going to utilize looping construct as well as demonstrating \textit{session delegation}. The description of the scenario of this subsection presented below as follows:
@@ -430,81 +438,98 @@ New scenario is a bit harder in complexity. We are going to utilize looping cons
 \item  SaaS continues interaction with user by session s. By steps of validation-verification, SaaS either responds User to proceed interaction by branch OK or FAIL. In both cases User receives from SaaS directly the reason and status of his request. Session s is terminated.
 \end{compactenum}
 
-\paragraph{Protocols.} First of all, the protocol provided with iterations using $![\dots]*$ $?[\dots]*$. Then protocol introduces higher order operations of type $!<T>\ \ ?<T>$. Full description is provided in tables \ref{tab:user-cloud-protocol} and \ref{tab:cloud-saas-providers}.
-
+\paragraph{Protocols.} First of all, the protocol provided with iterations using $![\dots]*$ $?[\dots]*$. Then protocol introduces higher order operations of type $!<T>\ \ ?<T>$. Full description is provided in figures \ref{fig:user-cloud-protocol} and \ref{fig:cloud-saas-providers}.
 {
 \lstset{
-framerule=0pt,
-numbers=none
+  framerule=0pt,
+  numbers=none,
+  basicstyle=\ttfamily\scriptsize,
 }
-\begin{longtable}{|p{0.45\textwidth}|p{0.45\textwidth}|}
-\caption{User-Cloud protocols}\label{tab:user-cloud-protocol} \\ \hline
-User & Cloud \\ \hline \endhead
-\begin{lstlisting}
+\renewcommand\lstlistingname{Protocol}
+\setcounter{lstlisting}{0}
+\begin{figure}
+
+\begin{minipage}[t]{0.50\textwidth}
+\begin{lstlisting}[caption=User]
+
 protocol p_uv { 
   begin.?[!<String>.!<String> ]*.
   ?{
-   ACCESS: !<JSONMessage>.
+   ACCESS: !<JSONMsg>.
    ?{
-     OK: ?(JSONMessage), FAIL: ?(JSONMessage)
+     OK: ?(JSONMsg), FAIL: ?(JSONMsg)
    },
   DENY: ?(String)
   } 
 }
+
 \end{lstlisting}
-&
-\begin{lstlisting}
+\end{minipage}
+\begin{minipage}[t]{0.50\textwidth}
+\begin{lstlisting}[caption=Cloud]
+
 private protocol p_vu { 
   begin.
    ![ ?(String).?(String) // login password
      ]*.
   !{
-    ACCESS: ?(JSONMessage).
+    ACCESS: ?(JSONMsg).
     !{
-      OK: !<JSONMessage>, FAIL: !<JSONMessage>
+      OK: !<JSONMsg>, FAIL: !<JSONMsg>
      },
       DENY: !<String>
    } 
 }
+
 \end{lstlisting}
-\\ \hline
-\end{longtable}
+\end{minipage}
+\caption{User-Cloud interaction protocol specifications for Scenario 2}\label{fig:user-cloud-protocol} 
+\end{figure}
+
 }
-
-
 
 {
 \lstset{
-framerule=0pt,
-numbers=none
+  framerule=0pt,
+  numbers=none,
+  basicstyle=\ttfamily\scriptsize,
 }
-\begin{longtable}{|p{0.45\textwidth}|p{0.45\textwidth}|}
-\caption{Cloud-SaaS protocols}\label{tab:cloud-saas-providers} \\ \hline
-Cloud & Saas \\ \hline \endhead
-\begin{lstlisting}
+\renewcommand\lstlistingname{Protocol}
+\setcounter{lstlisting}{0}
+\begin{figure}
+
+\begin{minipage}[t]{0.50\textwidth}
+\begin{lstlisting}[caption=Cloud]
+
 protocol p_vs {
   begin.
   !< !{
-    OK: !<JSONMessage>, 
-    FAIL: !<JSONMessage>
-  } >.!<JSONMessage>    
+    OK: !<JSONMsg>, 
+    FAIL: !<JSONMsg>
+  } >.!<JSONMsg>    
 }
+
 \end{lstlisting}
-&
-\begin{lstlisting}
+\end{minipage}
+\begin{minipage}[t]{0.50\textwidth}
+\begin{lstlisting}[caption=Cloud]
+
 protocol p_msg { 
   !{
-    OK: !<JSONMessage>,
-    FAIL: !<JSONMessage> 
+    OK: !<JSONMsg>,
+    FAIL: !<JSONMsg> 
   }
 }
 
 protocol p_sv {
-  begin.?(@p_msg).?(JSONMessage) 
+  begin.?(@p_msg).?(JSONMsg) 
 }
+
 \end{lstlisting}
-\\ \hline
-\end{longtable}
+\end{minipage}
+\caption{Cloud-SaaS interaction protocol specifications for Scenario 2}\label{fig:cloud-saas-providers} 
+\end{figure}
+
 }
 
 Unlike the previous protocol, the Cloud-Saas protocol significantly altered, also authentication process is added to the protocol in interaction between User --- Cloud. It is important to note that 
@@ -575,7 +600,9 @@ Our approach is to employ multiparty session types \cite{ng2012multiparty} for t
 
 \section{Conclusion}
 \label{sect:conclusion}
-In today's time, there is an actual need to develop structured, high-level and type-safe techniques for programming and interaction. The presented case studies demonstrated how communication safety can be guaranteed through a combination of static and dynamic type verification. Although session-based programming is on its infancy, it's developed with huge steps and already proved its feasibility in various fields: parallel algorithms \cite{sj-parallel}, event-driven programming \cite{event-driven-sj}, multiparty conversations \cite{sj-business-protocols}. 
+Although session-based programming is on its infancy, it's developed with huge steps and already proved its feasibility in various fields: parallel algorithms \cite{sj-parallel}, event-driven programming \cite{event-driven-sj}, multiparty conversations \cite{sj-business-protocols}. In this paper, we demonstrated the power of session types to control interaction patterns between communicating processes. The static type-checking in compile time and dynamic type-checking in connection initiation time ensures protocols compatibility. Higher level of abstraction of session types, shown in SJ language, prove its feasibility to effortlessly translate medium Business scenarios into protocols. Due to support of high-level communication (session delegation), it have to be remarked how seamless was the refinement process from Scenario 1 to Scenario 2. In addition, we omit more complicated Scenario about payment and wallet recharging transactions (available by \url{https://github.com/Rustem/Master-thesis}), where we discovered the benefits of combining session delegation and threading provided in SJ. Finally, we hope that our feedback about session types will be as a solid starting point for further research in this area.  
+
+
 %------------------------------------------------------------------------------
 % Refs:
 %
