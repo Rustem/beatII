@@ -115,7 +115,7 @@ morekeywords={*,...}            % if you want to add more keywords to the set
 \begin{abstract}
 The scale and complexity of Web Services raises the challenge of controlling their interaction. The goal of this work is to ensure that processes in a Cloud are correctly interacting according to a specification of their communication behaviour. To accomplish this goal, we employ session types to analyse the global and local communication patterns. Session types represents ``formal blueprints" of how communicating participants should behave and offers a concise view of the message flows.
   
-This work confirms the feasibility of application of session types on business protocols used by an e-commerce Cloud provider and developed in Session-Java, an extension of Java implementing Session-Based programming. Furthermore, we highlight the importance of this approach for services replicated across multiple Cloud providers each of which must correctly cooperate.
+This work confirms the feasibility of applying session types to business protocols used by an e-commerce Cloud provider and developed in Session-Java, an extension of Java implementing Session-Based programming. Furthermore, we highlight the importance of this approach for services distributed and replicated across multiple Cloud providers each of which must correctly cooperate.
 \end{abstract}
 
 \setcounter{tocdepth}{2}
@@ -131,7 +131,7 @@ This work confirms the feasibility of application of session types on business p
 %The growing needs for information availability and accessibility present new challenges for application development.
 The need for distributed highly available services presents challenges for application development.
 %Two forces working in parallel with regards to the need for integration.
-It is necessary for applications to be integrated both within an enterprise, and between businesses.
+It is necessary for applications to be integrated both within a Cloud, and between Clouds providers. %n enterprise, and between businesses.
 Service-Oriented Architectures (SOA) are widely accepted as a paradigm for integrating software applications within and across organizational boundaries.
 In this paradigm, independently deployed applications are exposed as Web Services which are then 
 interconnected using a stack of standards. %(depicted in Figure~\ref{fig:soa-stack}). 
@@ -180,14 +180,14 @@ The WS-CDL working group identified critical issues~\cite{ws-critical-overview} 
 
 The aforementioned challenges can be tackled by adopting a solid foundational model. Successful approaches based on session types~\cite{session-types-sessions,carbone2007structured} include: the Chor and Jolie programming languages of Carbone and Montesi~\cite{chor-lang,carbone2013deadlock} based on sessions and trace sets~\cite{chor-essence}; Session-Java~\cite{sj-lang}, Scribble~\cite{honda2011scribbling} and Session C~\cite{ng2012multiparty} due to Honda and Yoshida; Sing\#~\cite{basu2012deciding} that extends Spec\# with choreogrphies; and UBF(B)~\cite{armstrong2002getting} for Erlang.
 
-In this paper, we present a case study where processes interactions are controlled using Sessions Types. The theory of Session Types ensures communication safety by verifying that session implementations of each engaged participant conform to the defined protocol specification. In our case study, we use Session-Java, an extension to Java language supporting session, to specify protocols used by a Cloud provider that involve iteration and higher order communication.
+In this paper, we present a case study where processes interactions are controlled using Sessions Types. The theory of Session Types ensures communication safety by verifying that session implementations of each engaged participant conform to the defined protocol specification. In our case study, we use Session-Java (an extension of Java supporting sessions) to specify protocols used by a Cloud provider that involve iteration and higher order communication.
 %Session Java works by specifying the intended process transaction protocol using session types and implementing the interaction using session operations.
 
 %Through these we are aiming to confirm the suitability of Session-Java as an implementation of business to business transactions. We want to explore the agility and robustness of the language and the scalability as scenarios vary in size but also complexity. In addition we will be looking for things such as ease of programming in SJ, any limitations, bugs or non-implementable scenarios.
 
 
 In Section~\ref{sect:basics} we provide an overview of SJ.
-In Section~\ref{sect:impl}, we explain a refinements a protocols used by a Cloud provider, implemented using SJ. %and how they can be implemented correctly using session programming.
+In Section~\ref{sect:impl}, we explain a refinement a protocols used by a Cloud provider, implemented using SJ. %and how they can be implemented correctly using session programming.
 Finally, in Section~\ref{sect:highlights}, we highlight how session types can improve the design of inter-Cloud protocols.
 
 
@@ -198,8 +198,8 @@ Finally, in Section~\ref{sect:highlights}, we highlight how session types can im
 We briefly outline how Session-Java is employed to correctly implement protocols.
 %Session programming can be applied when participants cooperate according to specified protocols.
 %Session types are formal specifications of protocols, that describe structured sequences of interaction including basic message passing, branching and recursion.
-Firstly, the global protocol is specified using sequence diagrams. The global specification is projected to sessions types, which specify the protocol for each participant.
-The session is then implemented using operations on session sockets. Finally, the correctness of the protocol can be verified using session types.
+Firstly, the global protocol is specified using sequence diagrams. Secondly, the global specification is projected to sessions types, which specify the protocol for each participant.
+Thirdly, the session is implemented using operations on session sockets. The correctness of the protocol can be verified that the implementations conform to the session types.
 
 %according to the protocol using Session programming begins from the protocols specification for interaction (using session types), which can then be concretely implemented using structured communication operations available on session sockets.
 
@@ -222,7 +222,7 @@ Session programming in SJ consists of the following ordered actions:
 \begin{figure}
 \begin{gather*}
 \begin{array}{c}
-L_1, L_2\quad\mbox{tag}
+L_1, L_2\quad\mbox{label}
 \\[10pt]
 p\quad\mbox{protocol name}
 \\[10pt]
@@ -261,12 +261,12 @@ P \Coloneqq & P; P             \\
 \end{comment}
 
 
-\subsection{Protocol Specification}
+\paragraph{Protocol Specification.}
 %Session programming begins by declaring the protocol for the intended cooperation, where a name identifies the protocol.
 %following the standard Java naming rules. %What are the standard Java naming rules. Can we not put these in the same figure.
 
 The body of a protocol defines a \textit{session type}, according to the grammar in Figure~\ref{tab:prot-spec}.
-The session type specifies the actions that the participant in a session should perform. In SJ, the behaviour of an implementation of a session is monitored by the associated protocol, as enforced by the SJ compiler. %(Polyglot\footnote{\url{http://www.cs.cornell.edu/Projects/polyglot/}. Extensible compile framework.}).
+The session type specifies the actions that the participant in a session should perform. In SJ, the behaviour of an implementation of a session is monitored by the associated protocol, as enforced by the SJ compiler and runtime. %(Polyglot\footnote{\url{http://www.cs.cornell.edu/Projects/polyglot/}. Extensible compile framework.}).
 The constructs in Figure~\ref{tab:prot-spec} can describe a diverse range of complex interactions, including message passing, branching and iteration. Each session type construct has its dual construct, because a typical requirement is that two parties implement compatible protocols such that the specification of one party is dual to another party.
 
 
@@ -283,12 +283,12 @@ Such communication can be expressed by the following dual constructs:
 \end{comment}
 SJ allows message types to themselves be session types. This is called higher-order communication and is supported by using subtyping~\cite{higher-order-comm}.
 Consider the dual constructs $\mathopen{!}\left<\mathopen{?}\left(\text{int}\right)\right>$ and $\mathopen{?}\left(\mathopen{?}\left(\text{int}\right)\right)$. 
-These types specify sessions that expects to respectively send and receive a session of type $\mathopen{?}\left(\text{int}\right)$.
+These types specify sessions that expect to respectively send and receive a session of type $\mathopen{?}\left(\text{int}\right)$.
 Higher order communication is often referred to a session delegation. Figure \ref{fig:sj-delegation} shows a basic delegation scenario.
 
 In Figure~\ref{fig:sj-delegation}, the left diagram represents the session configuration before the delegation is performed: the user is engaged in a session $s$ of type $\mathopen{!}\left<\text{int}\right>$ with the Cloud, while the Cloud is also involved in a session $s'$ with SaaS of type $\mathopen{!}\left<\mathopen{?}\left(\text{int}\right)\right>$. So, instead of accepting the integer from the user, Cloud delegates his role in $s$ to SaaS.
 %After delegation, SaaS can instead receive the message from the user. 
-The diagram on the right of Figure~\ref{fig:sj-delegation} represents the session configuration after the delegation has been performed: the user now directly interact with SaaS for the session $s$.
+The diagram on the right of Figure~\ref{fig:sj-delegation} represents the session configuration after the delegation has been performed: User now directly interacts with SaaS for the session $s$.
 The delegation action corresponds to a higher-order send type for the session $s'$ between Cloud and SaaS.
 %
 \begin{figure}[ht]
@@ -301,13 +301,13 @@ The delegation action corresponds to a higher-order send type for the session $s
 \paragraph{Protocol Implementation using Session-Java.}
 %\paragraph{Another meaning for sockets}
 Session sockets represent the participants of a session connection.
-Each sockets implement the session code according to the specified session type.
+Each socket implements the session code according to the specified session type.
 In SJ session sockets extend the abstract \textit{SJSocket} class. %\textit{SJRSocket::SJSocket} and \textit{SJFSocket::SJSocket}.
 %Each party owns one endpoint and performs the specified interactions via the SJ session operations on that endpoint.
  %both, employ TCP as underlying transport.
 %SJ distinguishes client and server sockets, where the former are used to request sessions from the latter.
 %After creating a protocol (session type) and encapsulating the session into SJ socket,
-The session is implemented within a session-try scope using specific session operations. %operation  the session operations depicted in Figure \ref{tab:session-ops}.
+The session is implemented within a session-try scope using a vocabulary of session operations. %operation  the session operations depicted in Figure \ref{tab:session-ops}.
 
 \begin{comment}
 \begin{figure}
@@ -481,14 +481,14 @@ The informal description of the scenario is as follows:
 
 \item  V3na asks User to login, so User provides V3na with login and password.
 
-\item  V3na receives User credentials and verifies them: If User is not authenticated and still has tries%with minimal amount of tries or amount of tries is out of limit,
+\item  V3na receives User credentials and verifies them: If User is not authenticated and still has tries %with minimal amount of tries or amount of tries is out of limit,
 go back to step 2, otherwise continue.
 
 \item  If User is not allowed to access V3na, the interaction between User and V3na continues on the DENY-branch, otherwise on the ACCESS-branch.
 
 \item  If next branch is ACCESS, User sends his connection request with details to V3na. V3na creates new session with SaaS (s') and delegates the remaining session s with User on the latter and sends last user request details. Session s' is terminated.
 
-\item  SaaS continues interaction with User according to session $s$. By steps of validation-verification, SaaS either responds User to proceed interaction by branch OK or FAIL. In both cases User receives from SaaS directly the reason and status of his request. Eventually, session $s$ is terminated.
+\item  SaaS continues interaction with User according to session $s$. By validation/verification, SaaS either responds User to proceed interaction by branch OK or FAIL. In either case, User receives from SaaS directly the reason and status of his request. Eventually, session $s$ is terminated.
 \end{compactenum}
 
 %\paragraph{Protocols.}
@@ -640,7 +640,7 @@ Thus we explicitly define the protocol to be delegated and then include it in th
 
 \section{Future Work: Inter-Cloud protocols and Session Types}
 \label{sect:highlights}
-In Cloud Computing there are considerable benefits if Services are hosted on more than one Cloud~\cite{Armbrust2010,Buyya2009,intercloud}. Benefits include geographic replication for highly available robust services, and a greater ability to circumnavigate legal and technical restrictions. 
+In Cloud Computing, there are considerable benefits if Services are hosted on more than one Cloud~\cite{Armbrust2010,Buyya2009,intercloud}. Benefits include geographic replication for highly available robust services, and a greater ability to circumnavigate legal and technical restrictions. 
 %is moving to the concept where Cloud operated by one enterprise interoperating with a Cloud of another is powerful idea.
 %So far that is limited to use cases where code running on one cloud explicitly references a service on another cloud.
 %For improved interoperability, inter-Cloud protocols are prosed as future standards. %this we require protocols There is no implicit and transparent interoperability. 
@@ -665,9 +665,9 @@ Session types can improve the trust in protocols where each participant is devel
 Session-based programming has already proved itself in various fields, including parallel algorithms~\cite{sj-parallel}, event-driven programming~\cite{event-driven-sj} and multi-party conversations~\cite{sj-business-protocols}.
 In this paper, our case study demonstrates the ability of session types to control interaction patterns between communicating processes in a Cloud.
 Participants are statically type-checked at compile time and dynamically type-checking at run-time to ensure that protocol are compatible.
-The highe level of abstraction of session types, implemented in SJ language, enabled effortless translation of business scenarios into protocols.
+The high level of abstraction of session types, implemented in SJ language, enabled effortless translation of business scenarios into protocols.
 We were able to refine our protocol from Scenario 1 to Scenario 2, due to support of higher-order message passing (session delegation). %, allowed us to refine from Scenario 1 to Scenario 2.
-Further to scenarios presented here our case study covered a scenarios including payment and wallet recharging transactions, %(available by \url{https://github.com/Rustem/Master-thesis}),
+Further to scenarios presented here, our case study covered a scenarios including payment and wallet recharging transactions, %(available by \url{https://github.com/Rustem/Master-thesis}),
 where we discovered the benefits of combining session delegation and threading provided by SJ.
 The session-programming approach is suited to correctly implementing inter-Cloud protocols, which is our future objective. %Finally, hope that our feedback about session types will be as a solid starting point for further research in this area.  
 
