@@ -22,17 +22,19 @@ Andi Bejleri, Raymond Hu, and Nobuko Yoshida.
 \newblock Session-based programming for parallel algorithms.
 \newblock 2010.
 
-\bibitem{alg-seq-processes}
-Jan~A. Bergstra and Jan~Willem Klop.
-\newblock Algebra of communicating processes with abstraction.
-\newblock {\em Theoretical computer science}, 37:77--121, 1985.
-
 \bibitem{intercloud}
 David Bernstein, Erik Ludvigson, Krishna Sankar, Steve Diamond, and Monique
   Morrow.
 \newblock Blueprint for the intercloud-protocols and formats for cloud
   computing interoperability.
 \newblock In {\em ICIW'09.}, pages 328--336. IEEE, 2009.
+
+\bibitem{Buyya2009}
+Rajkumar Buyya, Chee~Shin Yeo, Srikumar Venugopal, James Broberg, and Ivona
+  Brandic.
+\newblock Cloud computing and emerging it platforms: Vision, hype, and reality
+  for delivering computing as the 5th utility.
+\newblock {\em Future Generation computer systems}, 25(6):599--616, 2009.
 
 \bibitem{carbone2007structured}
 Marco Carbone, Kohei Honda, and Nobuko Yoshida.
@@ -70,11 +72,6 @@ Michael Emmanuel.
 \newblock Session-based web service programming for business protocols.
 \newblock Available at:
   \url{http://www.doc.ic.ac.uk/~yoshida/CDL_USECASE/sj/report/report.pdf}.
-
-\bibitem{cs-processes}
-C.A.R. Hoare.
-\newblock {\em Communicating Sequential Processes}.
-\newblock Prentice Hall, 1985.
 
 \bibitem{honda2011scribbling}
 Kohei Honda, Aybek Mukhamedov, Gary Brown, Tzu-Chun Chen, and Nobuko Yoshida.

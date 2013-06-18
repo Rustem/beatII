@@ -5,45 +5,45 @@ The style file: plain.bst
 Database file #1: easychair.bib
 Warning--empty note in event-driven-sj
 Warning--empty year in xmpp-intercloud-transport
-You've used 22 entries,
+You've used 21 entries,
             2118 wiz_defined-function locations,
-            657 strings with 8654 characters,
-and the built_in function-call counts, 8805 in all, are:
-= -- 901
-> -- 375
+            654 strings with 8708 characters,
+and the built_in function-call counts, 8697 in all, are:
+= -- 889
+> -- 383
 < -- 13
-+ -- 150
-- -- 126
-* -- 547
-:= -- 1360
-add.period$ -- 76
-call.type$ -- 22
++ -- 153
+- -- 130
+* -- 556
+:= -- 1341
+add.period$ -- 73
+call.type$ -- 21
 change.case$ -- 129
 chr.to.int$ -- 0
-cite$ -- 24
-duplicate$ -- 376
-empty$ -- 711
-format.name$ -- 126
-if$ -- 1957
+cite$ -- 23
+duplicate$ -- 364
+empty$ -- 691
+format.name$ -- 130
+if$ -- 1929
 int.to.chr$ -- 0
-int.to.str$ -- 22
-missing$ -- 19
-newline$ -- 113
-num.names$ -- 44
-pop$ -- 171
+int.to.str$ -- 21
+missing$ -- 17
+newline$ -- 108
+num.names$ -- 42
+pop$ -- 166
 preamble$ -- 1
 purify$ -- 107
 quote$ -- 0
-skip$ -- 284
+skip$ -- 277
 stack$ -- 0
-substring$ -- 559
-swap$ -- 133
+substring$ -- 557
+swap$ -- 132
 text.length$ -- 13
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 86
+type$ -- 84
 warning$ -- 2
-while$ -- 88
-width$ -- 24
-write$ -- 246
+while$ -- 86
+width$ -- 23
+write$ -- 236
 (There were 2 warnings)

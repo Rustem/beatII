@@ -1,22 +1,5 @@
-% easychair.tex,v 3.2 2012/05/15
-%
-% Select appropriate paper format in your document class as
-% instructed by your conference organizers. Only withtimes
-% and notimes can be used in proceedings created by EasyChair
-%
-% The available formats are 'letterpaper' and 'a4paper' with
-% the former being the default if omitted as in the example
-% below.
-%
-\documentclass{llncs}
-%\documentclass[debug]{easychair}
-%\documentclass[verbose]{easychair}
-%\documentclass[notimes]{easychair}
-%\documentclass[withtimes]{easychair}
-%\documentclass[a4paper]{easychair}
-%\documentclass[letterpaper]{easychair}
+\documentclass[10pt]{llncs}
 
-% This provides the \BibTeX macro
 \usepackage{doc}
 \usepackage{makeidx}
 \usepackage{fancyvrb}
@@ -40,15 +23,15 @@
     linkcolor=black,
     urlcolor=blue
 }
-
 % for overriding caption view
 \usepackage{caption}
 \captionsetup[lstlisting]{ singlelinecheck=false, margin=0pt, font={it,footnotesize} }
+
 % Let's style the code!
 % Set-up code visualisation
 \lstset{fancyvrb=true}
 \lstset{
-language=java,                % the language of the code
+language=java,                  % the language of the code
 basicstyle=\footnotesize,       % the size of the fonts that are used for the code
 numbers=left,                   % where to put the line-numbers
 numberstyle=\footnotesize,      % the size of the fonts that are used for the line-numbers
@@ -96,25 +79,18 @@ morekeywords={*,...}            % if you want to add more keywords to the set
 
 %% Document
 %%
-\begin{document}
 
-%% Front Matter
-%%
+
 % Regular title as in the article class.
-%
 \title{Ensuring Faultless Communication Behaviour\\
        in an E-Commerce Cloud Application}
 
 % \titlerunning{} has to be set to either the main title or its shorter
-% version for the running heads. When processed by
-% EasyChair, this command is mandatory: a document without \titlerunning
-% will be rejected by EasyChair
-
+% version for the running heads.
 \titlerunning{Faultless Communication in a Cloud}
 
 % Authors are joined by \and. Their affiliations are given by \inst, which indexes
 % into the list defined using \institute
-%
 \author{
 	Rustem A. Kamun \and Ross Horne
 }
@@ -125,38 +101,27 @@ morekeywords={*,...}            % if you want to add more keywords to the set
   Faculty of Information Technology,\\
   Almaty, Kazakhstan\\
   \email{r.kamun@gmail.com}
- }
-%  \authorrunning{} has to be set for the shorter version of the authors' names;
-% otherwise a warning will be rendered in the running heads. When processed by
-% EasyChair, this command is mandatory: a document without \authorrunning
-% will be rejected by EasyChair
+}
 
-\authorrunning{Kamun \& Horne}
+%  \authorrunning{} has to be set for the shorter version of the authors' names.
+\authorrunning{R. Kamun \& R. Horne}
 
-
-%\clearpage
+\begin{document}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \maketitle
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{abstract}
-The scale and complexity of Web Services raises the challenge of controlling their interaction. The goal of this work is to ensure that processes in a production Cloud are correctly interacting according to a specification of their communication behaviour. To accomplish this goal, we employ session types to analyse the global and local communication patterns. Session types represents ``formal blueprints" of how communicating participants should behave and offers a concise view of the message flows.
+The scale and complexity of Web Services raises the challenge of controlling their interaction. The goal of this work is to ensure that processes in a Cloud are correctly interacting according to a specification of their communication behaviour. To accomplish this goal, we employ session types to analyse the global and local communication patterns. Session types represents ``formal blueprints" of how communicating participants should behave and offers a concise view of the message flows.
   
-  This work confirms the feasibility of application of session types on ``non-linear'' business protocols used by an e-commerce Cloud provider and developed in Session-Java, an extension of Java implementing Session-Based programming. Furthermore, we highlight the importance of this approach for services replicated across multiple Cloud providers each of which must correctly cooperate.
+This work confirms the feasibility of application of session types on business protocols used by an e-commerce Cloud provider and developed in Session-Java, an extension of Java implementing Session-Based programming. Furthermore, we highlight the importance of this approach for services replicated across multiple Cloud providers each of which must correctly cooperate.
 \end{abstract}
 
-%\setcounter{tocdepth}{2}
-%{\small\tableofcontents}
+\setcounter{tocdepth}{2}
+%\small\tableofcontents}
 
-%\section{To mention}
-%
-%Processing in EasyChair - number of pages.
-%
-%Examples of how EasyChair processes papers. Caveats (replacement of EC
-%class, errors).
-
-%\pagestyle{empty}
+\pagestyle{empty}
 
 
 %------------------------------------------------------------------------------
@@ -171,10 +136,13 @@ Service-Oriented Architectures (SOA) are widely accepted as a paradigm for integ
 In this paradigm, independently deployed applications are exposed as Web Services which are then 
 interconnected using a stack of standards. %(depicted in Figure~\ref{fig:soa-stack}). 
 		
-There remain open challenges when it comes to managing service interactions that go beyond simple sequences of requests and responses or involve large numbers of participants (multi-party communication). A need arises for new transaction implementations, more suitable for the Web.
-One technique for describing collaboration between a collection of services is a choreography model.
-Choreographies capture the interactions in which the participating services engage and interconnections between these interactions, including control-/data-flow dependencies.
-However, a choreography does not describe internal effects within a participating service. Furthermore, a choreography does not specify how a global description can be executed.
+It is challenging to managing service interactions that go beyond simple sequences of requests and responses or involve large numbers of participants (multi-party communication).
+%A need arises for new transaction implementations, more suitable for the Web.
+One technique for describing collaboration between a collection of services is a choreography.
+Choreographies capture a global view of the interactions between participating services. % engage and interconnections between these interactions, including control-/data-flow dependencies.
+However, a choreography does not specify how a global description can be executed.
+%However, a choreography does not describe internal effects within a participating service.
+
 %, and, therefore, its functionality is not clear.
 \begin{comment}
 		\begin{figure}[ht]
@@ -187,9 +155,11 @@ However, a choreography does not describe internal effects within a participatin
 		\end{centering}
 		\end{figure}
 \end{comment}
-Much literature exist on the specification of systems that describe services from the local viewpoint~\cite{cs-processes,alg-seq-processes}.
-The concept of a participant in a communication is essential in complex interactions. Applications include business transactions with short life span, operating in closely coupled context (e.g.\ the online stock exchange (ForEX), and e-commerce services based on Buyer-Seller-Shipper (BSH) protocols). Although, in closely coupled settings, the SOA standards may incur a significant performance overhead.
-Highly available services are likely to have a long life span that may result in deadlock.
+
+%Applications include business transactions operating in closely coupled context (e.g.\ the online stock exchange (ForEX), and e-commerce services based on Buyer-Seller-Shipper (BSH) protocols).
+%Highly available services are likely to have a long life span that may result in deadlock.
+%Although,in closely coupled settings, the SOA standards may incur a significant performance overhead.
+
 %In addition there is no special concept of the participants of communication. 
 
 \begin{comment}
@@ -199,7 +169,10 @@ Highly available services are likely to have a long life span that may result in
 	\end{compactenum}
 \end{comment}
 
-Such challenges motivated the design of Web Services Choreography Description Language (WS-CDL)~\cite{session-types-sessions}. The WS-CDL working group identified critical issues~\cite{ws-critical-overview} including:
+%The concept of a participant in a communication is essential in complex interactions.
+%Much literature exist on the specification of systems that describe services from the local perspective of a participant~\cite{cs-processes,alg-seq-processes,Milner1992}.
+The challenge of controlling interactions of participants motivated the design of Web Services Choreography Description Language (WS-CDL)~\cite{session-types-sessions}.
+The WS-CDL working group identified critical issues~\cite{ws-critical-overview} including:
 \begin{compactenum}
 	\item the need for tools to validate conformance to choreography specifications to ensure correct cooperation between Web Services;
 	\item design time validation and verification of choreographies to guarantee correctness of such properties like deadlock, livelock e.g.\ behaviour of participants conforms to the choreography interface.
@@ -213,8 +186,8 @@ In this paper, we demonstrate a method of controlling process interactions repre
 
 
 In Section~\ref{sect:basics} we provide an overview of SJ.
-In Section~\ref{sect:impl}, we provide detailed explanation of business protocols used by an e-commerce Cloud provider.
-Finally, in Section~\ref{sect:highlights}, we highlight how session types can improve the design of Intercloud~\cite{intercloud} communication protocols.
+In Section~\ref{sect:impl}, we explain several refinements of protocols used by a Cloud provider, using SJ. %and how they can be implemented correctly using session programming.
+Finally, in Section~\ref{sect:highlights}, we highlight how session types can improve the design of InterCloud~\cite{intercloud} communication protocols.
 
 
 %------------------------------------------------------------------------------
@@ -244,13 +217,6 @@ Session programming in SJ consists of the following ordered actions:
 \end{compactenum}
 \end{comment}
 
-\subsection{Protocol Specification}
-%Session programming begins by declaring the protocol for the intended cooperation, where a name identifies the protocol.
-%following the standard Java naming rules. %What are the standard Java naming rules. Can we not put these in the same figure.
-
-The body of a protocol defines a \textit{session type}, according to the grammar in Figure~\ref{tab:prot-spec}.
-The session type specifies the actions that the participant in a session should perform. In SJ, the behaviour of an implementation of a session is monitored by the associated protocol, as enforced by the SJ compiler (Polyglot\footnote{\url{http://www.cs.cornell.edu/Projects/polyglot/}. Extensible compile framework.}). The constructs in Figure~\ref{tab:prot-spec} can describe a diverse range of complex interactions, including message passing, branching and iteration. Each session type construct has its dual construct, because a typical requirement is that two parties implement compatible protocols such that the specification of one party is dual to another party.
-
 
 \begin{figure}
 \begin{gather*}
@@ -276,7 +242,7 @@ T \Coloneqq & T\mathbin{.}T & \mbox{Sequencing} \\
        \mid & \mathopen{@}p & \mbox{Protocol reference} \\
 \end{array}
 \end{gather*}
-\caption{SJ protocol specification}\label{tab:prot-spec} 
+\caption{SJ protocol specification using Session Types ($T$).}\label{tab:prot-spec} 
 \end{figure}
 \begin{comment}
 \begin{array}{rl}
@@ -293,6 +259,17 @@ P \Coloneqq & P; P             \\
 \end{array}
 \end{comment}
 
+
+\subsection{Protocol Specification}
+%Session programming begins by declaring the protocol for the intended cooperation, where a name identifies the protocol.
+%following the standard Java naming rules. %What are the standard Java naming rules. Can we not put these in the same figure.
+
+The body of a protocol defines a \textit{session type}, according to the grammar in Figure~\ref{tab:prot-spec}.
+The session type specifies the actions that the participant in a session should perform. In SJ, the behaviour of an implementation of a session is monitored by the associated protocol, as enforced by the SJ compiler. %(Polyglot\footnote{\url{http://www.cs.cornell.edu/Projects/polyglot/}. Extensible compile framework.}).
+The constructs in Figure~\ref{tab:prot-spec} can describe a diverse range of complex interactions, including message passing, branching and iteration. Each session type construct has its dual construct, because a typical requirement is that two parties implement compatible protocols such that the specification of one party is dual to another party.
+
+
+
 \paragraph{Higher Order Communication.}
 \begin{comment}
 For flexibility, SJ features subtyping.
@@ -307,6 +284,11 @@ SJ allows message types to themselves be session types. This is called higher-or
 Consider the dual constructs $\mathopen{!}\left<\mathopen{?}\left(\text{int}\right)\right>$ and $\mathopen{?}\left(\mathopen{?}\left(\text{int}\right)\right)$. 
 These types specify sessions that expects to respectively send and receive a session of type $\mathopen{?}\left(\text{int}\right)$.
 Higher order communication is often referred to a session delegation. Figure \ref{fig:sj-delegation} shows a basic delegation scenario.
+
+In Figure~\ref{fig:sj-delegation}, the left diagram represents the session configuration before the delegation is performed: the user is engaged in a session $s$ of type $\mathopen{!}\left<\text{int}\right>$ with the Cloud, while the Cloud is also involved in a session $s'$ with SaaS of type $\mathopen{!}\left<\mathopen{?}\left(\text{int}\right)\right>$. So, instead of accepting the integer from the user, Cloud delegates his role in $s$ to SaaS.
+%After delegation, SaaS can instead receive the message from the user. 
+The diagram on the right of Figure~\ref{fig:sj-delegation} represents the session configuration after the delegation has been performed: the user now directly interact with SaaS for the session $s$.
+The delegation action corresponds to a higher-order send type for the session $s'$ between Cloud and SaaS.
 %
 \begin{figure}[ht]
 \centering
@@ -314,11 +296,6 @@ Higher order communication is often referred to a session delegation. Figure \re
 \includegraphics[width=0.8\textwidth]{resources/sj-delegation.png}}
 \caption{Session delegation}\label{fig:sj-delegation}
 \end{figure}
-
-In Figure~\ref{fig:sj-delegation}, the left diagram represents the session configuration before the delegation is performed: the user is engaged in a session $s$ of type $\mathopen{!}\left<\text{int}\right>$ with the Cloud (V3na\footnote{\url{http://v3na.com}. Cloud platform for optimizing your business performance.}), while the Cloud is also involved in a session $s'$ with SaaS of type $\mathopen{!}\left<\mathopen{?}\left(\text{int}\right)\right>$. So, instead of accepting the integer from the user, Cloud delegates his role in $s$ to SaaS.
-%After delegation, SaaS can instead receive the message from the user. 
-The diagram on the right of Figure~\ref{fig:sj-delegation} represents the session configuration after the delegation has been performed: the user now directly interact with SaaS for the session $s$.
-The delegation action corresponds to a higher-order send type for the session $s'$ between Cloud and SaaS.
 
 \paragraph{Protocol Implementation using Session-Java.}
 %\paragraph{Another meaning for sockets}
@@ -384,7 +361,8 @@ The corresponding receive operation, $\textit{SJSocket}~s2 = s1.\textit{receive}
 \label{sect:impl}
 
 Our case study is an e-commerce Web portal called V3na that sells SaaS applications for business needs
-V3na was developed\footnote{Source code is available at \url{https://github.com/Rustem/Master-thesis}.}
+V3na\footnote{\url{http://v3na.com}. Cloud platform for optimizing your business performance. Source code available at \url{https://github.com/Rustem/Master-thesis}.}
+was developed
 in the Django framework --- a high-level Web framework for Python. %Further information: \url{https://www.djangoproject.com/}}.
 The persistence layer is based on MongoDB and Memcached.
 A major challenge was to automate the process of SaaS integration.
@@ -400,6 +378,8 @@ In particular, V3na implements the following problems that can be addresses usin
 
 \item  The payment for use of a service can be confirmed confirmation;
 \end{compactitem}
+In this section, we illustrate two refinement of the first scenario above.
+
 
 \subsection{A Simple Scenario with Branching}
 To begin, we specify a simple business protocol for SaaS connection. The protocol is informally specified as follows:
@@ -407,16 +387,13 @@ To begin, we specify a simple business protocol for SaaS connection. The protoco
 \item  User begins a request session ($s$) with Cloud service (V3na) and sends the request ``Connect SaaS'' as JSON-encoded message.
 \item  V3na sends either:
 \begin{enumerate}
-\item  FAIL, if user has no active session (not signed in on V3na) and further interaction terminates 
-
-\item  OK, if user has logged in and request data has passed validation steps. Then Cloud initiates a new session (s') with SaaS and requests it for new user connection with message details in JSONMsg.
+\item  FAIL, if user has no active session (not signed in on V3na). % and further interaction terminates 
+\item  OK, if user has logged in and request data has passed validation steps. %Then Cloud initiates a new session (s') with SaaS and requests it for new user connection with message details in JSONMsg.
 \end{enumerate}
-\item  If OK label take place, Cloud initiates a new session (s') with SaaS and requests it for new user connection with message details in JSONMsg.
+\item  If OK is sent, the Cloud initiates a new session (s') with SaaS and requests it for new user connection with message details in a JSON message.
 \item Finally, the SaaS responds to the Cloud with connection status OK or FAIL and V3na sends this status to the user. Both sessions are then terminated.
 \end{enumerate}
 
-In Figure~\ref{fig:protocols-sc1} we depict the protocol specifications for each participant (Cloud, SaaS or User).
-The protocols between User and Cloud and Cloud and SaaS are dual, i.e. the specification of interaction from one perspective is opposite from another.
 %Later we will see how decision (choice) in the protocol will be incorporated through the use of dual construct \texttt{outbranch} and \texttt{inbranch}.
 %Hence the whole scenario is presented in Figure \ref{fig:protocols-sc1}.
 %
@@ -468,6 +445,9 @@ protocol p_sv {
 \caption{Protocol specifications for Scenario 1}\label{fig:protocols-sc1} 
 \end{figure}
 
+In Figure~\ref{fig:protocols-sc1} we depict the protocol specifications for each participant (Cloud, SaaS or User).
+The protocols between User and Cloud and Cloud and SaaS are dual, i.e. the specification of interaction from one perspective is opposite from another.
+
 }
 
 
@@ -480,33 +460,33 @@ We implement this diagram in Session-Java, where the branching is implemented em
 \centering
 \scalebox{0.3}{
 \includegraphics{resources/interaction-sc1.png}}
-\caption{Overview of interactions for Scenario \# 1}
+\caption{Overview of global interactions for Scenario \#1.}
 \label{fig:interaction-overview-sc1}
 \end{figure}
 
 %\paragraph{Implementation.}
 
 
-\subsection{The Scenario extended with Looping}
+\subsection{The Scenario extended with Iteration}
 %New scenario is a bit harder in complexity.
-We now introduce the looping construct and demonstrate \textit{session delegation}.
+We now introduce the iteration construct and demonstrate \textit{session delegation}.
 The informal description of the scenario is as follows:
 \begin{compactenum}
 \item  User begins a request session ($s$) with cloud service (V3na)
 
-\item  V3na asks User to login, so next User provides V3na with login and password Strings.
+\item  V3na asks User to login, so User provides V3na with login and password.
 
-\item  V3na receives User credentials and verifies them: If User is authenticated with minimal amount of tries or amount of tries is out of limit, he is allowed to continue further interactions with V3na, otherwise --- not. Go back to step 2.
+\item  V3na receives User credentials and verifies them: If User is not authenticated and still has tries%with minimal amount of tries or amount of tries is out of limit,
+go back to step 2, otherwise continue.
 
-\item  If User is not allowed to access V3na, the interaction between User and V3na continues on DENY-branch, otherwise --- on ACCESS-branch.
+\item  If User is not allowed to access V3na, the interaction between User and V3na continues on the DENY-branch, otherwise on the ACCESS-branch.
 
 \item  If next branch is ACCESS, User sends his connection request with details to V3na. V3na creates new session with SaaS (s') and delegates the remaining session s with User on the latter and sends last user request details. Session s' is terminated.
 
-\item  SaaS continues interaction with user by session s. By steps of validation-verification, SaaS either responds User to proceed interaction by branch OK or FAIL. In both cases User receives from SaaS directly the reason and status of his request. Session s is terminated.
+\item  SaaS continues interaction with User according to session $s$. By steps of validation-verification, SaaS either responds User to proceed interaction by branch OK or FAIL. In both cases User receives from SaaS directly the reason and status of his request. Eventually, session $s$ is terminated.
 \end{compactenum}
 
 %\paragraph{Protocols.}
-First of all, the protocol provided with iterations using $![\dots]*$ $?[\dots]*$. Then protocol introduces higher order operations of type $!<T>\ \ ?<T>$. Full description is provided in figures \ref{fig:user-cloud-protocol} and \ref{fig:cloud-saas-providers}.
 {
 \lstset{
   framerule=0pt,
@@ -556,6 +536,10 @@ private protocol p_vu {
 
 }
 
+The protocol is specified in Figures~\ref{fig:user-cloud-protocol} and~\ref{fig:cloud-saas-providers}.
+The protocol uses iterations specified using $![\dots]*$ and $?[\dots]*$ and higher order operations. % of type $\mathopen{!}\left<T\right>\mathbin{.}\mathopen{?}\left<T\right>$.
+
+
 {
 \lstset{
   framerule=0pt,
@@ -597,37 +581,30 @@ protocol p_sv {
 \end{minipage}
 \caption{Cloud-SaaS interaction protocol specifications for Scenario 2}\label{fig:cloud-saas-providers} 
 \end{figure}
-
 }
 
-Unlike the previous protocol, the Cloud-Saas protocol significantly altered, also authentication process is added to the protocol in interaction between User --- Cloud. It is important to note that 
+For session type $\mathopen{!}\left<\mathopen{!}\left\{\texttt{OK}\colon \mathopen{!}\left<\textit{JSONMessage}\right>, \texttt{FAIL}\colon \mathopen{!}\left<\textit{JSONMessage}\right>\right\}\right>$, The first ! means that the Cloud is passing the high order message which describes the protocol that Saas should perform with the User.
+In the Saas-Cloud protocol, the protocol contains higher order messages by first defining them, then including them in the protocol.
+One protocol can be referenced from another using @ operator. %The $@p$ is syntactically substituted for the protocol of that name.
 
-\begin{lstlisting}
-!<!{
-        OK: !<JSONMessage>,
-        FAIL: !<JSONMessage> 
-}>
-\end{lstlisting}
+%Unlike the previous protocol, the Cloud-Saas protocol significantly altered, also authentication process is added to the protocol in interaction between User --- Cloud.
 
-corresponds to a higher-order message. The !$<\dots>$ means that it is the Cloud that is passing the high order message and everything inside it is the protocol of the session that Saas should perform with the User. In Saas --- Cloud, the protocol defined in more subtle way containing higher order messages by first defining them and then including them in the protocol. For syntactic convenience, one protocol can be referenced from another using @ operator. The $@p$ is syntactically substituted for the protocol of that name.
 
-\paragraph{Interactions.} Figure~\ref{fig:seq-diagram-sc2} depicts the protocols provided above using an UML sequence diagram. The language of the artifacts has already presented in the first scenario.
+\paragraph{Interactions.} Figure~\ref{fig:seq-diagram-sc2} depicts the protocols provided above using a sequence diagram. The language of the artifacts has already presented in the first scenario.
 
 \begin{figure}
-\label{fig:seq-diagram-sc2}
 \centering
 \includegraphics[width=0.8\textwidth]{resources/interaction-sc2.png}
 \caption{Sequence diagram of interactions for Scenario \# 2}
-\label{fig:}
+\label{fig:seq-diagram-sc2}
 \end{figure}
 
-\paragraph{Implementation.} Despite the fact that session delegation takes place, the program still remains very simple. Actually delegating the protocol is straightforward and only consists of passing the socket to service:
-
+\paragraph{Implementation.} %Despite the fact that session delegation takes place, the program still remains very simple. Actually
+Delegating the protocol is straightforward and only consists of passing the socket to service using $\textit{s\_vs}.\textit{send}(\textit{user\_vu})$.
+\begin{comment}
 \begin{lstlisting}
 s_vs.send(user_vu); // pass the remaining protocol
 \end{lstlisting}
-
-I have decided to include the whole segment of code to illustrate the following point. 
 
 \begin{lstlisting}
 user_vu.outbranch(ACCESS) {
@@ -642,22 +619,24 @@ user_vu.outbranch(ACCESS) {
   }
 }
 \end{lstlisting}
+\end{comment}
 
-To receive a high order message type casting must take place in the case of a protocol, the type of protocol must be explicitly defined:
-
+To receive a high order message type casting must take place in the case of a protocol, the type of protocol must be explicitly defined, using $\textit{v3na\_user\_socket} = \left(\mathopen{@}\textit{p\_msg}\right)~\textit{v3na\_sv}.\textit{receive}()$, where \textit{p\_msg} is a defined protocol.
+\begin{comment}
 \begin{lstlisting}
 v3na_user_socket = (@p_msg) v3na_sv.receive();
 \end{lstlisting}
-
-Where p\_msg is defined in the protocols section. This is a reason why it is good practice to first exclusively write the protocol to be delegated and then include it in the final protocol.
+\end{comment}
+Thus we explicitly define the protocol to be delegated and then include it in the final protocol.
 
 %------------------------------------------------------------------------------
 
 
 \section{Future Work: InterCloud and Session Types}
 \label{sect:highlights}
-Cloud computing is moving to the concept where cloud operated by one enterprise interoperating with a clouds of another is powerful idea. So far that is limited to use cases where code running on one cloud explicitly references a service on another cloud. There is no implicit and transparent interoperability. 
-Different visions has already proposed in papers ~\cite{utility-driven-fed,xmpp-intercloud-transport,cloud-integrator}. The most full picture of cloud inter-networking is depicted by \cite{utility-driven-fed}. They emphasized the main components of general inter-networking architecture:
+Cloud computing is moving to the concept where Cloud operated by one enterprise interoperating with a Cloud of another is powerful idea~\cite{Buyya2009}.
+So far that is limited to use cases where code running on one cloud explicitly references a service on another cloud. There is no implicit and transparent interoperability. 
+Different visions has already proposed in papers~\cite{utility-driven-fed,xmpp-intercloud-transport,cloud-integrator}. The most full picture of cloud inter-networking is depicted by \cite{utility-driven-fed}. They emphasized the main components of general inter-networking architecture:
 \begin{inparaenum}[(\bgroup\bfseries a\egroup)]
 \item \textit{Cloud Coordinator}, for bringing out Cloud services;
 \item \textit{Cloud Brocker}, ``for mediating between service consumers and Cloud coordinators'';
@@ -668,7 +647,14 @@ Our approach is to employ multiparty session types \cite{ng2012multiparty} for t
 
 \section{Conclusion}
 \label{sect:conclusion}
-Although session-based programming is on its infancy, it's developed with huge steps and already proved its feasibility in various fields: parallel algorithms \cite{sj-parallel}, event-driven programming \cite{event-driven-sj}, multiparty conversations \cite{sj-business-protocols}. In this paper, we demonstrated the power of session types to control interaction patterns between communicating processes. The static type-checking in compile time and dynamic type-checking in connection initiation time ensures protocols compatibility. Higher level of abstraction of session types, shown in SJ language, prove its feasibility to effortlessly translate medium Business scenarios into protocols. Due to support of high-level communication (session delegation), it have to be remarked how seamless was the refinement process from Scenario 1 to Scenario 2. In addition, we omit more complicated Scenario about payment and wallet recharging transactions (available by \url{https://github.com/Rustem/Master-thesis}), where we discovered the benefits of combining session delegation and threading provided in SJ. Finally, we hope that our feedback about session types will be as a solid starting point for further research in this area.  
+Session-based programming has already proved itself in various fields, including parallel algorithms~\cite{sj-parallel}, event-driven programming~\cite{event-driven-sj} and multi-party conversations~\cite{sj-business-protocols}.
+In this paper, our case study demonstrates the ability of session types to control interaction patterns between communicating processes in a Cloud.
+Participants are static type-checked at compile time and dynamical type-checking at run-time to ensure that protocol are compatibile.
+The higher level of abstraction of session types, implemented in SJ language, enabled effortless translation of business scenarios into protocols.
+Support of high-level communication (session delegation), allowed us to refine from Scenario 1 to Scenario 2.
+Further to scenarios presented here our case study also covered a scenario involving payment and wallet recharging transactions, %(available by \url{https://github.com/Rustem/Master-thesis}),
+where we discovered the benefits of combining session delegation and threading provided in SJ.
+The session-programming approach is suited to correctly implementing InterCloud communication protocols, which we intend to test as future work. %Finally, hope that our feedback about session types will be as a solid starting point for further research in this area.  
 
 
 %------------------------------------------------------------------------------
