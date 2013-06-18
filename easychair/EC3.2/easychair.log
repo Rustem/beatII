@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.1.18)  18 JUN 2013 19:08
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.1.18)  18 JUN 2013 20:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -137,26 +137,6 @@ LaTeX Font Info:    Redeclaring math symbol \Omega on input line 372.
 \c@solution=\count114
 \c@remark=\count115
 \headlineindent=\dimen123
-) (/usr/share/texlive/texmf-dist/tex/latex/base/doc.sty
-Package: doc 2010/02/04 v2.1e Standard LaTeX documentation package (FMi)
-\c@StandardModuleDepth=\count116
-\guard@level=\count117
-\MacrocodeTopsep=\skip45
-\MacroIndent=\dimen124
-\macro@cnt=\count118
-\MacroTopsep=\skip46
-\index@excludelist=\toks18
-\IndexMin=\dimen125
-\c@IndexColumns=\count119
-\GlossaryMin=\dimen126
-\c@GlossaryColumns=\count120
-\check@sum=\count121
-\bslash@cnt=\count122
-\wrong@table=\toks19
-\c@CodelineNo=\count123
-)
-(/usr/share/texlive/texmf-dist/tex/latex/base/makeidx.sty
-Package: makeidx 2000/03/29 v1.0m Standard LaTeX package
 )
 (/usr/share/texlive/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
 Package: fancyvrb 2008/02/07
@@ -164,32 +144,32 @@ Package: fancyvrb 2008/02/07
 Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
 <2008/02/07> (tvz) (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
-\KV@toks@=\toks20
+\KV@toks@=\toks18
 )
-\FV@CodeLineNo=\count124
+\FV@CodeLineNo=\count116
 \FV@InFile=\read1
 \FV@TabBox=\box54
-\c@FancyVerbLine=\count125
-\FV@StepNumber=\count126
+\c@FancyVerbLine=\count117
+\FV@StepNumber=\count118
 \FV@OutFile=\write3
 ) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count127
+\lst@mode=\count119
 \lst@gtempboxa=\box55
-\lst@token=\toks21
-\lst@length=\count128
-\lst@currlwidth=\dimen127
-\lst@column=\count129
-\lst@pos=\count130
-\lst@lostspace=\dimen128
-\lst@width=\dimen129
-\lst@newlines=\count131
-\lst@lineno=\count132
-\lst@maxwidth=\dimen130
+\lst@token=\toks19
+\lst@length=\count120
+\lst@currlwidth=\dimen124
+\lst@column=\count121
+\lst@pos=\count122
+\lst@lostspace=\dimen125
+\lst@width=\dimen126
+\lst@newlines=\count123
+\lst@lineno=\count124
+\lst@maxwidth=\dimen127
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
-\c@lstnumber=\count133
-\lst@skipnumbers=\count134
+\c@lstnumber=\count125
+\lst@skipnumbers=\count126
 \lst@framebox=\box56
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
@@ -199,29 +179,29 @@ Package: listings 2007/02/22 1.4 (Carsten Heinz)
 
 (/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
-\LTleft=\skip47
-\LTright=\skip48
-\LTpre=\skip49
-\LTpost=\skip50
-\LTchunksize=\count135
-\LTcapwidth=\dimen131
+\LTleft=\skip45
+\LTright=\skip46
+\LTpre=\skip47
+\LTpost=\skip48
+\LTchunksize=\count127
+\LTcapwidth=\dimen128
 \LT@head=\box57
 \LT@firsthead=\box58
 \LT@foot=\box59
 \LT@lastfoot=\box60
-\LT@cols=\count136
-\LT@rows=\count137
-\c@LT@tables=\count138
-\c@LT@chunks=\count139
-\LT@p@ftn=\toks22
+\LT@cols=\count128
+\LT@rows=\count129
+\c@LT@tables=\count130
+\c@LT@chunks=\count131
+\LT@p@ftn=\toks20
 )
 (/usr/share/texlive/texmf-dist/tex/latex/paralist/paralist.sty
 Package: paralist 2002/03/18 v2.3b Extended list environments (BS)
-\pltopsep=\skip51
-\plpartopsep=\skip52
-\plitemsep=\skip53
-\plparsep=\skip54
-\pl@lab=\toks23
+\pltopsep=\skip49
+\plpartopsep=\skip50
+\plitemsep=\skip51
+\plparsep=\skip52
+\pl@lab=\toks21
 )
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
@@ -240,7 +220,7 @@ Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
-\Gread@gobject=\count140
+\Gread@gobject=\count132
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
 Package: algpseudocode 
@@ -252,16 +232,16 @@ Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
 
 Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
-\c@ALG@line=\count141
-\c@ALG@rem=\count142
-\c@ALG@nested=\count143
-\ALG@tlm=\skip55
-\ALG@thistlm=\skip56
-\c@ALG@Lnr=\count144
-\c@ALG@blocknr=\count145
-\c@ALG@storecount=\count146
-\c@ALG@tmpcounter=\count147
-\ALG@tmplength=\skip57
+\c@ALG@line=\count133
+\c@ALG@rem=\count134
+\c@ALG@nested=\count135
+\ALG@tlm=\skip53
+\ALG@thistlm=\skip54
+\c@ALG@Lnr=\count136
+\c@ALG@blocknr=\count137
+\c@ALG@storecount=\count138
+\c@ALG@tmpcounter=\count139
+\ALG@tmplength=\skip55
 )
 Document Style - pseudocode environments for use with the `algorithmicx' style
 ) (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
@@ -318,14 +298,14 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
-\@linkdim=\dimen132
-\Hy@linkcounter=\count148
-\Hy@pagecounter=\count149
+\@linkdim=\dimen129
+\Hy@linkcounter=\count140
+\Hy@pagecounter=\count141
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2012/05/13 v6.82q Hyperref: PDFDocEncoding definition (HO)
 )
-\Hy@SavedSpaceFactor=\count150
+\Hy@SavedSpaceFactor=\count142
 
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -337,16 +317,16 @@ Package hyperref Info: Plain pages OFF on input line 4077.
 Package hyperref Info: Backreferencing OFF on input line 4082.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4300.
-\c@Hy@tempcnt=\count151
+\c@Hy@tempcnt=\count143
 
 (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip10
 Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4653.
-\Fld@menulength=\count152
-\Field@Width=\dimen133
-\Fld@charsize=\dimen134
+\Fld@menulength=\count144
+\Field@Width=\dimen130
+\Fld@charsize=\dimen131
 Package hyperref Info: Hyper figures OFF on input line 5773.
 Package hyperref Info: Link nesting OFF on input line 5778.
 Package hyperref Info: Hyper index ON on input line 5781.
@@ -356,24 +336,24 @@ Package hyperref Info: Link coloring with OCG OFF on input line 5798.
 Package hyperref Info: PDF/A mode OFF on input line 5803.
 LaTeX Info: Redefining \ref on input line 5843.
 LaTeX Info: Redefining \pageref on input line 5847.
-\Hy@abspage=\count153
-\c@Item=\count154
-\c@Hfootnote=\count155
+\Hy@abspage=\count145
+\c@Item=\count146
+\c@Hfootnote=\count147
 )
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2012/05/13 v6.82q Hyperref driver for pdfTeX
-\Fld@listcount=\count156
-\c@bookmark@seq@number=\count157
+\Fld@listcount=\count148
+\c@bookmark@seq@number=\count149
 
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
-\Hy@SectionHShift=\skip58
+\Hy@SectionHShift=\skip56
 )
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
@@ -389,31 +369,31 @@ File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 )
-\Gin@req@height=\dimen135
-\Gin@req@width=\dimen136
+\Gin@req@height=\dimen132
+\Gin@req@width=\dimen133
 )
 (/usr/share/texlive/texmf-dist/tex/latex/mh/mathtools.sty
 Package: mathtools 2012/04/24 v1.12 mathematical typesetting tools
 
 (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count158
-\calc@Bcount=\count159
-\calc@Adimen=\dimen137
-\calc@Bdimen=\dimen138
-\calc@Askip=\skip59
-\calc@Bskip=\skip60
+\calc@Acount=\count150
+\calc@Bcount=\count151
+\calc@Adimen=\dimen134
+\calc@Bdimen=\dimen135
+\calc@Askip=\skip57
+\calc@Bskip=\skip58
 LaTeX Info: Redefining \setlength on input line 76.
 LaTeX Info: Redefining \addtolength on input line 77.
-\calc@Ccount=\count160
-\calc@Cskip=\skip61
+\calc@Ccount=\count152
+\calc@Cskip=\skip59
 )
 (/usr/share/texlive/texmf-dist/tex/latex/mh/mhsetup.sty
 Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2000/07/18 v2.13 AMS math features
-\@mathmargin=\skip62
+\@mathmargin=\skip60
 
 For additional information on amsmath, use the `?' option.
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
@@ -421,67 +401,67 @@ Package: amstext 2000/06/29 v2.01
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
-\@emptytoks=\toks24
-\ex@=\dimen139
+\@emptytoks=\toks22
+\ex@=\dimen136
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
-\pmbraise@=\dimen140
+\pmbraise@=\dimen137
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
-\inf@bad=\count161
+\inf@bad=\count153
 LaTeX Info: Redefining \frac on input line 211.
-\uproot@=\count162
-\leftroot@=\count163
+\uproot@=\count154
+\leftroot@=\count155
 LaTeX Info: Redefining \overline on input line 307.
-\classnum@=\count164
-\DOTSCASE@=\count165
+\classnum@=\count156
+\DOTSCASE@=\count157
 LaTeX Info: Redefining \ldots on input line 379.
 LaTeX Info: Redefining \dots on input line 382.
 LaTeX Info: Redefining \cdots on input line 467.
 \Mathstrutbox@=\box61
 \strutbox@=\box62
-\big@size=\dimen141
+\big@size=\dimen138
 LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 
 
 Package amsmath Warning: Unable to redefine math accent \vec.
 
-\macc@depth=\count166
-\c@MaxMatrixCols=\count167
+\macc@depth=\count158
+\c@MaxMatrixCols=\count159
 \dotsspace@=\muskip11
-\c@parentequation=\count168
-\dspbrk@lvl=\count169
-\tag@help=\toks25
-\row@=\count170
-\column@=\count171
-\maxfields@=\count172
-\andhelp@=\toks26
-\eqnshift@=\dimen142
-\alignsep@=\dimen143
-\tagshift@=\dimen144
-\tagwidth@=\dimen145
-\totwidth@=\dimen146
-\lineht@=\dimen147
-\@envbody=\toks27
-\multlinegap=\skip63
-\multlinetaggap=\skip64
-\mathdisplay@stack=\toks28
+\c@parentequation=\count160
+\dspbrk@lvl=\count161
+\tag@help=\toks23
+\row@=\count162
+\column@=\count163
+\maxfields@=\count164
+\andhelp@=\toks24
+\eqnshift@=\dimen139
+\alignsep@=\dimen140
+\tagshift@=\dimen141
+\tagwidth@=\dimen142
+\totwidth@=\dimen143
+\lineht@=\dimen144
+\@envbody=\toks25
+\multlinegap=\skip61
+\multlinetaggap=\skip62
+\mathdisplay@stack=\toks26
 LaTeX Info: Redefining \[ on input line 2666.
 LaTeX Info: Redefining \] on input line 2667.
 )
-\g_MT_multlinerow_int=\count173
-\l_MT_multwidth_dim=\dimen148
-\origjot=\skip65
-\l_MT_shortvdotswithinadjustabove_dim=\dimen149
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen150
-\l_MT_above_intertext_dim=\dimen151
-\l_MT_below_intertext_dim=\dimen152
-\l_MT_above_shortintertext_dim=\dimen153
-\l_MT_below_shortintertext_dim=\dimen154
+\g_MT_multlinerow_int=\count165
+\l_MT_multwidth_dim=\dimen145
+\origjot=\skip63
+\l_MT_shortvdotswithinadjustabove_dim=\dimen146
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen147
+\l_MT_above_intertext_dim=\dimen148
+\l_MT_below_intertext_dim=\dimen149
+\l_MT_above_shortintertext_dim=\dimen150
+\l_MT_below_shortintertext_dim=\dimen151
 ) (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
 \symAMSa=\mathgroup4
@@ -497,8 +477,8 @@ LaTeX Font Info:    Overwriting symbol font `stmry' in version `bold'
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks29
-\verbatim@line=\toks30
+\every@verbatim=\toks27
+\verbatim@line=\toks28
 \verbatim@in@stream=\read2
 )
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/txfonts.sty
@@ -593,12 +573,12 @@ Package: caption 2012/02/19 v3.2f Customizing captions (AR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2012/01/12 v1.4b caption3 kernel (AR)
-\captionmargin=\dimen155
-\captionmargin@=\dimen156
-\captionwidth=\dimen157
-\caption@indent=\dimen158
-\caption@parindent=\dimen159
-\caption@hangindent=\dimen160
+\captionmargin=\dimen152
+\captionmargin@=\dimen153
+\captionwidth=\dimen154
+\caption@indent=\dimen155
+\caption@parindent=\dimen156
+\caption@hangindent=\dimen157
 Package caption Info: Unknown document class (or package),
 (caption)             standard defaults will be used.
 )
@@ -611,7 +591,7 @@ Package caption Info: \@makecaption = \long macro:#1#2->\small \vskip \abovecap
 tionskip \sbox \@tempboxa {{\bfseries #1.} #2}\ifdim \wd \@tempboxa >\hsize {\b
 fseries #1.} #2\par \else \global \@minipagefalse \hb@xt@ \hsize {\hfil \box \@
 tempboxa \hfil }\fi \vskip \belowcaptionskip .
-\c@ContinuedFloat=\count174
+\c@ContinuedFloat=\count166
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: longtable package is loaded.
@@ -671,21 +651,21 @@ LaTeX Font Info:    Try loading font information for OT1+txr on input line 109.
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
 )
-\c@lstlisting=\count175
+\c@lstlisting=\count167
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count176
-\scratchdimen=\dimen161
+\scratchcounter=\count168
+\scratchdimen=\dimen158
 \scratchbox=\box64
-\nofMPsegments=\count177
-\nofMParguments=\count178
-\everyMPshowfont=\toks31
-\MPscratchCnt=\count179
-\MPscratchDim=\dimen162
-\MPnumerator=\count180
-\makeMPintoPDFobject=\count181
-\everyMPtoPDFconversion=\toks32
+\nofMPsegments=\count169
+\nofMParguments=\count170
+\everyMPshowfont=\toks29
+\MPscratchCnt=\count171
+\MPscratchDim=\dimen159
+\MPnumerator=\count172
+\makeMPintoPDFobject=\count173
+\everyMPtoPDFconversion=\toks30
 )
 \AtBeginShipoutBox=\box65
 Package hyperref Info: Link coloring ON on input line 109.
@@ -695,7 +675,7 @@ Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count182
+\c@section@level=\count174
 )
 LaTeX Info: Redefining \ref on input line 109.
 LaTeX Info: Redefining \pageref on input line 109.
@@ -756,289 +736,306 @@ LaTeX Font Info:    Try loading font information for OT1+txtt on input line 114
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ot1txtt.fd
 File: ot1txtt.fd 2000/12/15 v3.1
-) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+)
 
-] [2]
-<resources/sj-delegation.png, id=101, 567.11874pt x 243.91125pt>
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\\' on input line 114.
+
+
+Overfull \hbox (1.99599pt too wide) in paragraph at lines 174--177
+\OT1/txr/m/n/10 Web Ser-vices Chore-og-ra-phy De-scrip-tion Lan-guage (WS-CDL) 
+[[]]. The WS-CDL work-
+ []
+
+
+Overfull \hbox (0.9366pt too wide) in paragraph at lines 181--182
+\OT1/txr/m/n/10 sets [[]]; Session-Java [[]], Scrib-ble [[]] and Ses-sion C [[]
+] due to Honda and Yoshida;
+ []
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
+<resources/sj-delegation.png, id=106, 567.11874pt x 243.91125pt>
 File: resources/sj-delegation.png Graphic file (type png)
 
 <use resources/sj-delegation.png>
-Package pdftex.def Info: resources/sj-delegation.png used on input line 296.
+Package pdftex.def Info: resources/sj-delegation.png used on input line 297.
 (pdftex.def)             Requested size: 277.69987pt x 119.43939pt.
-
-Underfull \vbox (badness 6396) has occurred while \output is active []
-
  [3 <./resources/sj-delegation.png>] [4]pdfTeX warning (ext4): destination with
- the same identifier (name{lstlisting.0.1}) has been already used, duplicate ig
+ the same identifier (name{lstlisting.1.1}) has been already used, duplicate ig
 nored
 <to be read again> 
                    \relax 
-l.503 \begin{lstlisting}[caption=User]
+l.506 \begin{lstlisting}[caption=User]
                                       pdfTeX warning (ext4): destination with t
-he same identifier (name{lstnumber.1.1}) has been already used, duplicate ignor
-ed
+he same identifier (name{lstnumber.1.1.1}) has been already used, duplicate ign
+ored
 <to be read again> 
                    \relax 
-l.505 protocol 
+l.508 protocol 
                p_uv {pdfTeX warning (ext4): destination with the same identifie
-r (name{lstnumber.1.2}) has been already used, duplicate ignored
+r (name{lstnumber.1.1.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.505 protocol 
+l.508 protocol 
                p_uv {pdfTeX warning (ext4): destination with the same identifie
-r (name{lstnumber.1.3}) has been already used, duplicate ignored
+r (name{lstnumber.1.1.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.506   begin.
+l.509   begin.
               ?[!<String>.!<String> ]*.pdfTeX warning (ext4): destination with 
-the same identifier (name{lstnumber.1.4}) has been already used, duplicate igno
-red
+the same identifier (name{lstnumber.1.1.4}) has been already used, duplicate ig
+nored
 <to be read again> 
                    \relax 
-l.507   ?{
+l.510   ?{
           pdfTeX warning (ext4): destination with the same identifier (name{lst
-number.1.5}) has been already used, duplicate ignored
+number.1.1.5}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.508    ACCESS:
+l.511    ACCESS:
                  !<JSONMsg>.pdfTeX warning (ext4): destination with the same id
-entifier (name{lstnumber.1.6}) has been already used, duplicate ignored
+entifier (name{lstnumber.1.1.6}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.509    ?{
+l.512    ?{
            pdfTeX warning (ext4): destination with the same identifier (name{ls
-tnumber.1.7}) has been already used, duplicate ignored
+tnumber.1.1.7}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.510      OK:
+l.513      OK:
                ?(JSONMsg), FAIL: ?(JSONMsg)pdfTeX warning (ext4): destination w
-ith the same identifier (name{lstnumber.1.8}) has been already used, duplicate 
-ignored
-<to be read again> 
-                   \relax 
-l.511    },
-           pdfTeX warning (ext4): destination with the same identifier (name{ls
-tlisting.0.2}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.519 \begin{lstlisting}[caption=Cloud]
-                                       pdfTeX warning (ext4): destination with 
-the same identifier (name{lstnumber.2.1}) has been already used, duplicate igno
-red
-<to be read again> 
-                   \relax 
-l.521 private 
-              protocol p_vu {pdfTeX warning (ext4): destination with the same i
-dentifier (name{lstnumber.2.2}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.521 private 
-              protocol p_vu {pdfTeX warning (ext4): destination with the same i
-dentifier (name{lstnumber.2.3}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.522   begin.
-              pdfTeX warning (ext4): destination with the same identifier (name
-{lstnumber.2.4}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.523    ![ 
-            ?(String).?(String) // login passwordpdfTeX warning (ext4): destina
-tion with the same identifier (name{lstnumber.2.5}) has been already used, dupl
-icate ignored
-<to be read again> 
-                   \relax 
-l.524      ]*.
-              pdfTeX warning (ext4): destination with the same identifier (name
-{lstnumber.2.6}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.525   !{
-          pdfTeX warning (ext4): destination with the same identifier (name{lst
-number.2.7}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.526     ACCESS:
-                  ?(JSONMsg).pdfTeX warning (ext4): destination with the same i
-dentifier (name{lstnumber.2.8}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.527     !{
-            pdfTeX warning (ext4): destination with the same identifier (name{l
-stnumber.2.9}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.528       OK:
-                !<JSONMsg>, FAIL: !<JSONMsg>pdfTeX warning (ext4): destination 
-with the same identifier (name{lstnumber.2.10}) has been already used, duplicat
+ith the same identifier (name{lstnumber.1.1.8}) has been already used, duplicat
 e ignored
 <to be read again> 
                    \relax 
-l.529      },
+l.514    },
+           pdfTeX warning (ext4): destination with the same identifier (name{ls
+tlisting.1.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.522 \begin{lstlisting}[caption=Cloud]
+                                       pdfTeX warning (ext4): destination with 
+the same identifier (name{lstnumber.1.2.1}) has been already used, duplicate ig
+nored
+<to be read again> 
+                   \relax 
+l.524 private 
+              protocol p_vu {pdfTeX warning (ext4): destination with the same i
+dentifier (name{lstnumber.1.2.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.524 private 
+              protocol p_vu {pdfTeX warning (ext4): destination with the same i
+dentifier (name{lstnumber.1.2.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.525   begin.
+              pdfTeX warning (ext4): destination with the same identifier (name
+{lstnumber.1.2.4}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.526    ![ 
+            ?(String).?(String) // login passwordpdfTeX warning (ext4): destina
+tion with the same identifier (name{lstnumber.1.2.5}) has been already used, du
+plicate ignored
+<to be read again> 
+                   \relax 
+l.527      ]*.
+              pdfTeX warning (ext4): destination with the same identifier (name
+{lstnumber.1.2.6}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.528   !{
+          pdfTeX warning (ext4): destination with the same identifier (name{lst
+number.1.2.7}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.529     ACCESS:
+                  ?(JSONMsg).pdfTeX warning (ext4): destination with the same i
+dentifier (name{lstnumber.1.2.8}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.530     !{
+            pdfTeX warning (ext4): destination with the same identifier (name{l
+stnumber.1.2.9}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.531       OK:
+                !<JSONMsg>, FAIL: !<JSONMsg>pdfTeX warning (ext4): destination 
+with the same identifier (name{lstnumber.1.2.10}) has been already used, duplic
+ate ignored
+<to be read again> 
+                   \relax 
+l.532      },
              pdfTeX warning (ext4): destination with the same identifier (name{
-lstnumber.2.11}) has been already used, duplicate ignored
+lstnumber.1.2.11}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.530       DENY:
+l.533       DENY:
                   !<String>pdfTeX warning (ext4): destination with the same ide
-ntifier (name{lstnumber.2.12}) has been already used, duplicate ignored
+ntifier (name{lstnumber.1.2.12}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.531    }
+l.534    }
           
-Overfull \hbox (1.71pt too wide) in paragraph at lines 502--536
+Overfull \hbox (1.71pt too wide) in paragraph at lines 505--539
 [][] [] 
  []
 
-pdfTeX warning (ext4): destination with the same identifier (name{lstlisting.0.
+pdfTeX warning (ext4): destination with the same identifier (name{lstlisting.1.
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.556 \begin{lstlisting}[caption=Cloud]
+l.559 \begin{lstlisting}[caption=Cloud]
                                        pdfTeX warning (ext4): destination with 
-the same identifier (name{lstnumber.1.1}) has been already used, duplicate igno
-red
+the same identifier (name{lstnumber.1.1.1}) has been already used, duplicate ig
+nored
 <to be read again> 
                    \relax 
-l.558 protocol 
+l.561 protocol 
                p_vs {pdfTeX warning (ext4): destination with the same identifie
-r (name{lstnumber.1.2}) has been already used, duplicate ignored
+r (name{lstnumber.1.1.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.558 protocol 
+l.561 protocol 
                p_vs {pdfTeX warning (ext4): destination with the same identifie
-r (name{lstnumber.1.3}) has been already used, duplicate ignored
+r (name{lstnumber.1.1.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.559   begin.
+l.562   begin.
               pdfTeX warning (ext4): destination with the same identifier (name
-{lstnumber.1.4}) has been already used, duplicate ignored
+{lstnumber.1.1.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.560   !< 
+l.563   !< 
            !{pdfTeX warning (ext4): destination with the same identifier (name{
-lstnumber.1.5}) has been already used, duplicate ignored
+lstnumber.1.1.5}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.561     OK:
+l.564     OK:
               !<JSONMsg>,pdfTeX warning (ext4): destination with the same ident
-ifier (name{lstnumber.1.6}) has been already used, duplicate ignored
+ifier (name{lstnumber.1.1.6}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.562     FAIL:
+l.565     FAIL:
                 !<JSONMsg>pdfTeX warning (ext4): destination with the same iden
-tifier (name{lstnumber.1.7}) has been already used, duplicate ignored
+tifier (name{lstnumber.1.1.7}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.563   } 
+l.566   } 
           >.!<JSONMsg>pdfTeX warning (ext4): destination with the same identifi
-er (name{lstnumber.1.8}) has been already used, duplicate ignored
+er (name{lstnumber.1.1.8}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.564 }
+l.567 }
        pdfTeX warning (ext4): destination with the same identifier (name{lstlis
-ting.0.2}) has been already used, duplicate ignored
+ting.1.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.569 \begin{lstlisting}[caption=Cloud]
+l.572 \begin{lstlisting}[caption=Cloud]
                                        pdfTeX warning (ext4): destination with 
-the same identifier (name{lstnumber.2.1}) has been already used, duplicate igno
-red
+the same identifier (name{lstnumber.1.2.1}) has been already used, duplicate ig
+nored
 <to be read again> 
                    \relax 
-l.571 protocol 
+l.574 protocol 
                p_msg {pdfTeX warning (ext4): destination with the same identifi
-er (name{lstnumber.2.2}) has been already used, duplicate ignored
+er (name{lstnumber.1.2.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.571 protocol 
+l.574 protocol 
                p_msg {pdfTeX warning (ext4): destination with the same identifi
-er (name{lstnumber.2.3}) has been already used, duplicate ignored
+er (name{lstnumber.1.2.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.572   !{
+l.575   !{
           pdfTeX warning (ext4): destination with the same identifier (name{lst
-number.2.4}) has been already used, duplicate ignored
+number.1.2.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.573     OK:
+l.576     OK:
               !<JSONMsg>,pdfTeX warning (ext4): destination with the same ident
-ifier (name{lstnumber.2.5}) has been already used, duplicate ignored
+ifier (name{lstnumber.1.2.5}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.574     FAIL:
+l.577     FAIL:
                 !<JSONMsg>pdfTeX warning (ext4): destination with the same iden
-tifier (name{lstnumber.2.6}) has been already used, duplicate ignored
+tifier (name{lstnumber.1.2.6}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.575   }
+l.578   }
          pdfTeX warning (ext4): destination with the same identifier (name{lstn
-umber.2.7}) has been already used, duplicate ignored
+umber.1.2.7}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.576 }
+l.579 }
        pdfTeX warning (ext4): destination with the same identifier (name{lstnum
-ber.2.8}) has been already used, duplicate ignored
+ber.1.2.8}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.578 protocol 
+l.581 protocol 
                p_sv {pdfTeX warning (ext4): destination with the same identifie
-r (name{lstnumber.2.9}) has been already used, duplicate ignored
+r (name{lstnumber.1.2.9}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.578 protocol 
+l.581 protocol 
                p_sv {pdfTeX warning (ext4): destination with the same identifie
-r (name{lstnumber.2.10}) has been already used, duplicate ignored
+r (name{lstnumber.1.2.10}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.579   begin.
+l.582   begin.
               ?(@p_msg).?(JSONMsg)pdfTeX warning (ext4): destination with the s
-ame identifier (name{lstnumber.2.11}) has been already used, duplicate ignored
+ame identifier (name{lstnumber.1.2.11}) has been already used, duplicate ignore
+d
 <to be read again> 
                    \relax 
-l.580 }
+l.583 }
        pdfTeX warning (ext4): destination with the same identifier (name{lstnum
-ber.2.12}) has been already used, duplicate ignored
+ber.1.2.12}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.582 \end{lstlisting}
+l.585 \end{lstlisting}
                       
-Overfull \hbox (1.71pt too wide) in paragraph at lines 555--584
+Overfull \hbox (1.71pt too wide) in paragraph at lines 558--587
 [][] [] 
  []
 
-[5] <resources/interaction-sc2.png, id=175, 1250.6725pt x 894.34125pt>
+[5] <resources/interaction-sc2.png, id=182, 1250.6725pt x 894.34125pt>
 File: resources/interaction-sc2.png Graphic file (type png)
 
 <use resources/interaction-sc2.png>
-Package pdftex.def Info: resources/interaction-sc2.png used on input line 599.
+Package pdftex.def Info: resources/interaction-sc2.png used on input line 632.
 (pdftex.def)             Requested size: 277.69987pt x 198.57066pt.
- [6 <./resources/interaction-sc2.png>]
-(./easychair.bbl [7]
-Underfull \hbox (badness 2073) in paragraph at lines 71--75
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6 <./resources/interaction-sc2.png>] (./easychair.bbl [7]
+Underfull \hbox (badness 2073) in paragraph at lines 77--81
 []\OT1/txr/m/n/9 Michael Em-manuel.  Session-based web ser-vice pro-gram-ming f
 or busi-ness pro-to-
  []
 
-[8])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 682.
- [9]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 682.
+)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 695.
+ [8]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 695.
  (./easychair.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 682.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 682.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 695.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 695.
 Package rerunfilecheck Info: File `easychair.out' has not changed.
-(rerunfilecheck)             Checksum: 666AAD3CE28696DC70AB5B942EF23B83;563.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 682.
+(rerunfilecheck)             Checksum: CFD8D0A5B282A326FA3CC7C2113CEB90;720.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 695.
  ) 
 Here is how much of TeX's memory you used:
- 11139 strings out of 493485
- 163144 string characters out of 3143526
- 389397 words of memory out of 3000000
- 14155 multiletter control sequences out of 15000+200000
+ 10947 strings out of 493485
+ 160565 string characters out of 3143526
+ 385810 words of memory out of 3000000
+ 13969 multiletter control sequences out of 15000+200000
  41365 words of font info for 104 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 36i,17n,40p,1094b,1251s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,17n,40p,633b,1251s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type
@@ -1047,10 +1044,10 @@ onts/txsyc.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txtt.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on easychair.pdf (9 pages, 141541 bytes).
+Output written on easychair.pdf (8 pages, 140515 bytes).
 PDF statistics:
- 290 PDF objects out of 1000 (max. 8388607)
+ 289 PDF objects out of 1000 (max. 8388607)
  240 compressed objects within 3 object streams
  100 named destinations out of 1000 (max. 500000)
- 75 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 83 words of extra memory for PDF output out of 10000 (max. 10000000)
 

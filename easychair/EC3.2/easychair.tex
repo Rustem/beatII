@@ -1,7 +1,7 @@
 \documentclass[10pt]{llncs}
 
-\usepackage{doc}
-\usepackage{makeidx}
+%\usepackage{doc}
+%\usepackage{makeidx}
 \usepackage{fancyvrb}
 \usepackage{listings}
 \usepackage{longtable}
@@ -180,7 +180,8 @@ The WS-CDL working group identified critical issues~\cite{ws-critical-overview} 
 
 The aforementioned challenges can be tackled by adopting a solid foundational model. Successful approaches based on session types~\cite{session-types-sessions,carbone2007structured} include: the Chor and Jolie programming languages of Carbone and Montesi~\cite{chor-lang,carbone2013deadlock} based on sessions and trace sets~\cite{chor-essence}; Session-Java~\cite{sj-lang}, Scribble~\cite{honda2011scribbling} and Session C~\cite{ng2012multiparty} due to Honda and Yoshida; Sing\#~\cite{basu2012deciding} that extends Spec\# with choreogrphies; and UBF(B)~\cite{armstrong2002getting} for Erlang.
 
-In this paper, we demonstrate a method of controlling process interactions represented by sessions. The formal theory based on session types ensures communication safety by verifying that session implementations of each engaged participant conform to the defined protocol specification. In order to evaluate the feasibility of this theory we use Session-Java, an extension to Java language. Session Java works by specifying the intended process transaction protocol using session types and implementing the interaction using session operations.
+In this paper, we present a case study where processes interactions are controlled using Sessions Types. The theory of Session Types ensures communication safety by verifying that session implementations of each engaged participant conform to the defined protocol specification. In our case study, we use Session-Java, an extension to Java language supporting session, to specify protocols used by a Cloud provider that involve iteration and higher order communication.
+%Session Java works by specifying the intended process transaction protocol using session types and implementing the interaction using session operations.
 
 %Through these we are aiming to confirm the suitability of Session-Java as an implementation of business to business transactions. We want to explore the agility and robustness of the language and the scalability as scenarios vary in size but also complexity. In addition we will be looking for things such as ease of programming in SJ, any limitations, bugs or non-implementable scenarios.
 
@@ -198,7 +199,7 @@ We briefly outline how Session-Java is employed to correctly implement protocols
 %Session programming can be applied when participants cooperate according to specified protocols.
 %Session types are formal specifications of protocols, that describe structured sequences of interaction including basic message passing, branching and recursion.
 Firstly, the global protocol is specified using sequence diagrams. The global specification is projected to sessions types, which specify the protocol for each participant.
-The session is then implemented using operations on session sockets. The correctness of the protocol can be verified using session types.
+The session is then implemented using operations on session sockets. Finally, the correctness of the protocol can be verified using session types.
 
 %according to the protocol using Session programming begins from the protocols specification for interaction (using session types), which can then be concretely implemented using structured communication operations available on session sockets.
 
@@ -351,10 +352,12 @@ P \Coloneqq & P; P              &                                               
 s1.send(s2) // !<T>, where T is the remaining session type of 's2'
 \end{lstlisting}
 \end{comment}
+\begin{comment}
 To delegate a session, the session socket variable must be passed to a send operation on the target session.
 For example, assuming that $s2$ is an active session of type $T$, then the type of $s1.\textit{send}(s2)$ is $\mathopen!\left<T\right>$.
-%Only active session sockets can be delegated.
 The corresponding receive operation, $\textit{SJSocket}~s2 = s1.\textit{receive}()$ receives delegated sessions.
+\end{comment}
+%Only active session sockets can be delegated.
 
 %------------------------------------------------------------------------------
 \section{Case Study: Protocols for a Cloud}
@@ -384,13 +387,13 @@ In this section, we illustrate two refinement of the first scenario above.
 \subsection{A Simple Scenario with Branching}
 To begin, we specify a simple business protocol for SaaS connection. The protocol is informally specified as follows:
 \begin{enumerate}
-\item  User begins a request session ($s$) with Cloud service (V3na) and sends the request ``Connect SaaS'' as JSON-encoded message.
+\item  User begins a request session $s$ with Cloud service (V3na) and sends the request ``Connect SaaS'' as JSON-encoded message.
 \item  V3na sends either:
 \begin{enumerate}
 \item  FAIL, if user has no active session (not signed in on V3na). % and further interaction terminates 
 \item  OK, if user has logged in and request data has passed validation steps. %Then Cloud initiates a new session (s') with SaaS and requests it for new user connection with message details in JSONMsg.
 \end{enumerate}
-\item  If OK is sent, the Cloud initiates a new session (s') with SaaS and requests it for new user connection with message details in a JSON message.
+\item  If OK is sent, the Cloud initiates a new session $s'$ with SaaS and requests it for new user connection with message details in a JSON message.
 \item Finally, the SaaS responds to the Cloud with connection status OK or FAIL and V3na sends this status to the user. Both sessions are then terminated.
 \end{enumerate}
 
@@ -594,15 +597,9 @@ One protocol can be referenced from another using @ operator. %The $@p$ is synta
 
 \paragraph{Interactions.} Figure~\ref{fig:seq-diagram-sc2} depicts the protocols provided above using a sequence diagram. The language of the artifacts has already presented in the first scenario.
 
-\begin{figure}
-\centering
-\includegraphics[width=0.8\textwidth]{resources/interaction-sc2.png}
-\caption{Sequence diagram of interactions for Scenario \# 2}
-\label{fig:seq-diagram-sc2}
-\end{figure}
-
 \paragraph{Implementation.} %Despite the fact that session delegation takes place, the program still remains very simple. Actually
-Delegating the protocol is straightforward and only consists of passing the socket to service using $\textit{s\_vs}.\textit{send}(\textit{user\_vu})$.
+Delegating the protocol is straightforward. Simply pass the socket to service using $\textit{s\_vs}.\textit{send}(\textit{user\_vu})$.
+
 \begin{comment}
 \begin{lstlisting}
 s_vs.send(user_vu); // pass the remaining protocol
@@ -622,7 +619,6 @@ user_vu.outbranch(ACCESS) {
 }
 \end{lstlisting}
 \end{comment}
-
 To receive a high order message type casting must take place in the case of a protocol, the type of protocol must be explicitly defined, using $\textit{v3na\_user\_socket} = \left(\mathopen{@}\textit{p\_msg}\right)~\textit{v3na\_sv}.\textit{receive}()$, where \textit{p\_msg} is a defined protocol.
 \begin{comment}
 \begin{lstlisting}
@@ -631,31 +627,48 @@ v3na_user_socket = (@p_msg) v3na_sv.receive();
 \end{comment}
 Thus we explicitly define the protocol to be delegated and then include it in the final protocol.
 
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth]{resources/interaction-sc2.png}
+\caption{Sequence diagram of interactions for Scenario \# 2}
+\label{fig:seq-diagram-sc2}
+\end{figure}
+
+
 %------------------------------------------------------------------------------
 
 
 \section{Future Work: Inter-Cloud protocols and Session Types}
 \label{sect:highlights}
-Cloud computing is moving to the concept where Cloud operated by one enterprise interoperating with a Cloud of another is powerful idea~\cite{Buyya2009,intercloud}.
-So far that is limited to use cases where code running on one cloud explicitly references a service on another cloud. There is no implicit and transparent interoperability. 
-Different visions has already proposed in papers~\cite{utility-driven-fed,xmpp-intercloud-transport,cloud-integrator}. The most full picture of cloud inter-networking is depicted by \cite{utility-driven-fed}. They emphasized the main components of general inter-networking architecture:
+In Cloud Computing there are considerable benefits if Services are hosted on more than one Cloud~\cite{Armbrust2010,Buyya2009,intercloud}. Benefits include geographic replication for highly available robust services, and a greater ability to circumnavigate legal and technical restrictions. 
+%is moving to the concept where Cloud operated by one enterprise interoperating with a Cloud of another is powerful idea.
+%So far that is limited to use cases where code running on one cloud explicitly references a service on another cloud.
+%For improved interoperability, inter-Cloud protocols are prosed as future standards. %this we require protocols There is no implicit and transparent interoperability. 
+Several visions have already proposed for inter-Cloud protocols in papers~\cite{utility-driven-fed,xmpp-intercloud-transport,cloud-integrator}. In~\cite{utility-driven-fed}, they emphasised the main components of general inter-networking architecture:
 \begin{inparaenum}[(\bgroup\bfseries a\egroup)]
 \item \textit{Cloud Coordinator}, for bringing out Cloud services;
-\item \textit{Cloud Brocker}, ``for mediating between service consumers and Cloud coordinators'';
-\item \textit{Cloud Exchange} (e.g. Cloud Integrator), for collecting consumers' demands and locating Cloud providers with them with offers.
+\item \textit{Cloud Broker}, ``for mediating between service consumers and Cloud coordinators'';
+\item \textit{Cloud Exchange} (e.g. Cloud Integrator), for collecting consumers' demands and locating Cloud providers. % with them with offers.
 \end{inparaenum}
 
-Our approach is to employ multiparty session types \cite{ng2012multiparty} for type-safe conversation between Cloud providers and Cloud Integrators (many-to-many conversation). It starts by specifying the intended interactions as an inter Cloud protocol in the, contract checker, UBF. Then processes for each role (either Cloud provider or Cloud Exchange) are implemented in Erlang or Python (they are best for working with high load applications). Since all the roles should be aware of each other in global network in order to dialog with each other, we are going to use SockJS\footnote{SockJS is an effort to define a protocol between in-browser SockJS-client and its server-side counterparts} protocol for presence and AMQP messaging (it's thin, flexible). Moreover, there is an idea, to extend SockJS protocol during communication initiation to check at runtime that each interaction is correct and as a result the whole communication is safe. As a starting point for dynamic verification observers, we referred to \cite{safe-conver-prog-python} work.
+We propose to employ multi-party session types \cite{ng2012multiparty} for type-safe conversations between Cloud providers and Cloud Integrators (many-to-many conversation).
+We start by specifying the interactions of an inter-Cloud protocol using a contract checker.
+%Each processes for each role (either Cloud provider or Cloud Exchange) can then be implemented are implemented in Erlang or Python (they are best for working with high load applications).
+%Since all the roles should be aware of each other in global network in order to dialog with each other, we
+%We propose using SockJS\footnote{SockJS is an effort to define a protocol between in-browser SockJS-client and its server-side counterparts} protocol for presence and AMQP messaging (it's thin, flexible).
+We then extend implementations of protocols at the socket layer (e.g. SockJS), so that they check at runtime that each interaction is correct and, as a result, the whole communication is safe.
+Session types can improve the trust in protocols where each participant is developed and hosted by competing businesses.
+%As a starting point for dynamic verification observers, we referred to \cite{safe-conver-prog-python} work.
 
 \section{Conclusion}
 \label{sect:conclusion}
 Session-based programming has already proved itself in various fields, including parallel algorithms~\cite{sj-parallel}, event-driven programming~\cite{event-driven-sj} and multi-party conversations~\cite{sj-business-protocols}.
 In this paper, our case study demonstrates the ability of session types to control interaction patterns between communicating processes in a Cloud.
-Participants are static type-checked at compile time and dynamical type-checking at run-time to ensure that protocol are compatibile.
-The higher level of abstraction of session types, implemented in SJ language, enabled effortless translation of business scenarios into protocols.
-Support of high-level communication (session delegation), allowed us to refine from Scenario 1 to Scenario 2.
-Further to scenarios presented here our case study also covered a scenario involving payment and wallet recharging transactions, %(available by \url{https://github.com/Rustem/Master-thesis}),
-where we discovered the benefits of combining session delegation and threading provided in SJ.
+Participants are statically type-checked at compile time and dynamically type-checking at run-time to ensure that protocol are compatible.
+The highe level of abstraction of session types, implemented in SJ language, enabled effortless translation of business scenarios into protocols.
+We were able to refine our protocol from Scenario 1 to Scenario 2, due to support of higher-order message passing (session delegation). %, allowed us to refine from Scenario 1 to Scenario 2.
+Further to scenarios presented here our case study covered a scenarios including payment and wallet recharging transactions, %(available by \url{https://github.com/Rustem/Master-thesis}),
+where we discovered the benefits of combining session delegation and threading provided by SJ.
 The session-programming approach is suited to correctly implementing inter-Cloud protocols, which is our future objective. %Finally, hope that our feedback about session types will be as a solid starting point for further research in this area.  
 
 

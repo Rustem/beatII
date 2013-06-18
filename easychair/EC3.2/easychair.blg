@@ -7,38 +7,38 @@ Warning--empty note in event-driven-sj
 Warning--empty year in xmpp-intercloud-transport
 You've used 21 entries,
             2118 wiz_defined-function locations,
-            654 strings with 8708 characters,
-and the built_in function-call counts, 8697 in all, are:
-= -- 889
-> -- 383
-< -- 13
-+ -- 153
-- -- 130
-* -- 556
-:= -- 1341
+            655 strings with 8813 characters,
+and the built_in function-call counts, 8923 in all, are:
+= -- 904
+> -- 434
+< -- 12
++ -- 174
+- -- 150
+* -- 599
+:= -- 1397
 add.period$ -- 73
 call.type$ -- 21
-change.case$ -- 129
+change.case$ -- 138
 chr.to.int$ -- 0
 cite$ -- 23
-duplicate$ -- 364
-empty$ -- 691
-format.name$ -- 130
-if$ -- 1929
+duplicate$ -- 354
+empty$ -- 678
+format.name$ -- 150
+if$ -- 1949
 int.to.chr$ -- 0
 int.to.str$ -- 21
 missing$ -- 17
 newline$ -- 108
 num.names$ -- 42
-pop$ -- 166
+pop$ -- 170
 preamble$ -- 1
-purify$ -- 107
+purify$ -- 116
 quote$ -- 0
-skip$ -- 277
+skip$ -- 268
 stack$ -- 0
 substring$ -- 557
-swap$ -- 132
-text.length$ -- 13
+swap$ -- 124
+text.length$ -- 12
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 84

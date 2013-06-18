@@ -1,5 +1,11 @@
 \begin{thebibliography}{10}
 
+\bibitem{Armbrust2010}
+Michael Armbrust, Armando Fox, Rean Griffith, Anthony~D Joseph, Randy Katz,
+  Andy Konwinski, Gunho Lee, David Patterson, Ariel Rabkin, Ion Stoica, et~al.
+\newblock A view of cloud computing.
+\newblock {\em Communications of the ACM}, 53(4):50--58, 2010.
+
 \bibitem{armstrong2002getting}
 Joe Armstrong.
 \newblock Getting {Erlang} to talk to the outside world.
@@ -88,12 +94,6 @@ Raymond Hu, Nobuko Yoshida, and Kohei Honda.
 Fabrizio Montesi and Marco Carbone.
 \newblock Chor --- choreography programming language.
 \newblock \url{http://www.chor-lang.org/}.
-
-\bibitem{safe-conver-prog-python}
-Rumyana Neykova.
-\newblock Session types go dynamic or how to verify your {Python}
-  conversations.
-\newblock In {\em PLACES'13. Rome, Italy, 23 March}, pages 34--39, 2013.
 
 \bibitem{ng2012multiparty}
 Nicholas Ng, Nobuko Yoshida, and Kohei Honda.
