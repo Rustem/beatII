@@ -186,8 +186,8 @@ In this paper, we demonstrate a method of controlling process interactions repre
 
 
 In Section~\ref{sect:basics} we provide an overview of SJ.
-In Section~\ref{sect:impl}, we explain several refinements of protocols used by a Cloud provider, using SJ. %and how they can be implemented correctly using session programming.
-Finally, in Section~\ref{sect:highlights}, we highlight how session types can improve the design of InterCloud~\cite{intercloud} communication protocols.
+In Section~\ref{sect:impl}, we explain a refinements a protocols used by a Cloud provider, implemented using SJ. %and how they can be implemented correctly using session programming.
+Finally, in Section~\ref{sect:highlights}, we highlight how session types can improve the design of inter-Cloud protocols.
 
 
 %------------------------------------------------------------------------------
@@ -444,18 +444,19 @@ protocol p_sv {
 \end{minipage}
 \caption{Protocol specifications for Scenario 1}\label{fig:protocols-sc1} 
 \end{figure}
+}
 
 In Figure~\ref{fig:protocols-sc1} we depict the protocol specifications for each participant (Cloud, SaaS or User).
 The protocols between User and Cloud and Cloud and SaaS are dual, i.e. the specification of interaction from one perspective is opposite from another.
+We implement this diagram in Session-Java, where the branching is implemented employing the \texttt{outbranch} and \texttt{inbranch} operations.
 
-}
 
 
 %\paragraph{Interactions.} The general syntax for
-The global description of the protocol is presented as a sequence diagram in Figure~\ref{fig:interaction-overview-sc1}. %The whole syntax is on the down-left side of the figure.
-To represent choice, the OK case is represented by the main picture and the FAIL case is a sub-diagram.
-We implement this diagram in Session-Java, where the branching is implemented employing the \texttt{outbranch} and \texttt{inbranch} operations.
+%The global description of the protocol is presented as a sequence diagram in Figure~\ref{fig:interaction-overview-sc1}. %The whole syntax is on the down-left side of the figure.
+%To represent choice, the OK case is represented by the main picture and the FAIL case is a sub-diagram.
 
+\begin{comment}
 \begin{figure}[ht]
 \centering
 \scalebox{0.3}{
@@ -463,6 +464,7 @@ We implement this diagram in Session-Java, where the branching is implemented em
 \caption{Overview of global interactions for Scenario \#1.}
 \label{fig:interaction-overview-sc1}
 \end{figure}
+\end{comment}
 
 %\paragraph{Implementation.}
 
@@ -632,9 +634,9 @@ Thus we explicitly define the protocol to be delegated and then include it in th
 %------------------------------------------------------------------------------
 
 
-\section{Future Work: InterCloud and Session Types}
+\section{Future Work: Inter-Cloud protocols and Session Types}
 \label{sect:highlights}
-Cloud computing is moving to the concept where Cloud operated by one enterprise interoperating with a Cloud of another is powerful idea~\cite{Buyya2009}.
+Cloud computing is moving to the concept where Cloud operated by one enterprise interoperating with a Cloud of another is powerful idea~\cite{Buyya2009,intercloud}.
 So far that is limited to use cases where code running on one cloud explicitly references a service on another cloud. There is no implicit and transparent interoperability. 
 Different visions has already proposed in papers~\cite{utility-driven-fed,xmpp-intercloud-transport,cloud-integrator}. The most full picture of cloud inter-networking is depicted by \cite{utility-driven-fed}. They emphasized the main components of general inter-networking architecture:
 \begin{inparaenum}[(\bgroup\bfseries a\egroup)]
@@ -654,7 +656,7 @@ The higher level of abstraction of session types, implemented in SJ language, en
 Support of high-level communication (session delegation), allowed us to refine from Scenario 1 to Scenario 2.
 Further to scenarios presented here our case study also covered a scenario involving payment and wallet recharging transactions, %(available by \url{https://github.com/Rustem/Master-thesis}),
 where we discovered the benefits of combining session delegation and threading provided in SJ.
-The session-programming approach is suited to correctly implementing InterCloud communication protocols, which we intend to test as future work. %Finally, hope that our feedback about session types will be as a solid starting point for further research in this area.  
+The session-programming approach is suited to correctly implementing inter-Cloud protocols, which is our future objective. %Finally, hope that our feedback about session types will be as a solid starting point for further research in this area.  
 
 
 %------------------------------------------------------------------------------
