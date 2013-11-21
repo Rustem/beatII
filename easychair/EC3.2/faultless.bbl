@@ -1,0 +1,94 @@
+\begin{thebibliography}{10}
+
+\bibitem{Armbrust2010}
+Michael Armbrust, Armando Fox, Rean Griffith, Anthony~D Joseph, Randy Katz,
+  Andy Konwinski, Gunho Lee, David Patterson, Ariel Rabkin, Ion Stoica, et~al.
+\newblock Above the clouds: A berkeley view of cloud computing.
+\newblock {\em Communications of the ACM}, 53(4):50--58, 2010.
+
+\bibitem{armstrong2002getting}
+Joe Armstrong.
+\newblock Getting {Erlang} to talk to the outside world.
+\newblock In {\em Proceedings of the 2002 ACM SIGPLAN workshop on Erlang},
+  pages 64--72. ACM, 2002.
+
+\bibitem{ws-critical-overview}
+Alistair Barros, Marlon Dumas, and Phillipa Oaks.
+\newblock A critical overview of the web services choreography description
+  language.
+\newblock {\em BPTrends Newsletter}, 3:1--24, 2005.
+
+\bibitem{basu2012deciding}
+Samik Basu, Tevfik Bultan, and Meriem Ouederni.
+\newblock Deciding choreography realizability.
+\newblock {\em ACM SIGPLAN Notices}, 47(1):191--202, 2012.
+
+\bibitem{intercloud}
+David Bernstein, Erik Ludvigson, Krishna Sankar, Steve Diamond, and Monique
+  Morrow.
+\newblock Blueprint for the intercloud-protocols and formats for cloud
+  computing interoperability.
+\newblock In {\em ICIW'09.}, pages 328--336. IEEE, 2009.
+
+\bibitem{Buyya2009}
+Rajkumar Buyya, Chee~Shin Yeo, Srikumar Venugopal, James Broberg, and Ivona
+  Brandic.
+\newblock Cloud computing and emerging it platforms: Vision, hype, and reality
+  for delivering computing as the 5th utility.
+\newblock {\em Future Generation computer systems}, 25(6):599--616, 2009.
+
+\bibitem{carbone2007structured}
+Marco Carbone, Kohei Honda, and Nobuko Yoshida.
+\newblock Structured communication-centred programming for {Web} services.
+\newblock In {\em Programming Languages and Systems}, pages 2--17. Springer,
+  2007.
+
+\bibitem{session-types-sessions}
+Marco Carbone, Kohei Honda, Nobuko Yoshida, Robin Milner, Gary Brown, and Steve
+  Ross-Talbot.
+\newblock A theoretical basis of communication-centred concurrent programming.
+\newblock {WS-CDL} working report, W3C, 2006.
+
+\bibitem{cloud-integrator}
+E.~Cavalcante, F.~Lopes, T.~Batista, N.~Cacho, F.C. Delicato, and P.F. Pires.
+\newblock Cloud integrator: Building value-added services on the {Cloud}.
+\newblock In {\em Network Cloud Computing and Applications (NCCA'11)}, pages
+  135--142, 2011.
+
+\bibitem{xmpp-intercloud-transport}
+Vij D.~Bernstein.
+\newblock Using xmpp as a transport in intercloud protocols.
+\newblock In {\em In Proceedings of CloudComp 2010, the 2nd International
+  Conference on Cloud Computing}, pages 973--982. CiteSeer.
+
+\bibitem{honda2011scribbling}
+Kohei Honda, Aybek Mukhamedov, Gary Brown, Tzu-Chun Chen, and Nobuko Yoshida.
+\newblock Scribbling interactions with a formal foundation.
+\newblock In {\em Distributed Computing and Internet Technology}, pages 55--75.
+  Springer, 2011.
+
+\bibitem{sj-lang}
+Raymond Hu, Nobuko Yoshida, and Kohei Honda.
+\newblock Session-based distributed programming in java.
+\newblock In {\em ECOOP 2008}, pages 516--541. Springer, 2008.
+
+\bibitem{ng2012multiparty}
+Nicholas Ng, Nobuko Yoshida, and Kohei Honda.
+\newblock {Multiparty Session C}: Safe parallel programming with message
+  optimisation.
+\newblock In {\em Objects, Models, Components, Patterns}, pages 202--218.
+  Springer, 2012.
+
+\bibitem{utility-driven-fed}
+Rajiv~Ranjan Rajkumar~Buyya and Rodrigo~N. Calheiros.
+\newblock {InterCloud}: Utility-oriented federation of {Cloud Computing}
+  environments for scaling of application services.
+\newblock In {\em Algorithms and architectures for parallel processing}, pages
+  13--31. Springer, 2010.
+
+\bibitem{higher-order-comm}
+Malcolm~Hole Simon~Gay.
+\newblock Subtyping for session types in the pi calculus.
+\newblock {\em Journal Acta Informatica}, 42(2-3):191--225, 2005.
+
+\end{thebibliography}
